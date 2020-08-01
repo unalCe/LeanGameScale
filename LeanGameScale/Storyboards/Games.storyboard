@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="flW-F9-FrJ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Games-->
+        <scene sceneID="4Ed-jg-Hlr">
+            <objects>
+                <viewController id="vTi-b3-gdO" customClass="GamesViewController" customModule="LeanGameScale" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1ts-Ph-HDP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ops-Bh-qdD">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ops-Bh-qdD" firstAttribute="leading" secondItem="qGs-e5-hQ9" secondAttribute="leading" id="6n3-BM-DlZ"/>
+                            <constraint firstItem="ops-Bh-qdD" firstAttribute="trailing" secondItem="qGs-e5-hQ9" secondAttribute="trailing" id="7tY-F0-O4G"/>
+                            <constraint firstItem="ops-Bh-qdD" firstAttribute="top" secondItem="qGs-e5-hQ9" secondAttribute="top" id="PdC-C3-Voa"/>
+                            <constraint firstAttribute="bottom" secondItem="ops-Bh-qdD" secondAttribute="bottom" id="wqo-8c-9St"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qGs-e5-hQ9"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Games" id="gIC-Q4-PRd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sFA-wF-w2o" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1191" y="-309"/>
+        </scene>
+        <!--Games-->
+        <scene sceneID="tco-R5-NTG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="flW-F9-FrJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Games" image="gamecontroller.fill" catalog="system" id="yRl-ts-CzX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="eb0-2a-t4x">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vTi-b3-gdO" kind="relationship" relationship="rootViewController" id="rB4-Qu-dCm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9jb-LW-lkb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="281" y="-309"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gamecontroller.fill" catalog="system" width="64" height="40"/>
+    </resources>
+</document>
