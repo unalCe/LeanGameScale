@@ -8,9 +8,12 @@
 
 import UIKit
 
-class GamesViewController: UIViewController {
+class GamesViewController: UIViewController, Storyboarded {
+    weak var coordinator: GamesCoordinator?
     
     private let searchController = UISearchController(searchResultsController: nil)
+    
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +33,9 @@ class GamesViewController: UIViewController {
         navigationItem.searchController = searchController
     }
     
-    
+    private func setupTableView() {
+        //tableView.registe
+    }
 }
 
 extension GamesViewController: UISearchResultsUpdating {
