@@ -1,0 +1,6 @@
+framework module Pods_LeanGameScale_LeanGameScaleUITests {
+  umbrella header "Pods-LeanGameScale-LeanGameScaleUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
