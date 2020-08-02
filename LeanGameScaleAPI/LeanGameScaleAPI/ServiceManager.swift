@@ -1,0 +1,102 @@
+//
+//  ServiceManager.swift
+//  LeanGameScaleAPI
+//
+//  Created by Unal Celik on 1.08.2020.
+//  Copyright © 2020 unalCe. All rights reserved.
+//
+
+import Foundation
+
+
+public enum APIError: String, Error {
+    case invalidURL = "The URL is invalid"
+    case invalidData = "The data is invalid"
+    case invalidResponse = "The response is invalid"
+    case decodingError = "Decoding failed"
+}
+
+
+public final class ServiceManager {
+    
+    static public let shared = ServiceManager()
+    
+    private var currentDataTask: URLSessionTask?
+    
+    public typealias responseHandler<T: Decodable> = (T?, _ error: Error?) -> Void
+    
+    private func requestData<T: Decodable>(fromEndpoint endpoint: APIEndpoints,
+                                      completion: @escaping responseHandler<T>) {
+        
+        guard let url = endpoint.url else {
+            #if DEBUG
+            assertionFailure("URL invalid")
+            #endif
+            completion(nil, APIError.invalidURL)
+            return
+        }
+        
+        // Cancel previous data task if there is one
+        currentDataTask?.cancel()
+        
+        let request = URLRequest(url: url)
+        
+        currentDataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+            
+            // Check if the serer response is suitable
+            guard let response = response as? HTTPURLResponse,
+                (200..<300) ~= response.statusCode
+                else {
+                    completion(nil, APIError.invalidResponse)
+                    return
+            }
+            
+            // Check if data exists
+            guard let data = data else {
+                completion(nil, APIError.invalidData)
+                return
+            }
+            
+            // Data is ready, decode it
+            do {
+                let decodedObject = try JSONDecoder().decode(T.self, from: data)
+                
+                // Update the results on the main thread
+                DispatchQueue.main.async {
+                    completion(decodedObject, nil)
+                }
+            } catch (let error){
+                debugPrint(error)
+                completion(nil, APIError.decodingError)
+            }
+        }
+        
+        currentDataTask?.resume()
+    }
+}
+
+// MARK: - Fetch Services
+extension ServiceManager {
+    
+    // FIXME: **** ** * * * *    Response handler generic Types!!
+    // MARK: - All Games
+    public func fetchAllGames(in page: Int, completion: @escaping responseHandler<String>) {
+        requestData(fromEndpoint: .games(page), completion: completion)
+    }
+    
+    // MARK: - Game Detail
+    public func gameDetail(with gameId: Int, completion: @escaping responseHandler<String>) {
+        requestData(fromEndpoint: .gameDetail(gameId), completion: completion)
+    }
+    
+    // MARK: - Search Games
+    public func searchGames(with keyword: String, in page: Int = 1, completion: @escaping responseHandler<String>) {
+        requestData(fromEndpoint: .searchGames(page, keyword), completion: completion)
+    }
+    
+}

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LeanGameScaleAPI
 
 class GamesViewController: UIViewController, Storyboarded {
     weak var coordinator: GamesCoordinator?
@@ -19,6 +20,10 @@ class GamesViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
         
         setupSearchController()
+
+//        ServiceManager.shared.fetchAllGames(in: 1) { (<#String?#>, <#Error?#>) in
+//            <#code#>
+//        }
     }
     
     

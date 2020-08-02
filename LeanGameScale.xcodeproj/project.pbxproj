@@ -22,6 +22,8 @@
 		90F2816724D5A1D90049AF0E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2816624D5A1D90049AF0E /* MainTabBarController.swift */; };
 		90F2816924D5A2A20049AF0E /* GamesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2816824D5A2A20049AF0E /* GamesCoordinator.swift */; };
 		90F2816B24D5A30C0049AF0E /* FavoritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2816A24D5A30C0049AF0E /* FavoritesCoordinator.swift */; };
+		90F2819624D690F50049AF0E /* LeanGameScaleAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F2819524D690F50049AF0E /* LeanGameScaleAPI.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		90F2819724D690F50049AF0E /* LeanGameScaleAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90F2819524D690F50049AF0E /* LeanGameScaleAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,20 @@
 			remoteInfo = LeanGameScale;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		90F2819824D690F50049AF0E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				90F2819724D690F50049AF0E /* LeanGameScaleAPI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		90F093DD24D4A4170043B1EA /* LeanGameScale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeanGameScale.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +79,7 @@
 		90F2816624D5A1D90049AF0E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		90F2816824D5A2A20049AF0E /* GamesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCoordinator.swift; sourceTree = "<group>"; };
 		90F2816A24D5A30C0049AF0E /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCoordinator.swift; sourceTree = "<group>"; };
+		90F2819524D690F50049AF0E /* LeanGameScaleAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LeanGameScaleAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90F2819624D690F50049AF0E /* LeanGameScaleAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +115,7 @@
 				90F093F924D4A4190043B1EA /* LeanGameScaleTests */,
 				90F0940424D4A41A0043B1EA /* LeanGameScaleUITests */,
 				90F093DE24D4A4170043B1EA /* Products */,
+				90F2819424D690F50049AF0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,6 +224,14 @@
 			path = Tabs;
 			sourceTree = "<group>";
 		};
+		90F2819424D690F50049AF0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90F2819524D690F50049AF0E /* LeanGameScaleAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,6 +242,7 @@
 				90F093D924D4A4170043B1EA /* Sources */,
 				90F093DA24D4A4170043B1EA /* Frameworks */,
 				90F093DB24D4A4170043B1EA /* Resources */,
+				90F2819824D690F50049AF0E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
