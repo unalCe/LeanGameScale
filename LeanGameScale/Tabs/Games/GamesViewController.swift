@@ -10,20 +10,27 @@ import UIKit
 import LeanGameScaleAPI
 
 class GamesViewController: UIViewController, Storyboarded {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     weak var coordinator: GamesCoordinator?
     
     private let searchController = UISearchController(searchResultsController: nil)
     
-    @IBOutlet weak var tableView: UITableView!
+    var viewModel: GamesViewModelProtocol! {
+        didSet {
+            viewModel.delegate = self
+        }
+    }
 
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.fetchAllGames()
+        
         setupSearchController()
-
-//        ServiceManager.shared.fetchAllGames(in: 1) { (<#String?#>, <#Error?#>) in
-//            <#code#>
-//        }
+        setupTableView()
     }
     
     
@@ -39,13 +46,52 @@ class GamesViewController: UIViewController, Storyboarded {
     }
     
     private func setupTableView() {
-        //tableView.registe
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "denemeCell")
+        tableView.rowHeight = 120
+        tableView.dataSource = self
     }
 }
 
+extension GamesViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.games.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "denemeCell", for: indexPath)
+        
+        let game = viewModel.games[indexPath.row]
+        
+        cell.textLabel?.text = game.name
+        
+        return cell
+    }
+}
+
+
+// MARK: - UISearchResultsUpdating
 extension GamesViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        // debugPrint(searchController.searchBar.text)
+        if let text = searchController.searchBar.text, text != "" {
+            viewModel.searchGames(with: text)
+        } else {
+            viewModel.fetchAllGames()
+        }
+    }
+}
+
+
+// MARK: - GamesViewModelDelegate
+extension GamesViewController: GamesViewModelDelegate {
+    func handleGamesDataState(_ state: GamesViewModelState) {
+        switch state {
+        case .isLoadingData(let isLoading):
+            isLoading ? startAnimating() : stopAnimating()
+        case .dataReady:
+            tableView.reloadData()
+        case .requestFailed(let error):
+            debugPrint(error.localizedDescription)
+        }
     }
 }
 
