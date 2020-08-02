@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CCA6C94114E076249A51E71 /* Pods_LeanGameScaleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5A0B1A7997CD5274836C15 /* Pods_LeanGameScaleTests.framework */; };
+		714D2067FE515A04A4B7E687 /* Pods_LeanGameScale_LeanGameScaleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA4849572C763C9E7862482 /* Pods_LeanGameScale_LeanGameScaleUITests.framework */; };
 		902416A424D74FCF00B4AE15 /* GameTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902416A324D74FCF00B4AE15 /* GameTableCellViewModel.swift */; };
 		90F093E124D4A4170043B1EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F093E024D4A4170043B1EA /* AppDelegate.swift */; };
 		90F093E524D4A4170043B1EA /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F093E424D4A4170043B1EA /* GamesViewController.swift */; };
@@ -31,6 +33,7 @@
 		90F281AC24D725540049AF0E /* UIViewController-LoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F281AB24D725530049AF0E /* UIViewController-LoadingAnimation.swift */; };
 		90F281B024D7449E0049AF0E /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F281AE24D7449E0049AF0E /* GameTableViewCell.swift */; };
 		90F281B124D7449E0049AF0E /* GameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F281AF24D7449E0049AF0E /* GameTableViewCell.xib */; };
+		9EA5AC13E1E9A21730E817E8 /* Pods_LeanGameScale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5C2E0766E39FF1514CAF0A /* Pods_LeanGameScale.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		12B03F0DECDC0957DBF53E4B /* Pods-LeanGameScale-LeanGameScaleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanGameScale-LeanGameScaleUITests.debug.xcconfig"; path = "Target Support Files/Pods-LeanGameScale-LeanGameScaleUITests/Pods-LeanGameScale-LeanGameScaleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		51ABA2BF6AC95D3DD14D7AA4 /* Pods-LeanGameScaleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanGameScaleTests.debug.xcconfig"; path = "Target Support Files/Pods-LeanGameScaleTests/Pods-LeanGameScaleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		625DAD027EB89D51BCE67CB3 /* Pods-LeanGameScale.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanGameScale.debug.xcconfig"; path = "Target Support Files/Pods-LeanGameScale/Pods-LeanGameScale.debug.xcconfig"; sourceTree = "<group>"; };
+		6910022B2729843F2EF0D801 /* Pods-LeanGameScaleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanGameScaleTests.release.xcconfig"; path = "Target Support Files/Pods-LeanGameScaleTests/Pods-LeanGameScaleTests.release.xcconfig"; sourceTree = "<group>"; };
+		6E36F8E75739F6006BA987C4 /* Pods-LeanGameScale-LeanGameScaleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanGameScale-LeanGameScaleUITests.release.xcconfig"; path = "Target Support Files/Pods-LeanGameScale-LeanGameScaleUITests/Pods-LeanGameScale-LeanGameScaleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7AA4849572C763C9E7862482 /* Pods_LeanGameScale_LeanGameScaleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeanGameScale_LeanGameScaleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F5C2E0766E39FF1514CAF0A /* Pods_LeanGameScale.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeanGameScale.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		902416A324D74FCF00B4AE15 /* GameTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableCellViewModel.swift; sourceTree = "<group>"; };
 		902416A524D7512300B4AE15 /* LeanGameScaleAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LeanGameScaleAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F093DD24D4A4170043B1EA /* LeanGameScale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeanGameScale.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +105,8 @@
 		90F281AB24D725530049AF0E /* UIViewController-LoadingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-LoadingAnimation.swift"; sourceTree = "<group>"; };
 		90F281AE24D7449E0049AF0E /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 		90F281AF24D7449E0049AF0E /* GameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameTableViewCell.xib; sourceTree = "<group>"; };
+		AD5A0B1A7997CD5274836C15 /* Pods_LeanGameScaleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeanGameScaleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF04A97F7D44EAA910F5DBE1 /* Pods-LeanGameScale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanGameScale.release.xcconfig"; path = "Target Support Files/Pods-LeanGameScale/Pods-LeanGameScale.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +115,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90F2819624D690F50049AF0E /* LeanGameScaleAPI.framework in Frameworks */,
+				9EA5AC13E1E9A21730E817E8 /* Pods_LeanGameScale.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CCA6C94114E076249A51E71 /* Pods_LeanGameScaleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,12 +131,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				714D2067FE515A04A4B7E687 /* Pods_LeanGameScale_LeanGameScaleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A6F020FAFAFF9BA2EEEB515 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				625DAD027EB89D51BCE67CB3 /* Pods-LeanGameScale.debug.xcconfig */,
+				FF04A97F7D44EAA910F5DBE1 /* Pods-LeanGameScale.release.xcconfig */,
+				12B03F0DECDC0957DBF53E4B /* Pods-LeanGameScale-LeanGameScaleUITests.debug.xcconfig */,
+				6E36F8E75739F6006BA987C4 /* Pods-LeanGameScale-LeanGameScaleUITests.release.xcconfig */,
+				51ABA2BF6AC95D3DD14D7AA4 /* Pods-LeanGameScaleTests.debug.xcconfig */,
+				6910022B2729843F2EF0D801 /* Pods-LeanGameScaleTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		90F093D424D4A4170043B1EA = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +160,7 @@
 				90F0940424D4A41A0043B1EA /* LeanGameScaleUITests */,
 				90F093DE24D4A4170043B1EA /* Products */,
 				90F2819424D690F50049AF0E /* Frameworks */,
+				7A6F020FAFAFF9BA2EEEB515 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -248,6 +278,9 @@
 			children = (
 				902416A524D7512300B4AE15 /* LeanGameScaleAPI.framework */,
 				90F2819524D690F50049AF0E /* LeanGameScaleAPI.framework */,
+				7F5C2E0766E39FF1514CAF0A /* Pods_LeanGameScale.framework */,
+				7AA4849572C763C9E7862482 /* Pods_LeanGameScale_LeanGameScaleUITests.framework */,
+				AD5A0B1A7997CD5274836C15 /* Pods_LeanGameScaleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -278,10 +311,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90F0940A24D4A41A0043B1EA /* Build configuration list for PBXNativeTarget "LeanGameScale" */;
 			buildPhases = (
+				557565625A59633CF2038F5E /* [CP] Check Pods Manifest.lock */,
 				90F093D924D4A4170043B1EA /* Sources */,
 				90F093DA24D4A4170043B1EA /* Frameworks */,
 				90F093DB24D4A4170043B1EA /* Resources */,
 				90F2819824D690F50049AF0E /* Embed Frameworks */,
+				727666402ADEEE472B98FBC8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,6 +331,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90F0940D24D4A41A0043B1EA /* Build configuration list for PBXNativeTarget "LeanGameScaleTests" */;
 			buildPhases = (
+				CFB08EA356FFC38221C433A0 /* [CP] Check Pods Manifest.lock */,
 				90F093F224D4A4190043B1EA /* Sources */,
 				90F093F324D4A4190043B1EA /* Frameworks */,
 				90F093F424D4A4190043B1EA /* Resources */,
@@ -314,9 +350,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90F0941024D4A41A0043B1EA /* Build configuration list for PBXNativeTarget "LeanGameScaleUITests" */;
 			buildPhases = (
+				31F8746744DB385354561662 /* [CP] Check Pods Manifest.lock */,
 				90F093FD24D4A41A0043B1EA /* Sources */,
 				90F093FE24D4A41A0043B1EA /* Frameworks */,
 				90F093FF24D4A41A0043B1EA /* Resources */,
+				64D8B63856A7C0F51CB71738 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -399,6 +437,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31F8746744DB385354561662 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LeanGameScale-LeanGameScaleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		557565625A59633CF2038F5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LeanGameScale-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64D8B63856A7C0F51CB71738 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LeanGameScale-LeanGameScaleUITests/Pods-LeanGameScale-LeanGameScaleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LeanGameScale-LeanGameScaleUITests/Pods-LeanGameScale-LeanGameScaleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LeanGameScale-LeanGameScaleUITests/Pods-LeanGameScale-LeanGameScaleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		727666402ADEEE472B98FBC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LeanGameScale/Pods-LeanGameScale-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LeanGameScale/Pods-LeanGameScale-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LeanGameScale/Pods-LeanGameScale-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFB08EA356FFC38221C433A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LeanGameScaleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		90F093D924D4A4170043B1EA /* Sources */ = {
@@ -582,6 +723,7 @@
 		};
 		90F0940B24D4A41A0043B1EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 625DAD027EB89D51BCE67CB3 /* Pods-LeanGameScale.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -601,6 +743,7 @@
 		};
 		90F0940C24D4A41A0043B1EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF04A97F7D44EAA910F5DBE1 /* Pods-LeanGameScale.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -620,6 +763,7 @@
 		};
 		90F0940E24D4A41A0043B1EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51ABA2BF6AC95D3DD14D7AA4 /* Pods-LeanGameScaleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -642,6 +786,7 @@
 		};
 		90F0940F24D4A41A0043B1EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6910022B2729843F2EF0D801 /* Pods-LeanGameScaleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -664,6 +809,7 @@
 		};
 		90F0941124D4A41A0043B1EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12B03F0DECDC0957DBF53E4B /* Pods-LeanGameScale-LeanGameScaleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -684,6 +830,7 @@
 		};
 		90F0941224D4A41A0043B1EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E36F8E75739F6006BA987C4 /* Pods-LeanGameScale-LeanGameScaleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

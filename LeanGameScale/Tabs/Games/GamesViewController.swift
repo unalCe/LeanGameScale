@@ -25,6 +25,7 @@ class GamesViewController: UIViewController, Storyboarded {
     
     private var cellIdentifier: String = "gameCellIdentifier"
 
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +56,6 @@ class GamesViewController: UIViewController, Storyboarded {
 
 
 // MARK: - UITableViewDataSource
-
 extension GamesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.games.count
@@ -87,13 +87,15 @@ extension GamesViewController: UISearchResultsUpdating {
 // MARK: - GamesViewModelDelegate
 extension GamesViewController: GamesViewModelDelegate {
     func handleGamesDataState(_ state: GamesViewModelState) {
-        switch state {
-        case .isLoadingData(let isLoading):
-            isLoading ? startAnimating() : stopAnimating()
-        case .dataReady:
-            tableView.reloadData()
-        case .requestFailed(let error):
-            debugPrint(error.localizedDescription)
+        DispatchQueue.main.async {
+            switch state {
+            case .isLoadingData(let isLoading):
+                isLoading ? self.startAnimating() : self.stopAnimating()
+            case .dataReady:
+                self.tableView.reloadData()
+            case .requestFailed(let error):
+                debugPrint(error.localizedDescription)
+            }
         }
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class GameTableViewCell: UITableViewCell {
     
@@ -17,15 +18,22 @@ class GameTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        gameImageView.backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
         nameLabel.text = ""
         metacriticPointLabel.text = ""
         genreLabel.text = ""
     }
     
     public func configure(with viewModel: GameTableCellViewModel) {
-        gameImageView.backgroundColor = .orange
         nameLabel.text = viewModel.gameName
         metacriticPointLabel.text = viewModel.metacriticScore
         genreLabel.text = viewModel.genres
+        
+        gameImageView.kf.setImage(with: viewModel.gameImageUrl,
+                                      options: [
+                                        .scaleFactor(UIScreen.main.scale),
+                                        .transition(.fade(1)),
+                                        .cacheOriginalImage
+        ])
     }
 }

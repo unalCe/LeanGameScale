@@ -21,6 +21,10 @@ struct GameTableCellViewModel {
         game.name
     }
     
+    var gameImageUrl: URL? {
+        game.backgroundImage
+    }
+    
     var metacriticScore: String? {
         game.metacritic == nil ? "N/A" : "\(game.metacritic!)"
     }
