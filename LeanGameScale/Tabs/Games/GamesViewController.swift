@@ -22,6 +22,8 @@ class GamesViewController: UIViewController, Storyboarded {
             viewModel.delegate = self
         }
     }
+    
+    private var cellIdentifier: String = "gameCellIdentifier"
 
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -34,23 +36,25 @@ class GamesViewController: UIViewController, Storyboarded {
     }
     
     
-    // MARK: - Setup
+    // MARK: - Setup UI
     private func setupSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search for games"
         navigationItem.searchController = searchController
         definesPresentationContext = true
-        
-        navigationItem.searchController = searchController
     }
     
     private func setupTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "denemeCell")
+        tableView.register(UINib(nibName: "GameTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: cellIdentifier)
         tableView.rowHeight = 120
         tableView.dataSource = self
     }
 }
+
+
+// MARK: - UITableViewDataSource
 
 extension GamesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,11 +62,10 @@ extension GamesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "denemeCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! GameTableViewCell
         
         let game = viewModel.games[indexPath.row]
-        
-        cell.textLabel?.text = game.name
+        cell.configure(with: GameTableCellViewModel(game: game))
         
         return cell
     }
