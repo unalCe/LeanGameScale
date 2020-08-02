@@ -75,6 +75,7 @@
 		90F2817824D5F0D80049AF0E /* LeanGameScaleAPI */ = {
 			isa = PBXGroup;
 			children = (
+				90F2819924D6C7F30049AF0E /* Response */,
 				90F2817924D5F0D80049AF0E /* LeanGameScaleAPI.h */,
 				90F2817A24D5F0D80049AF0E /* Info.plist */,
 				90F2819024D5F1410049AF0E /* APIEndpoints.swift */,
@@ -90,6 +91,13 @@
 				90F2818624D5F0D80049AF0E /* Info.plist */,
 			);
 			path = LeanGameScaleAPITests;
+			sourceTree = "<group>";
+		};
+		90F2819924D6C7F30049AF0E /* Response */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
