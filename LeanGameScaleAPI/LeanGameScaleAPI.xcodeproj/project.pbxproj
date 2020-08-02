@@ -12,6 +12,10 @@
 		90F2818724D5F0D80049AF0E /* LeanGameScaleAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 90F2817924D5F0D80049AF0E /* LeanGameScaleAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		90F2819124D5F1410049AF0E /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2819024D5F1410049AF0E /* APIEndpoints.swift */; };
 		90F2819324D5F14B0049AF0E /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2819224D5F14B0049AF0E /* ServiceManager.swift */; };
+		90F2819D24D6CBC70049AF0E /* BaseGamesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2819C24D6CBC70049AF0E /* BaseGamesResponse.swift */; };
+		90F2819F24D6CE190049AF0E /* GamesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2819E24D6CE190049AF0E /* GamesResult.swift */; };
+		90F281A124D6CE950049AF0E /* GameGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F281A024D6CE950049AF0E /* GameGenre.swift */; };
+		90F281A324D6D5050049AF0E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F281A224D6D5050049AF0E /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,10 @@
 		90F2818624D5F0D80049AF0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90F2819024D5F1410049AF0E /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		90F2819224D5F14B0049AF0E /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		90F2819C24D6CBC70049AF0E /* BaseGamesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGamesResponse.swift; sourceTree = "<group>"; };
+		90F2819E24D6CE190049AF0E /* GamesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesResult.swift; sourceTree = "<group>"; };
+		90F281A024D6CE950049AF0E /* GameGenre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGenre.swift; sourceTree = "<group>"; };
+		90F281A224D6D5050049AF0E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,10 @@
 		90F2819924D6C7F30049AF0E /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				90F2819C24D6CBC70049AF0E /* BaseGamesResponse.swift */,
+				90F2819E24D6CE190049AF0E /* GamesResult.swift */,
+				90F281A024D6CE950049AF0E /* GameGenre.swift */,
+				90F281A224D6D5050049AF0E /* Game.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -210,8 +222,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90F2819F24D6CE190049AF0E /* GamesResult.swift in Sources */,
+				90F281A324D6D5050049AF0E /* Game.swift in Sources */,
 				90F2819124D5F1410049AF0E /* APIEndpoints.swift in Sources */,
+				90F2819D24D6CBC70049AF0E /* BaseGamesResponse.swift in Sources */,
 				90F2819324D5F14B0049AF0E /* ServiceManager.swift in Sources */,
+				90F281A124D6CE950049AF0E /* GameGenre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

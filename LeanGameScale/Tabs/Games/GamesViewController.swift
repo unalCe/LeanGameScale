@@ -20,10 +20,15 @@ class GamesViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
         
         setupSearchController()
-
-//        ServiceManager.shared.fetchAllGames(in: 1) { (<#String?#>, <#Error?#>) in
-//            <#code#>
-//        }
+        
+        ServiceManager.shared.gameDetail(with: 3498) { (result) in
+            switch result {
+            case .success(let game):
+                debugPrint(game)
+            case .failure(let err):
+                debugPrint(err.localizedDescription)
+            }
+        }
     }
     
     

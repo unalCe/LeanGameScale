@@ -21,12 +21,16 @@ public final class ServiceManager {
     
     static public let shared = ServiceManager()
     
+    /// Current URLSession datatask that ServiceManager handling
     private var currentDataTask: URLSessionTask?
     
-    public typealias responseHandler<T: Decodable> = (Result<T, Error>?) -> Void
+    // This ensures the singleton
+    private init() { }
+    
+    public typealias ResponseHandler<T: Decodable> = (Result<T, Error>) -> Void
     
     private func requestData<T: Decodable>(fromEndpoint endpoint: APIEndpoints,
-                                      completion: @escaping responseHandler<T>) {
+                                      completion: @escaping ResponseHandler<T>) {
 
         guard let url = endpoint.url else {
             #if DEBUG
@@ -85,17 +89,17 @@ extension ServiceManager {
 
     // FIXME: **** ** * * * *    Response handler generic Types!!
     // MARK: - All Games
-    public func fetchAllGames(in page: Int, completion: @escaping responseHandler<String>) {
+    public func fetchAllGames(in page: Int, completion: @escaping ResponseHandler<BaseGamesResponse>) {
         requestData(fromEndpoint: .games(page), completion: completion)
     }
 
     // MARK: - Game Detail
-    public func gameDetail(with gameId: Int, completion: @escaping responseHandler<String>) {
+    public func gameDetail(with gameId: Int, completion: @escaping ResponseHandler<Game>) {
         requestData(fromEndpoint: .gameDetail(gameId), completion: completion)
     }
 
     // MARK: - Search Games
-    public func searchGames(with keyword: String, in page: Int = 1, completion: @escaping responseHandler<String>) {
+    public func searchGames(with keyword: String, in page: Int = 1, completion: @escaping ResponseHandler<BaseGamesResponse>) {
         requestData(fromEndpoint: .searchGames(page, keyword), completion: completion)
     }
 
