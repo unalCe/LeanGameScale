@@ -8,14 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		90F093E124D4A4170043B1EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F093E024D4A4170043B1EA /* AppDelegate.swift */; };
-		90F093E324D4A4170043B1EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F093E224D4A4170043B1EA /* SceneDelegate.swift */; };
-		90F093E524D4A4170043B1EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F093E424D4A4170043B1EA /* ViewController.swift */; };
-		90F093E824D4A4170043B1EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F093E624D4A4170043B1EA /* Main.storyboard */; };
+		90F093E524D4A4170043B1EA /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F093E424D4A4170043B1EA /* GamesViewController.swift */; };
 		90F093EB24D4A4170043B1EA /* LeanGameScale.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90F093E924D4A4170043B1EA /* LeanGameScale.xcdatamodeld */; };
 		90F093ED24D4A4190043B1EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F093EC24D4A4190043B1EA /* Assets.xcassets */; };
 		90F093F024D4A4190043B1EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F093EE24D4A4190043B1EA /* LaunchScreen.storyboard */; };
 		90F093FB24D4A4190043B1EA /* LeanGameScaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F093FA24D4A4190043B1EA /* LeanGameScaleTests.swift */; };
 		90F0940624D4A41A0043B1EA /* LeanGameScaleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F0940524D4A41A0043B1EA /* LeanGameScaleUITests.swift */; };
+		90F2815924D53EF50049AF0E /* Games.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F2815824D53EF50049AF0E /* Games.storyboard */; };
+		90F2815B24D53FB10049AF0E /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F2815A24D53FB10049AF0E /* Favorites.storyboard */; };
+		90F2815E24D59D880049AF0E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2815D24D59D880049AF0E /* Coordinator.swift */; };
+		90F2816024D59D920049AF0E /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2815F24D59D920049AF0E /* Storyboarded.swift */; };
+		90F2816524D5A1A90049AF0E /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2816424D5A1A90049AF0E /* FavoritesViewController.swift */; };
+		90F2816724D5A1D90049AF0E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2816624D5A1D90049AF0E /* MainTabBarController.swift */; };
+		90F2816924D5A2A20049AF0E /* GamesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2816824D5A2A20049AF0E /* GamesCoordinator.swift */; };
+		90F2816B24D5A30C0049AF0E /* FavoritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2816A24D5A30C0049AF0E /* FavoritesCoordinator.swift */; };
+		90F2819624D690F50049AF0E /* LeanGameScaleAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F2819524D690F50049AF0E /* LeanGameScaleAPI.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		90F2819724D690F50049AF0E /* LeanGameScaleAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90F2819524D690F50049AF0E /* LeanGameScaleAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +43,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		90F2819824D690F50049AF0E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				90F2819724D690F50049AF0E /* LeanGameScaleAPI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		90F093DD24D4A4170043B1EA /* LeanGameScale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeanGameScale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F093E024D4A4170043B1EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		90F093E224D4A4170043B1EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		90F093E424D4A4170043B1EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		90F093E724D4A4170043B1EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		90F093E424D4A4170043B1EA /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		90F093EA24D4A4170043B1EA /* LeanGameScale.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LeanGameScale.xcdatamodel; sourceTree = "<group>"; };
 		90F093EC24D4A4190043B1EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90F093EF24D4A4190043B1EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +71,15 @@
 		90F0940124D4A41A0043B1EA /* LeanGameScaleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeanGameScaleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F0940524D4A41A0043B1EA /* LeanGameScaleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeanGameScaleUITests.swift; sourceTree = "<group>"; };
 		90F0940724D4A41A0043B1EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90F2815824D53EF50049AF0E /* Games.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Games.storyboard; sourceTree = "<group>"; };
+		90F2815A24D53FB10049AF0E /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		90F2815D24D59D880049AF0E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		90F2815F24D59D920049AF0E /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		90F2816424D5A1A90049AF0E /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		90F2816624D5A1D90049AF0E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		90F2816824D5A2A20049AF0E /* GamesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCoordinator.swift; sourceTree = "<group>"; };
+		90F2816A24D5A30C0049AF0E /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCoordinator.swift; sourceTree = "<group>"; };
+		90F2819524D690F50049AF0E /* LeanGameScaleAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LeanGameScaleAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90F2819624D690F50049AF0E /* LeanGameScaleAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +115,7 @@
 				90F093F924D4A4190043B1EA /* LeanGameScaleTests */,
 				90F0940424D4A41A0043B1EA /* LeanGameScaleUITests */,
 				90F093DE24D4A4170043B1EA /* Products */,
+				90F2819424D690F50049AF0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,13 +133,12 @@
 			isa = PBXGroup;
 			children = (
 				90F093E024D4A4170043B1EA /* AppDelegate.swift */,
-				90F093E224D4A4170043B1EA /* SceneDelegate.swift */,
-				90F093E424D4A4170043B1EA /* ViewController.swift */,
-				90F093E624D4A4170043B1EA /* Main.storyboard */,
-				90F093EC24D4A4190043B1EA /* Assets.xcassets */,
-				90F093EE24D4A4190043B1EA /* LaunchScreen.storyboard */,
-				90F093F124D4A4190043B1EA /* Info.plist */,
-				90F093E924D4A4170043B1EA /* LeanGameScale.xcdatamodeld */,
+				90F2816624D5A1D90049AF0E /* MainTabBarController.swift */,
+				90F2816324D5A1340049AF0E /* Tabs */,
+				90F2815C24D59D6C0049AF0E /* Protocols */,
+				90F0941524D4AEF40043B1EA /* Resources */,
+				90F0941624D4AEFC0043B1EA /* Supporting Files */,
+				90F0941724D4AF1F0043B1EA /* Persistence */,
 			);
 			path = LeanGameScale;
 			sourceTree = "<group>";
@@ -131,6 +161,77 @@
 			path = LeanGameScaleUITests;
 			sourceTree = "<group>";
 		};
+		90F0941524D4AEF40043B1EA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				90F093EC24D4A4190043B1EA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		90F0941624D4AEFC0043B1EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				90F093EE24D4A4190043B1EA /* LaunchScreen.storyboard */,
+				90F093F124D4A4190043B1EA /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90F0941724D4AF1F0043B1EA /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				90F093E924D4A4170043B1EA /* LeanGameScale.xcdatamodeld */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		90F0941824D4AF6C0043B1EA /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				90F2815824D53EF50049AF0E /* Games.storyboard */,
+				90F2816824D5A2A20049AF0E /* GamesCoordinator.swift */,
+				90F093E424D4A4170043B1EA /* GamesViewController.swift */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		90F2815C24D59D6C0049AF0E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				90F2815F24D59D920049AF0E /* Storyboarded.swift */,
+				90F2815D24D59D880049AF0E /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		90F2816124D5A0F50049AF0E /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				90F2815A24D53FB10049AF0E /* Favorites.storyboard */,
+				90F2816A24D5A30C0049AF0E /* FavoritesCoordinator.swift */,
+				90F2816424D5A1A90049AF0E /* FavoritesViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		90F2816324D5A1340049AF0E /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				90F0941824D4AF6C0043B1EA /* Games */,
+				90F2816124D5A0F50049AF0E /* Favorites */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		90F2819424D690F50049AF0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90F2819524D690F50049AF0E /* LeanGameScaleAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +242,7 @@
 				90F093D924D4A4170043B1EA /* Sources */,
 				90F093DA24D4A4170043B1EA /* Frameworks */,
 				90F093DB24D4A4170043B1EA /* Resources */,
+				90F2819824D690F50049AF0E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,9 +337,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90F2815924D53EF50049AF0E /* Games.storyboard in Resources */,
 				90F093F024D4A4190043B1EA /* LaunchScreen.storyboard in Resources */,
 				90F093ED24D4A4190043B1EA /* Assets.xcassets in Resources */,
-				90F093E824D4A4170043B1EA /* Main.storyboard in Resources */,
+				90F2815B24D53FB10049AF0E /* Favorites.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,10 +365,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90F2815E24D59D880049AF0E /* Coordinator.swift in Sources */,
 				90F093EB24D4A4170043B1EA /* LeanGameScale.xcdatamodeld in Sources */,
-				90F093E524D4A4170043B1EA /* ViewController.swift in Sources */,
+				90F2816924D5A2A20049AF0E /* GamesCoordinator.swift in Sources */,
+				90F2816024D59D920049AF0E /* Storyboarded.swift in Sources */,
+				90F2816724D5A1D90049AF0E /* MainTabBarController.swift in Sources */,
+				90F093E524D4A4170043B1EA /* GamesViewController.swift in Sources */,
+				90F2816524D5A1A90049AF0E /* FavoritesViewController.swift in Sources */,
+				90F2816B24D5A30C0049AF0E /* FavoritesCoordinator.swift in Sources */,
 				90F093E124D4A4170043B1EA /* AppDelegate.swift in Sources */,
-				90F093E324D4A4170043B1EA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +409,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		90F093E624D4A4170043B1EA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				90F093E724D4A4170043B1EA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		90F093EE24D4A4190043B1EA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -440,7 +540,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77H998AFPB;
-				INFOPLIST_FILE = LeanGameScale/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LeanGameScale/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,7 +559,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77H998AFPB;
-				INFOPLIST_FILE = LeanGameScale/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LeanGameScale/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
