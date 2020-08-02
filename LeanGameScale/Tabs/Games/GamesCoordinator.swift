@@ -21,6 +21,7 @@ class GamesCoordinator: Coordinator {
                                                  image: UIImage(named: "GamesTab"),
                                                  tag: 0)
         viewController.coordinator = self
+        viewController.viewModel = GamesViewModel()
 
         navigationController.viewControllers = [viewController]
     }

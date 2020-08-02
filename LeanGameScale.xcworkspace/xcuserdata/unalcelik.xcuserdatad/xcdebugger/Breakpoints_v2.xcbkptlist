@@ -3,4 +3,134 @@
    uuid = "A87662A0-41FC-45FF-8CB5-3E666DFDC7BA"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E832408-18CC-4398-8EF6-FF7D04FA3F80"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeanGameScaleAPI/LeanGameScaleAPI/ServiceManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "requestData(fromEndpoint:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "54311BDD-E18F-48A3-8844-25DCFFC5569E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeanGameScaleAPI/LeanGameScaleAPI/ServiceManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "requestData(fromEndpoint:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FD295405-CD6A-4EA4-87D2-67B66D26FF2A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeanGameScaleAPI/LeanGameScaleAPI/ServiceManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "requestData(fromEndpoint:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "49381541-0A8D-41C7-8A7F-5B56D74E4E6B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeanGameScaleAPI/LeanGameScaleAPI/ServiceManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "requestData(fromEndpoint:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8C4A3614-7B8B-4E4A-96A1-A2D7EF087274"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeanGameScaleAPI/LeanGameScaleAPI/ServiceManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "requestData(fromEndpoint:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7C7382C1-45B6-4811-B37E-6AA31A1DAA35"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeanGameScaleAPI/LeanGameScaleAPI/ServiceManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "requestData(fromEndpoint:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7C7382C1-45B6-4811-B37E-6AA31A1DAA35 - fcfad352a504ad2d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeanGameScaleAPI.ServiceManager.(requestData in _6C4147CE2E24D0E10624C47498F64DEC)&lt;A where A: Swift.Decodable&gt;(fromEndpoint: LeanGameScaleAPI.APIEndpoints, completion: (Swift.Result&lt;A, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "LeanGameScaleAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/unalcelik/Developer/LeanGameScale/LeanGameScaleAPI/LeanGameScaleAPI/ServiceManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "927">
+               </Location>
+               <Location
+                  uuid = "7C7382C1-45B6-4811-B37E-6AA31A1DAA35 - c1b6f434502a0fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LeanGameScaleAPI.ServiceManager.(requestData in _6C4147CE2E24D0E10624C47498F64DEC)&lt;A where A: Swift.Decodable&gt;(fromEndpoint: LeanGameScaleAPI.APIEndpoints, completion: (Swift.Result&lt;A, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "LeanGameScaleAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/unalcelik/Developer/LeanGameScale/LeanGameScaleAPI/LeanGameScaleAPI/ServiceManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "502">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
