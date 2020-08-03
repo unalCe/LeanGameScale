@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GamesCoordinator: Coordinator {
+final class GamesCoordinator: Coordinator {
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController = UINavigationController()) {
@@ -24,5 +24,11 @@ class GamesCoordinator: Coordinator {
         viewController.viewModel = GamesViewModel()
 
         navigationController.viewControllers = [viewController]
+    }
+    
+    public func showDetail(with gameId: String) {
+        let detailViewController = GameDetailViewController.instantiate(storyboard: .GameDetail)
+        detailViewController.gameName = gameId
+        navigationController.pushViewController(detailViewController, animated: true)
     }
 }

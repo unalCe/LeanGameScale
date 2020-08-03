@@ -78,7 +78,8 @@ extension GamesViewController: UITableViewDataSource {
 extension GamesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+        let game = viewModel.games[indexPath.row]
+        coordinator?.showDetail(with: game.name ?? "")
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
