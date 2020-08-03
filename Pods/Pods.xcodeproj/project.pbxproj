@@ -1,0 +1,1178 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A6B5DD01688D2909B123872D28BA244 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302535FC6B44C0CC3ADC2CE7E5E89E18 /* ImageDownloader.swift */; };
+		1271D16ED09C3A7F1C8B59FB5E8F4C4A /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CC87682A350676ABE89813810EBCCA /* ImageTransition.swift */; };
+		14958DD3BAD1867E9C710899D8EF9EB0 /* Pods-LeanGameScale-LeanGameScaleUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C6F6E770BFE78E8D588AED36A4D939 /* Pods-LeanGameScale-LeanGameScaleUITests-dummy.m */; };
+		157C093553DEA8090A5EDB594C7A10EF /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0038345CBC9A186C974254E82688C54F /* Runtime.swift */; };
+		2169973D7461954F47AE2E4B2FC29AFC /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE5A236F019480C4D05CF05AF2BB54 /* AnimatedImageView.swift */; };
+		218E9683CDC3DCB849CB22E6ADDD5C4F /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D4A234A677C30FDD067F936D297EC /* Storage.swift */; };
+		27AC73ECEA22469300D0C84082D5A11A /* ImageDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2801AA7E777726B7B8403914301A54EA /* ImageDrawing.swift */; };
+		2A946D64F55D1483CD914783D0CDBCF1 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FF45DFCCA1C60B6926735FE6E4D7DB /* Deprecated.swift */; };
+		2F39AC009FDCDC6395456DF9C6F73B2E /* CallbackQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3319ADA7681AE3065FF92FAB4EB45CEA /* CallbackQueue.swift */; };
+		392B550454354027A95860A24F373493 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15980F81B695D00D41FCD457D1B73C28 /* MemoryStorage.swift */; };
+		39C07DB1B30E5DDCCE16B39185E8DDD9 /* Kingfisher.h in Headers */ = {isa = PBXBuildFile; fileRef = DC5B6A3F85F69BFD6260FF5EE2DC6E83 /* Kingfisher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BE14D60B48F7A168E30B6035A6679D8 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E3DF47D084996164291E45F3937827 /* Filter.swift */; };
+		413419D5EAF49981F1126220D949998D /* DiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F21F0A741AF8A9F10DBCBD25B3A0D45 /* DiskStorage.swift */; };
+		45C53EBA8D54ABBD03AFABA40AA04526 /* ImageProgressive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7855A54FDD32BFFBC3EED85BA406393D /* ImageProgressive.swift */; };
+		4A125BC9435C0689EFC9083C4D6AD1F1 /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE930812E71BAEFB8C822D6260BEAF3 /* ExtensionHelpers.swift */; };
+		4B11223B7E84D678CC7DCE06E7DA4F2D /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D49BC3F7719315413F71204BCE91DE /* Kingfisher-dummy.m */; };
+		4E05F182D27523997DDA8B4E5EA62D73 /* Pods-LeanGameScaleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 543A67AE1C1D2F33FC769485797D996D /* Pods-LeanGameScaleTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5160E72568F72DD52E1857DC19702314 /* Pods-LeanGameScale-LeanGameScaleUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB2DA2DF2B64D6149568A6A71726E58 /* Pods-LeanGameScale-LeanGameScaleUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52AFC373558EA66A36978ACA2A59C208 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B3C6F8400C6B90A66A66868E87F63 /* Box.swift */; };
+		53573D140ED2FF4625595921244E9F83 /* NSButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B1470E70A3A17814C61807092BA1E7 /* NSButton+Kingfisher.swift */; };
+		57E809146DE1D795AB566D582C5BD4FB /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083534D0F40FE4978354D65720ADC23C /* FormatIndicatedCacheSerializer.swift */; };
+		59E1831DBFE51C03F59EB2494505179B /* KingfisherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5C2D055A9723775E294BBB6F74B092 /* KingfisherError.swift */; };
+		643A62B599350B4B53DDD1410723A9F5 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD53E9DD41739E4250C520A2A2F2B1E /* ImagePrefetcher.swift */; };
+		6C4240E6A28A56C7EABA3E403BCCE73B /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA7FF1EB74CFFEDCAEB66B098BF3960 /* Kingfisher.swift */; };
+		6ED44048335E81198C083DDF65C61A12 /* Pods-LeanGameScale-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E70ED2E9BA257061114BCDB687712A /* Pods-LeanGameScale-dummy.m */; };
+		7520BBB91891BC2263563F03822A1C01 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4439BCA8312E4998EABBB5B2F5D9C8D4 /* CFNetwork.framework */; };
+		7671179B79ADBEB13F04EC36CA68EA6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3BF06BD92238CB43628415C234BF25 /* Foundation.framework */; };
+		76832F66F5317CD2B48315B2A8BE5D6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3BF06BD92238CB43628415C234BF25 /* Foundation.framework */; };
+		76C605C95842AAD9EC43BEAB6C6FD3B3 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EDA0E6772DE9874ECC2C1860852B4B /* Resource.swift */; };
+		76FB3FD4AD9C576C030C1E0637C9F33E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684878DDF42AA41F3183D1161EAD134D /* ImageCache.swift */; };
+		7B47DF6AC65A6AEA96E2631A215B4EEE /* Pods-LeanGameScaleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34378293FA6093B56B550BBDAFBD571C /* Pods-LeanGameScaleTests-dummy.m */; };
+		7D2186484ADCDD14DE414F8416E78009 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CEFC916E20F462B21BC0A189B7CA2 /* KingfisherManager.swift */; };
+		7D59B085FB0A678C50F49C942F9CDAE5 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582411156169A4F3F31CA945595C950C /* Source.swift */; };
+		7DA111BA28D2ABAF0127448656A91BA1 /* SessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE1F4CCB1E094781AFE65EF1A649514 /* SessionDataTask.swift */; };
+		82CC5117492096336ACEDE1124567CE1 /* ImageDataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3A13730FB7E3BA926D6DEBC6EA72A /* ImageDataProcessor.swift */; };
+		9433A37319050AECED47A83CC1AB2411 /* SizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72DE7163C99833741A774EFBD46C00B /* SizeExtensions.swift */; };
+		9F4859AA0B7FF10EBFCE500D05E97F22 /* AuthenticationChallengeResponsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BA298E8B2D60E45FD43AA954C100D /* AuthenticationChallengeResponsable.swift */; };
+		A1D1489ADDDD3ACD02AC9AED719208B5 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE85527431D3C48140CC42C408FB39 /* Delegate.swift */; };
+		A7A0D8D40C074424B7A4F359C8790B87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3BF06BD92238CB43628415C234BF25 /* Foundation.framework */; };
+		A9F52292CD73CC7BC667BC6BFB13F76E /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E56B90786082AF9FA4A2215D69AD4 /* Indicator.swift */; };
+		AA257500F9A59C7DEAA7EBA9F3DDCFDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3BF06BD92238CB43628415C234BF25 /* Foundation.framework */; };
+		AA32E60194E22BD7D63996982953B254 /* ImageFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE8E6EC7993E64B36395F96E16D7411 /* ImageFormat.swift */; };
+		BD311F47ACB85AC1BEECFD5A2EB97DAD /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517CCAB27CE21B70B35834001009A517 /* Placeholder.swift */; };
+		BF5D7A588E42170704DE3CE387810002 /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25ABC4A1D9392D5F80D8E5B314A042F /* RequestModifier.swift */; };
+		CBF8F66AAE972CB75436EE640DB403DF /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B441043A87AF939D8378E27540012 /* UIButton+Kingfisher.swift */; };
+		CDE6E025EB7814166FE10729FD8ECD99 /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391C627ABFDE8C7D704FE71FA2D1D496 /* RedirectHandler.swift */; };
+		D01F65F0FB64651347BE071B40D9137C /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB063A2550A5737B0D8EAC72BCE8AC /* ImageProcessor.swift */; };
+		D06D1ECF0F83459B30344E72D5BD80C0 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7750E5E3C10B5D9E2C2BF7FE9A7C4A9 /* Result.swift */; };
+		D120E1076F09BC2B6EB04DFB77B4337E /* ImageDownloaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11041EE59F177F92DD8994B8BF8FC041 /* ImageDownloaderDelegate.swift */; };
+		D2A1BADA7775EB86BE54E76DD5287DCC /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54579B415A7498AE3DCFD5B3D40E20D /* KingfisherOptionsInfo.swift */; };
+		D2F623D1BA8366959E5B4B28EE8C74A3 /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED002FC16F27D1B2274DC5F8B373C89C /* CacheSerializer.swift */; };
+		D33A41A088CFD8CDEF093B81473ABC24 /* ImageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8AEAFEEF6CD19C4F452EB54E494853 /* ImageDataProvider.swift */; };
+		D3B6C7CC81054A15944438950930B466 /* RetryStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EB0C995AB6FB4F88F434B535CEEA8F /* RetryStrategy.swift */; };
+		D3C9EF8E98DF5AA70597E488B85C235E /* Pods-LeanGameScale-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6895961B325D678F4FCD07D98092F058 /* Pods-LeanGameScale-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D766EFD6660F107FEC78405FD014A3FE /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C9CC46C04B908FF8708A6DE7FF5419 /* Accelerate.framework */; };
+		D89D6F7695104E270DBEC916123DEF43 /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5A8C6D09BCA62E036640D8A099FA95 /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE2FE634CA168C76E6F6EAECCCF2CB25 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179E3832C8042EBCA365A28253552933 /* Image.swift */; };
+		DEE0BD97F8CD350B96FA108DEAD01DB5 /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D89C4A497307BB750F25C391679BA2 /* ImageModifier.swift */; };
+		E931E4B7ED6AC4EE078413311FD623FC /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23AA36E9EF4BA7F92161AFE2AC2A498 /* SessionDelegate.swift */; };
+		EA5568FD865CDC270C7FDF9D07C12A3A /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031459AE8043B6D99C40A3A4F051AB1E /* ImageView+Kingfisher.swift */; };
+		EF3991B6151D1EAD5C4B87ADBA8CE991 /* WKInterfaceImage+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE11E1C683E35208E54FFF51797453D /* WKInterfaceImage+Kingfisher.swift */; };
+		EF57BD189600FEFBA65A04F840192612 /* GIFAnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8904B1FF215C879D893FF28C37A63 /* GIFAnimatedImage.swift */; };
+		FB38D9498D76115C61C207652A90140B /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5FA773E3CEDC5416BD69520D80826E /* String+MD5.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D98A6865B96E6657A33A1DAB883E375 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45CD3582502AD89657B6062CE693EBEE;
+			remoteInfo = "Pods-LeanGameScale";
+		};
+		5FC8AADDC63500667A08D0DF5DCEC4E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8022D22FAA6690B5E1C379C1BCE1491;
+			remoteInfo = Kingfisher;
+		};
+		B342EAD17EF999E4F5EA59B99FF1741E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8022D22FAA6690B5E1C379C1BCE1491;
+			remoteInfo = Kingfisher;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0038345CBC9A186C974254E82688C54F /* Runtime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Runtime.swift; path = Sources/Utility/Runtime.swift; sourceTree = "<group>"; };
+		01EB0C995AB6FB4F88F434B535CEEA8F /* RetryStrategy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryStrategy.swift; path = Sources/Networking/RetryStrategy.swift; sourceTree = "<group>"; };
+		031459AE8043B6D99C40A3A4F051AB1E /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/Extensions/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		083534D0F40FE4978354D65720ADC23C /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormatIndicatedCacheSerializer.swift; path = Sources/Cache/FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
+		08C3F2180E113385B5B45BD481DD33FD /* Pods-LeanGameScale-LeanGameScaleUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LeanGameScale-LeanGameScaleUITests-Info.plist"; sourceTree = "<group>"; };
+		0E36A54F0A0A5F7DAA640DD249250C6A /* Kingfisher-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Kingfisher-Info.plist"; sourceTree = "<group>"; };
+		0E8BA298E8B2D60E45FD43AA954C100D /* AuthenticationChallengeResponsable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationChallengeResponsable.swift; path = Sources/Networking/AuthenticationChallengeResponsable.swift; sourceTree = "<group>"; };
+		11041EE59F177F92DD8994B8BF8FC041 /* ImageDownloaderDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloaderDelegate.swift; path = Sources/Networking/ImageDownloaderDelegate.swift; sourceTree = "<group>"; };
+		11D89C4A497307BB750F25C391679BA2 /* ImageModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageModifier.swift; path = Sources/Networking/ImageModifier.swift; sourceTree = "<group>"; };
+		12E8904B1FF215C879D893FF28C37A63 /* GIFAnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFAnimatedImage.swift; path = Sources/Image/GIFAnimatedImage.swift; sourceTree = "<group>"; };
+		15980F81B695D00D41FCD457D1B73C28 /* MemoryStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MemoryStorage.swift; path = Sources/Cache/MemoryStorage.swift; sourceTree = "<group>"; };
+		179E3832C8042EBCA365A28253552933 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image/Image.swift; sourceTree = "<group>"; };
+		1D5A8C6D09BCA62E036640D8A099FA95 /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
+		1F1F69CC2D6508C12F368478843152AC /* Pods-LeanGameScale-LeanGameScaleUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LeanGameScale-LeanGameScaleUITests-frameworks.sh"; sourceTree = "<group>"; };
+		1F8AEAFEEF6CD19C4F452EB54E494853 /* ImageDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDataProvider.swift; path = Sources/General/ImageSource/ImageDataProvider.swift; sourceTree = "<group>"; };
+		25FC55F3AFE910CCA66A1FB98BA46165 /* Pods-LeanGameScale-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LeanGameScale-acknowledgements.plist"; sourceTree = "<group>"; };
+		2801AA7E777726B7B8403914301A54EA /* ImageDrawing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDrawing.swift; path = Sources/Image/ImageDrawing.swift; sourceTree = "<group>"; };
+		2B0D692288DB5282AC34A0745E879339 /* Pods_LeanGameScale.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LeanGameScale.framework; path = "Pods-LeanGameScale.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B7867130E08E42D9CE5249890660E9C /* Pods-LeanGameScaleTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LeanGameScaleTests-Info.plist"; sourceTree = "<group>"; };
+		2DCBAD500319F282E8278F354C35BE2D /* Pods-LeanGameScale-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LeanGameScale-frameworks.sh"; sourceTree = "<group>"; };
+		2F432AA70E98352DF560DFAB1D2EB958 /* Pods-LeanGameScale-LeanGameScaleUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LeanGameScale-LeanGameScaleUITests.modulemap"; sourceTree = "<group>"; };
+		302535FC6B44C0CC3ADC2CE7E5E89E18 /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/Networking/ImageDownloader.swift; sourceTree = "<group>"; };
+		3319ADA7681AE3065FF92FAB4EB45CEA /* CallbackQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallbackQueue.swift; path = Sources/Utility/CallbackQueue.swift; sourceTree = "<group>"; };
+		3328A2684C103AC8C199A69323A5CE21 /* Pods-LeanGameScaleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LeanGameScaleTests.release.xcconfig"; sourceTree = "<group>"; };
+		34378293FA6093B56B550BBDAFBD571C /* Pods-LeanGameScaleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LeanGameScaleTests-dummy.m"; sourceTree = "<group>"; };
+		36BB063A2550A5737B0D8EAC72BCE8AC /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/Image/ImageProcessor.swift; sourceTree = "<group>"; };
+		38959E9EDE6617DAFECF6DA69C5E4C23 /* Pods-LeanGameScale-LeanGameScaleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LeanGameScale-LeanGameScaleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		391C627ABFDE8C7D704FE71FA2D1D496 /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Sources/Networking/RedirectHandler.swift; sourceTree = "<group>"; };
+		3AD53E9DD41739E4250C520A2A2F2B1E /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/Networking/ImagePrefetcher.swift; sourceTree = "<group>"; };
+		3FC3A13730FB7E3BA926D6DEBC6EA72A /* ImageDataProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDataProcessor.swift; path = Sources/Networking/ImageDataProcessor.swift; sourceTree = "<group>"; };
+		4439BCA8312E4998EABBB5B2F5D9C8D4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		48C9CC46C04B908FF8708A6DE7FF5419 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		48E70ED2E9BA257061114BCDB687712A /* Pods-LeanGameScale-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LeanGameScale-dummy.m"; sourceTree = "<group>"; };
+		49CE5A236F019480C4D05CF05AF2BB54 /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/Views/AnimatedImageView.swift; sourceTree = "<group>"; };
+		4E0824F94D41168B413CF4BD7F789389 /* Pods-LeanGameScaleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LeanGameScaleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		517CCAB27CE21B70B35834001009A517 /* Placeholder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Placeholder.swift; path = Sources/Image/Placeholder.swift; sourceTree = "<group>"; };
+		52BE85527431D3C48140CC42C408FB39 /* Delegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Delegate.swift; path = Sources/Utility/Delegate.swift; sourceTree = "<group>"; };
+		543A67AE1C1D2F33FC769485797D996D /* Pods-LeanGameScaleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LeanGameScaleTests-umbrella.h"; sourceTree = "<group>"; };
+		569BEF4CDC897325240A1CE6F4E5FF47 /* Pods-LeanGameScale-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LeanGameScale-acknowledgements.markdown"; sourceTree = "<group>"; };
+		582411156169A4F3F31CA945595C950C /* Source.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Source.swift; path = Sources/General/ImageSource/Source.swift; sourceTree = "<group>"; };
+		59CC87682A350676ABE89813810EBCCA /* ImageTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTransition.swift; path = Sources/Image/ImageTransition.swift; sourceTree = "<group>"; };
+		5A491E327B1744C098EA9BBCAA85CA19 /* Kingfisher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.release.xcconfig; sourceTree = "<group>"; };
+		5C5C2D055A9723775E294BBB6F74B092 /* KingfisherError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherError.swift; path = Sources/General/KingfisherError.swift; sourceTree = "<group>"; };
+		5EA7FF1EB74CFFEDCAEB66B098BF3960 /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/General/Kingfisher.swift; sourceTree = "<group>"; };
+		5EE930812E71BAEFB8C822D6260BEAF3 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtensionHelpers.swift; path = Sources/Utility/ExtensionHelpers.swift; sourceTree = "<group>"; };
+		684878DDF42AA41F3183D1161EAD134D /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/Cache/ImageCache.swift; sourceTree = "<group>"; };
+		6895961B325D678F4FCD07D98092F058 /* Pods-LeanGameScale-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LeanGameScale-umbrella.h"; sourceTree = "<group>"; };
+		6DE8E6EC7993E64B36395F96E16D7411 /* ImageFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageFormat.swift; path = Sources/Image/ImageFormat.swift; sourceTree = "<group>"; };
+		745BCB210174EEE47EDFC3C90CBEEB3D /* Pods-LeanGameScaleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LeanGameScaleTests.modulemap"; sourceTree = "<group>"; };
+		7855A54FDD32BFFBC3EED85BA406393D /* ImageProgressive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProgressive.swift; path = Sources/Image/ImageProgressive.swift; sourceTree = "<group>"; };
+		78EDA0E6772DE9874ECC2C1860852B4B /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/General/ImageSource/Resource.swift; sourceTree = "<group>"; };
+		7EE1F4CCB1E094781AFE65EF1A649514 /* SessionDataTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDataTask.swift; path = Sources/Networking/SessionDataTask.swift; sourceTree = "<group>"; };
+		83981E1D08148EF38D77EDC30396F44E /* Pods-LeanGameScaleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LeanGameScaleTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8AE2C17395CBBE3F3E385467E35B1420 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kingfisher.modulemap; sourceTree = "<group>"; };
+		8BB2DA2DF2B64D6149568A6A71726E58 /* Pods-LeanGameScale-LeanGameScaleUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LeanGameScale-LeanGameScaleUITests-umbrella.h"; sourceTree = "<group>"; };
+		8D3BF06BD92238CB43628415C234BF25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8F21F0A741AF8A9F10DBCBD25B3A0D45 /* DiskStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskStorage.swift; path = Sources/Cache/DiskStorage.swift; sourceTree = "<group>"; };
+		9279C98D4B63CA04F07C940D4245795B /* Pods-LeanGameScale-LeanGameScaleUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LeanGameScale-LeanGameScaleUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9591180165E5174CDAA1D4135196BADF /* Kingfisher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.debug.xcconfig; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3170ADCDACFDE9EAC4092A5755F8366 /* Pods_LeanGameScaleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LeanGameScaleTests.framework; path = "Pods-LeanGameScaleTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50CEFC916E20F462B21BC0A189B7CA2 /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/General/KingfisherManager.swift; sourceTree = "<group>"; };
+		ADCE3BD443BD3A695387CC838B2372A2 /* Pods-LeanGameScale.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LeanGameScale.modulemap"; sourceTree = "<group>"; };
+		B8E3DF47D084996164291E45F3937827 /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Image/Filter.swift; sourceTree = "<group>"; };
+		B9FF45DFCCA1C60B6926735FE6E4D7DB /* Deprecated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecated.swift; path = Sources/General/Deprecated.swift; sourceTree = "<group>"; };
+		BCE11E1C683E35208E54FFF51797453D /* WKInterfaceImage+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WKInterfaceImage+Kingfisher.swift"; path = "Sources/Extensions/WKInterfaceImage+Kingfisher.swift"; sourceTree = "<group>"; };
+		BD1E894F5A49A3EFA71DD68FD67FB364 /* Pods_LeanGameScale_LeanGameScaleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LeanGameScale_LeanGameScaleUITests.framework; path = "Pods-LeanGameScale-LeanGameScaleUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5FA773E3CEDC5416BD69520D80826E /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/Utility/String+MD5.swift"; sourceTree = "<group>"; };
+		C0D49BC3F7719315413F71204BCE91DE /* Kingfisher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kingfisher-dummy.m"; sourceTree = "<group>"; };
+		C23AA36E9EF4BA7F92161AFE2AC2A498 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Sources/Networking/SessionDelegate.swift; sourceTree = "<group>"; };
+		C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C54579B415A7498AE3DCFD5B3D40E20D /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/General/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
+		C76E56B90786082AF9FA4A2215D69AD4 /* Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indicator.swift; path = Sources/Views/Indicator.swift; sourceTree = "<group>"; };
+		C7750E5E3C10B5D9E2C2BF7FE9A7C4A9 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/Utility/Result.swift; sourceTree = "<group>"; };
+		C7842E60FFFAAEBADAD57D2A5A9AE851 /* Pods-LeanGameScale-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LeanGameScale-Info.plist"; sourceTree = "<group>"; };
+		CA6B441043A87AF939D8378E27540012 /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Kingfisher.swift"; path = "Sources/Extensions/UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		D0D4336072DC4F643C2E7B234F644A17 /* Pods-LeanGameScale-LeanGameScaleUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LeanGameScale-LeanGameScaleUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D5C41B33F5716065ACAEA7FCC5A10DE1 /* Pods-LeanGameScale-LeanGameScaleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LeanGameScale-LeanGameScaleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DB6D4A234A677C30FDD067F936D297EC /* Storage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = Sources/Cache/Storage.swift; sourceTree = "<group>"; };
+		DC5B6A3F85F69BFD6260FF5EE2DC6E83 /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
+		E25ABC4A1D9392D5F80D8E5B314A042F /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/Networking/RequestModifier.swift; sourceTree = "<group>"; };
+		E2C6F6E770BFE78E8D588AED36A4D939 /* Pods-LeanGameScale-LeanGameScaleUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LeanGameScale-LeanGameScaleUITests-dummy.m"; sourceTree = "<group>"; };
+		E8D19976A30A141AE2553DA5AA68D7AA /* Pods-LeanGameScale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LeanGameScale.release.xcconfig"; sourceTree = "<group>"; };
+		E90CA23361BB32EDECB09F919926C545 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
+		ED002FC16F27D1B2274DC5F8B373C89C /* CacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheSerializer.swift; path = Sources/Cache/CacheSerializer.swift; sourceTree = "<group>"; };
+		EEEC6EA2BB99AF480DB2CF96F8A6E808 /* Pods-LeanGameScale.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LeanGameScale.debug.xcconfig"; sourceTree = "<group>"; };
+		F505A55E2F814D9C331A243646463782 /* Pods-LeanGameScaleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LeanGameScaleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F5B1470E70A3A17814C61807092BA1E7 /* NSButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSButton+Kingfisher.swift"; path = "Sources/Extensions/NSButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		F72DE7163C99833741A774EFBD46C00B /* SizeExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SizeExtensions.swift; path = Sources/Utility/SizeExtensions.swift; sourceTree = "<group>"; };
+		F78B3C6F8400C6B90A66A66868E87F63 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Utility/Box.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1288C0FBC32A85F23217DA4BAF61674B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA257500F9A59C7DEAA7EBA9F3DDCFDF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1CC82E000FB2163C0E9AAD57EDC0600 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7671179B79ADBEB13F04EC36CA68EA6B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7CC682A6B65B968CDCE2A52724A778D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76832F66F5317CD2B48315B2A8BE5D6C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7EEE2AED53D95FF81F503CF71ECAAAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D766EFD6660F107FEC78405FD014A3FE /* Accelerate.framework in Frameworks */,
+				7520BBB91891BC2263563F03822A1C01 /* CFNetwork.framework in Frameworks */,
+				A7A0D8D40C074424B7A4F359C8790B87 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4EDCEE8FA60C58BE6C758D9C25D78AE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0DEF253D6F5BB7309F036FA09DCDC9FF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				49CE5A236F019480C4D05CF05AF2BB54 /* AnimatedImageView.swift */,
+				0E8BA298E8B2D60E45FD43AA954C100D /* AuthenticationChallengeResponsable.swift */,
+				F78B3C6F8400C6B90A66A66868E87F63 /* Box.swift */,
+				ED002FC16F27D1B2274DC5F8B373C89C /* CacheSerializer.swift */,
+				3319ADA7681AE3065FF92FAB4EB45CEA /* CallbackQueue.swift */,
+				52BE85527431D3C48140CC42C408FB39 /* Delegate.swift */,
+				B9FF45DFCCA1C60B6926735FE6E4D7DB /* Deprecated.swift */,
+				8F21F0A741AF8A9F10DBCBD25B3A0D45 /* DiskStorage.swift */,
+				5EE930812E71BAEFB8C822D6260BEAF3 /* ExtensionHelpers.swift */,
+				B8E3DF47D084996164291E45F3937827 /* Filter.swift */,
+				083534D0F40FE4978354D65720ADC23C /* FormatIndicatedCacheSerializer.swift */,
+				12E8904B1FF215C879D893FF28C37A63 /* GIFAnimatedImage.swift */,
+				179E3832C8042EBCA365A28253552933 /* Image.swift */,
+				684878DDF42AA41F3183D1161EAD134D /* ImageCache.swift */,
+				3FC3A13730FB7E3BA926D6DEBC6EA72A /* ImageDataProcessor.swift */,
+				1F8AEAFEEF6CD19C4F452EB54E494853 /* ImageDataProvider.swift */,
+				302535FC6B44C0CC3ADC2CE7E5E89E18 /* ImageDownloader.swift */,
+				11041EE59F177F92DD8994B8BF8FC041 /* ImageDownloaderDelegate.swift */,
+				2801AA7E777726B7B8403914301A54EA /* ImageDrawing.swift */,
+				6DE8E6EC7993E64B36395F96E16D7411 /* ImageFormat.swift */,
+				11D89C4A497307BB750F25C391679BA2 /* ImageModifier.swift */,
+				3AD53E9DD41739E4250C520A2A2F2B1E /* ImagePrefetcher.swift */,
+				36BB063A2550A5737B0D8EAC72BCE8AC /* ImageProcessor.swift */,
+				7855A54FDD32BFFBC3EED85BA406393D /* ImageProgressive.swift */,
+				59CC87682A350676ABE89813810EBCCA /* ImageTransition.swift */,
+				031459AE8043B6D99C40A3A4F051AB1E /* ImageView+Kingfisher.swift */,
+				C76E56B90786082AF9FA4A2215D69AD4 /* Indicator.swift */,
+				DC5B6A3F85F69BFD6260FF5EE2DC6E83 /* Kingfisher.h */,
+				5EA7FF1EB74CFFEDCAEB66B098BF3960 /* Kingfisher.swift */,
+				5C5C2D055A9723775E294BBB6F74B092 /* KingfisherError.swift */,
+				A50CEFC916E20F462B21BC0A189B7CA2 /* KingfisherManager.swift */,
+				C54579B415A7498AE3DCFD5B3D40E20D /* KingfisherOptionsInfo.swift */,
+				15980F81B695D00D41FCD457D1B73C28 /* MemoryStorage.swift */,
+				F5B1470E70A3A17814C61807092BA1E7 /* NSButton+Kingfisher.swift */,
+				517CCAB27CE21B70B35834001009A517 /* Placeholder.swift */,
+				391C627ABFDE8C7D704FE71FA2D1D496 /* RedirectHandler.swift */,
+				E25ABC4A1D9392D5F80D8E5B314A042F /* RequestModifier.swift */,
+				78EDA0E6772DE9874ECC2C1860852B4B /* Resource.swift */,
+				C7750E5E3C10B5D9E2C2BF7FE9A7C4A9 /* Result.swift */,
+				01EB0C995AB6FB4F88F434B535CEEA8F /* RetryStrategy.swift */,
+				0038345CBC9A186C974254E82688C54F /* Runtime.swift */,
+				7EE1F4CCB1E094781AFE65EF1A649514 /* SessionDataTask.swift */,
+				C23AA36E9EF4BA7F92161AFE2AC2A498 /* SessionDelegate.swift */,
+				F72DE7163C99833741A774EFBD46C00B /* SizeExtensions.swift */,
+				582411156169A4F3F31CA945595C950C /* Source.swift */,
+				DB6D4A234A677C30FDD067F936D297EC /* Storage.swift */,
+				BE5FA773E3CEDC5416BD69520D80826E /* String+MD5.swift */,
+				CA6B441043A87AF939D8378E27540012 /* UIButton+Kingfisher.swift */,
+				BCE11E1C683E35208E54FFF51797453D /* WKInterfaceImage+Kingfisher.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		25FDF27B009ACFDBF5E6D9AC05DFDAF5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FBE9F925AAD220DD6299DD9DE0B6A71 /* Kingfisher */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		790B97AC4A69D7AA79E270DEC3A0A08E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AE2C17395CBBE3F3E385467E35B1420 /* Kingfisher.modulemap */,
+				C0D49BC3F7719315413F71204BCE91DE /* Kingfisher-dummy.m */,
+				0E36A54F0A0A5F7DAA640DD249250C6A /* Kingfisher-Info.plist */,
+				E90CA23361BB32EDECB09F919926C545 /* Kingfisher-prefix.pch */,
+				1D5A8C6D09BCA62E036640D8A099FA95 /* Kingfisher-umbrella.h */,
+				9591180165E5174CDAA1D4135196BADF /* Kingfisher.debug.xcconfig */,
+				5A491E327B1744C098EA9BBCAA85CA19 /* Kingfisher.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Kingfisher";
+			sourceTree = "<group>";
+		};
+		8FBE9F925AAD220DD6299DD9DE0B6A71 /* Kingfisher */ = {
+			isa = PBXGroup;
+			children = (
+				0DEF253D6F5BB7309F036FA09DCDC9FF /* Core */,
+				790B97AC4A69D7AA79E270DEC3A0A08E /* Support Files */,
+			);
+			name = Kingfisher;
+			path = Kingfisher;
+			sourceTree = "<group>";
+		};
+		C27D2840EAA8CA71719A9E77E70277F7 /* Pods-LeanGameScale */ = {
+			isa = PBXGroup;
+			children = (
+				ADCE3BD443BD3A695387CC838B2372A2 /* Pods-LeanGameScale.modulemap */,
+				569BEF4CDC897325240A1CE6F4E5FF47 /* Pods-LeanGameScale-acknowledgements.markdown */,
+				25FC55F3AFE910CCA66A1FB98BA46165 /* Pods-LeanGameScale-acknowledgements.plist */,
+				48E70ED2E9BA257061114BCDB687712A /* Pods-LeanGameScale-dummy.m */,
+				2DCBAD500319F282E8278F354C35BE2D /* Pods-LeanGameScale-frameworks.sh */,
+				C7842E60FFFAAEBADAD57D2A5A9AE851 /* Pods-LeanGameScale-Info.plist */,
+				6895961B325D678F4FCD07D98092F058 /* Pods-LeanGameScale-umbrella.h */,
+				EEEC6EA2BB99AF480DB2CF96F8A6E808 /* Pods-LeanGameScale.debug.xcconfig */,
+				E8D19976A30A141AE2553DA5AA68D7AA /* Pods-LeanGameScale.release.xcconfig */,
+			);
+			name = "Pods-LeanGameScale";
+			path = "Target Support Files/Pods-LeanGameScale";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
+				25FDF27B009ACFDBF5E6D9AC05DFDAF5 /* Pods */,
+				F47298881C7C5CA06C071BE469D4B8A0 /* Products */,
+				E56531CC068DD0796B93020E97C7DA93 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E4805E2B75ADB4E4D5B226C5DC9A7E61 /* Pods-LeanGameScale-LeanGameScaleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2F432AA70E98352DF560DFAB1D2EB958 /* Pods-LeanGameScale-LeanGameScaleUITests.modulemap */,
+				D0D4336072DC4F643C2E7B234F644A17 /* Pods-LeanGameScale-LeanGameScaleUITests-acknowledgements.markdown */,
+				9279C98D4B63CA04F07C940D4245795B /* Pods-LeanGameScale-LeanGameScaleUITests-acknowledgements.plist */,
+				E2C6F6E770BFE78E8D588AED36A4D939 /* Pods-LeanGameScale-LeanGameScaleUITests-dummy.m */,
+				1F1F69CC2D6508C12F368478843152AC /* Pods-LeanGameScale-LeanGameScaleUITests-frameworks.sh */,
+				08C3F2180E113385B5B45BD481DD33FD /* Pods-LeanGameScale-LeanGameScaleUITests-Info.plist */,
+				8BB2DA2DF2B64D6149568A6A71726E58 /* Pods-LeanGameScale-LeanGameScaleUITests-umbrella.h */,
+				38959E9EDE6617DAFECF6DA69C5E4C23 /* Pods-LeanGameScale-LeanGameScaleUITests.debug.xcconfig */,
+				D5C41B33F5716065ACAEA7FCC5A10DE1 /* Pods-LeanGameScale-LeanGameScaleUITests.release.xcconfig */,
+			);
+			name = "Pods-LeanGameScale-LeanGameScaleUITests";
+			path = "Target Support Files/Pods-LeanGameScale-LeanGameScaleUITests";
+			sourceTree = "<group>";
+		};
+		E56531CC068DD0796B93020E97C7DA93 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C27D2840EAA8CA71719A9E77E70277F7 /* Pods-LeanGameScale */,
+				E4805E2B75ADB4E4D5B226C5DC9A7E61 /* Pods-LeanGameScale-LeanGameScaleUITests */,
+				FF79E88081B6EBB6D19926F5CF0F7CEF /* Pods-LeanGameScaleTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F47298881C7C5CA06C071BE469D4B8A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */,
+				2B0D692288DB5282AC34A0745E879339 /* Pods_LeanGameScale.framework */,
+				BD1E894F5A49A3EFA71DD68FD67FB364 /* Pods_LeanGameScale_LeanGameScaleUITests.framework */,
+				A3170ADCDACFDE9EAC4092A5755F8366 /* Pods_LeanGameScaleTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4EDCEE8FA60C58BE6C758D9C25D78AE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				48C9CC46C04B908FF8708A6DE7FF5419 /* Accelerate.framework */,
+				4439BCA8312E4998EABBB5B2F5D9C8D4 /* CFNetwork.framework */,
+				8D3BF06BD92238CB43628415C234BF25 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FF79E88081B6EBB6D19926F5CF0F7CEF /* Pods-LeanGameScaleTests */ = {
+			isa = PBXGroup;
+			children = (
+				745BCB210174EEE47EDFC3C90CBEEB3D /* Pods-LeanGameScaleTests.modulemap */,
+				F505A55E2F814D9C331A243646463782 /* Pods-LeanGameScaleTests-acknowledgements.markdown */,
+				83981E1D08148EF38D77EDC30396F44E /* Pods-LeanGameScaleTests-acknowledgements.plist */,
+				34378293FA6093B56B550BBDAFBD571C /* Pods-LeanGameScaleTests-dummy.m */,
+				2B7867130E08E42D9CE5249890660E9C /* Pods-LeanGameScaleTests-Info.plist */,
+				543A67AE1C1D2F33FC769485797D996D /* Pods-LeanGameScaleTests-umbrella.h */,
+				4E0824F94D41168B413CF4BD7F789389 /* Pods-LeanGameScaleTests.debug.xcconfig */,
+				3328A2684C103AC8C199A69323A5CE21 /* Pods-LeanGameScaleTests.release.xcconfig */,
+			);
+			name = "Pods-LeanGameScaleTests";
+			path = "Target Support Files/Pods-LeanGameScaleTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		79FAB3CEA271FE7927839A85DD6BD95B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D89D6F7695104E270DBEC916123DEF43 /* Kingfisher-umbrella.h in Headers */,
+				39C07DB1B30E5DDCCE16B39185E8DDD9 /* Kingfisher.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDBA95AC89681F24684D1A777294EA51 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3C9EF8E98DF5AA70597E488B85C235E /* Pods-LeanGameScale-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC369D91B6D75D839A313C6A9FCB4E56 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5160E72568F72DD52E1857DC19702314 /* Pods-LeanGameScale-LeanGameScaleUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9D711ACB9FE450DAF8839B204A2C3AA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E05F182D27523997DDA8B4E5EA62D73 /* Pods-LeanGameScaleTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		013DE5196B2B2EC8087D58CF31C1E320 /* Pods-LeanGameScale-LeanGameScaleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB3DCC7E36C9BEE3E490BCD66D30B697 /* Build configuration list for PBXNativeTarget "Pods-LeanGameScale-LeanGameScaleUITests" */;
+			buildPhases = (
+				DC369D91B6D75D839A313C6A9FCB4E56 /* Headers */,
+				B8592DA5E921D2DF7702534B3D5F5D73 /* Sources */,
+				A7CC682A6B65B968CDCE2A52724A778D /* Frameworks */,
+				E5094B161D2C29FDE2DECD4A3ADD54CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7987E02E3C0D20BD441BE29B8130445 /* PBXTargetDependency */,
+			);
+			name = "Pods-LeanGameScale-LeanGameScaleUITests";
+			productName = "Pods-LeanGameScale-LeanGameScaleUITests";
+			productReference = BD1E894F5A49A3EFA71DD68FD67FB364 /* Pods_LeanGameScale_LeanGameScaleUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		45CD3582502AD89657B6062CE693EBEE /* Pods-LeanGameScale */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 628F22DA99909886F90A15554E19531C /* Build configuration list for PBXNativeTarget "Pods-LeanGameScale" */;
+			buildPhases = (
+				BDBA95AC89681F24684D1A777294EA51 /* Headers */,
+				F192F79A250D9EA0CC02DE134E887E87 /* Sources */,
+				A1CC82E000FB2163C0E9AAD57EDC0600 /* Frameworks */,
+				7CB41FBF4594F672639B5DC1A68ABD76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42E7C2DA7D082966D08B26D6E4F520F0 /* PBXTargetDependency */,
+			);
+			name = "Pods-LeanGameScale";
+			productName = "Pods-LeanGameScale";
+			productReference = 2B0D692288DB5282AC34A0745E879339 /* Pods_LeanGameScale.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		66B000C4217A2F155B78F2E313B0F7EA /* Pods-LeanGameScaleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49825695F6C423C0CE41B3979A5C0374 /* Build configuration list for PBXNativeTarget "Pods-LeanGameScaleTests" */;
+			buildPhases = (
+				E9D711ACB9FE450DAF8839B204A2C3AA /* Headers */,
+				01A01C30CFA975D68F57EBE6E1F33CD3 /* Sources */,
+				1288C0FBC32A85F23217DA4BAF61674B /* Frameworks */,
+				382F70BAA6630B7E9940C567F4D4B2B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				639436E39E24AA91A70BB92BD485B49A /* PBXTargetDependency */,
+			);
+			name = "Pods-LeanGameScaleTests";
+			productName = "Pods-LeanGameScaleTests";
+			productReference = A3170ADCDACFDE9EAC4092A5755F8366 /* Pods_LeanGameScaleTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C869AF63A76CFF19E814182B57A6BD1 /* Build configuration list for PBXNativeTarget "Kingfisher" */;
+			buildPhases = (
+				79FAB3CEA271FE7927839A85DD6BD95B /* Headers */,
+				AB1DE24E2C83D928FDF04817FD2A6AEE /* Sources */,
+				F7EEE2AED53D95FF81F503CF71ECAAAB /* Frameworks */,
+				E0DF076205BF8EC7C6B7E2040C56A4DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kingfisher;
+			productName = Kingfisher;
+			productReference = C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = F47298881C7C5CA06C071BE469D4B8A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */,
+				45CD3582502AD89657B6062CE693EBEE /* Pods-LeanGameScale */,
+				013DE5196B2B2EC8087D58CF31C1E320 /* Pods-LeanGameScale-LeanGameScaleUITests */,
+				66B000C4217A2F155B78F2E313B0F7EA /* Pods-LeanGameScaleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		382F70BAA6630B7E9940C567F4D4B2B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CB41FBF4594F672639B5DC1A68ABD76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0DF076205BF8EC7C6B7E2040C56A4DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5094B161D2C29FDE2DECD4A3ADD54CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01A01C30CFA975D68F57EBE6E1F33CD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B47DF6AC65A6AEA96E2631A215B4EEE /* Pods-LeanGameScaleTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB1DE24E2C83D928FDF04817FD2A6AEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2169973D7461954F47AE2E4B2FC29AFC /* AnimatedImageView.swift in Sources */,
+				9F4859AA0B7FF10EBFCE500D05E97F22 /* AuthenticationChallengeResponsable.swift in Sources */,
+				52AFC373558EA66A36978ACA2A59C208 /* Box.swift in Sources */,
+				D2F623D1BA8366959E5B4B28EE8C74A3 /* CacheSerializer.swift in Sources */,
+				2F39AC009FDCDC6395456DF9C6F73B2E /* CallbackQueue.swift in Sources */,
+				A1D1489ADDDD3ACD02AC9AED719208B5 /* Delegate.swift in Sources */,
+				2A946D64F55D1483CD914783D0CDBCF1 /* Deprecated.swift in Sources */,
+				413419D5EAF49981F1126220D949998D /* DiskStorage.swift in Sources */,
+				4A125BC9435C0689EFC9083C4D6AD1F1 /* ExtensionHelpers.swift in Sources */,
+				3BE14D60B48F7A168E30B6035A6679D8 /* Filter.swift in Sources */,
+				57E809146DE1D795AB566D582C5BD4FB /* FormatIndicatedCacheSerializer.swift in Sources */,
+				EF57BD189600FEFBA65A04F840192612 /* GIFAnimatedImage.swift in Sources */,
+				DE2FE634CA168C76E6F6EAECCCF2CB25 /* Image.swift in Sources */,
+				76FB3FD4AD9C576C030C1E0637C9F33E /* ImageCache.swift in Sources */,
+				82CC5117492096336ACEDE1124567CE1 /* ImageDataProcessor.swift in Sources */,
+				D33A41A088CFD8CDEF093B81473ABC24 /* ImageDataProvider.swift in Sources */,
+				0A6B5DD01688D2909B123872D28BA244 /* ImageDownloader.swift in Sources */,
+				D120E1076F09BC2B6EB04DFB77B4337E /* ImageDownloaderDelegate.swift in Sources */,
+				27AC73ECEA22469300D0C84082D5A11A /* ImageDrawing.swift in Sources */,
+				AA32E60194E22BD7D63996982953B254 /* ImageFormat.swift in Sources */,
+				DEE0BD97F8CD350B96FA108DEAD01DB5 /* ImageModifier.swift in Sources */,
+				643A62B599350B4B53DDD1410723A9F5 /* ImagePrefetcher.swift in Sources */,
+				D01F65F0FB64651347BE071B40D9137C /* ImageProcessor.swift in Sources */,
+				45C53EBA8D54ABBD03AFABA40AA04526 /* ImageProgressive.swift in Sources */,
+				1271D16ED09C3A7F1C8B59FB5E8F4C4A /* ImageTransition.swift in Sources */,
+				EA5568FD865CDC270C7FDF9D07C12A3A /* ImageView+Kingfisher.swift in Sources */,
+				A9F52292CD73CC7BC667BC6BFB13F76E /* Indicator.swift in Sources */,
+				4B11223B7E84D678CC7DCE06E7DA4F2D /* Kingfisher-dummy.m in Sources */,
+				6C4240E6A28A56C7EABA3E403BCCE73B /* Kingfisher.swift in Sources */,
+				59E1831DBFE51C03F59EB2494505179B /* KingfisherError.swift in Sources */,
+				7D2186484ADCDD14DE414F8416E78009 /* KingfisherManager.swift in Sources */,
+				D2A1BADA7775EB86BE54E76DD5287DCC /* KingfisherOptionsInfo.swift in Sources */,
+				392B550454354027A95860A24F373493 /* MemoryStorage.swift in Sources */,
+				53573D140ED2FF4625595921244E9F83 /* NSButton+Kingfisher.swift in Sources */,
+				BD311F47ACB85AC1BEECFD5A2EB97DAD /* Placeholder.swift in Sources */,
+				CDE6E025EB7814166FE10729FD8ECD99 /* RedirectHandler.swift in Sources */,
+				BF5D7A588E42170704DE3CE387810002 /* RequestModifier.swift in Sources */,
+				76C605C95842AAD9EC43BEAB6C6FD3B3 /* Resource.swift in Sources */,
+				D06D1ECF0F83459B30344E72D5BD80C0 /* Result.swift in Sources */,
+				D3B6C7CC81054A15944438950930B466 /* RetryStrategy.swift in Sources */,
+				157C093553DEA8090A5EDB594C7A10EF /* Runtime.swift in Sources */,
+				7DA111BA28D2ABAF0127448656A91BA1 /* SessionDataTask.swift in Sources */,
+				E931E4B7ED6AC4EE078413311FD623FC /* SessionDelegate.swift in Sources */,
+				9433A37319050AECED47A83CC1AB2411 /* SizeExtensions.swift in Sources */,
+				7D59B085FB0A678C50F49C942F9CDAE5 /* Source.swift in Sources */,
+				218E9683CDC3DCB849CB22E6ADDD5C4F /* Storage.swift in Sources */,
+				FB38D9498D76115C61C207652A90140B /* String+MD5.swift in Sources */,
+				CBF8F66AAE972CB75436EE640DB403DF /* UIButton+Kingfisher.swift in Sources */,
+				EF3991B6151D1EAD5C4B87ADBA8CE991 /* WKInterfaceImage+Kingfisher.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8592DA5E921D2DF7702534B3D5F5D73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14958DD3BAD1867E9C710899D8EF9EB0 /* Pods-LeanGameScale-LeanGameScaleUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F192F79A250D9EA0CC02DE134E887E87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6ED44048335E81198C083DDF65C61A12 /* Pods-LeanGameScale-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42E7C2DA7D082966D08B26D6E4F520F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kingfisher;
+			target = E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */;
+			targetProxy = B342EAD17EF999E4F5EA59B99FF1741E /* PBXContainerItemProxy */;
+		};
+		639436E39E24AA91A70BB92BD485B49A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-LeanGameScale";
+			target = 45CD3582502AD89657B6062CE693EBEE /* Pods-LeanGameScale */;
+			targetProxy = 2D98A6865B96E6657A33A1DAB883E375 /* PBXContainerItemProxy */;
+		};
+		D7987E02E3C0D20BD441BE29B8130445 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kingfisher;
+			target = E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */;
+			targetProxy = 5FC8AADDC63500667A08D0DF5DCEC4E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		257497152829C177993B5EC99C1D227A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		315FC06574F09524C2C9A6B6310AD022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38959E9EDE6617DAFECF6DA69C5E4C23 /* Pods-LeanGameScale-LeanGameScaleUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LeanGameScale-LeanGameScaleUITests/Pods-LeanGameScale-LeanGameScaleUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LeanGameScale-LeanGameScaleUITests/Pods-LeanGameScale-LeanGameScaleUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3EE912008ABC29B9077605E1AB1F7B0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEEC6EA2BB99AF480DB2CF96F8A6E808 /* Pods-LeanGameScale.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LeanGameScale/Pods-LeanGameScale-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LeanGameScale/Pods-LeanGameScale.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		437BC8BE00365738124A171E31186183 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9591180165E5174CDAA1D4135196BADF /* Kingfisher.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kingfisher/Kingfisher-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
+				PRODUCT_MODULE_NAME = Kingfisher;
+				PRODUCT_NAME = Kingfisher;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		993810DBE324124957A9067F980190B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E0824F94D41168B413CF4BD7F789389 /* Pods-LeanGameScaleTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LeanGameScaleTests/Pods-LeanGameScaleTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LeanGameScaleTests/Pods-LeanGameScaleTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9F6BE0534C910C8507A9887A0FE5B73A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3328A2684C103AC8C199A69323A5CE21 /* Pods-LeanGameScaleTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LeanGameScaleTests/Pods-LeanGameScaleTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LeanGameScaleTests/Pods-LeanGameScaleTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A47EBD968D7E59AAF2B475522125F286 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8D19976A30A141AE2553DA5AA68D7AA /* Pods-LeanGameScale.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LeanGameScale/Pods-LeanGameScale-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LeanGameScale/Pods-LeanGameScale.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A540060AEDCAD31DBBFD1214F7C8DCBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A491E327B1744C098EA9BBCAA85CA19 /* Kingfisher.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kingfisher/Kingfisher-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
+				PRODUCT_MODULE_NAME = Kingfisher;
+				PRODUCT_NAME = Kingfisher;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B6D16CA2724587838218CDAF1C4C4DBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5C41B33F5716065ACAEA7FCC5A10DE1 /* Pods-LeanGameScale-LeanGameScaleUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LeanGameScale-LeanGameScaleUITests/Pods-LeanGameScale-LeanGameScaleUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LeanGameScale-LeanGameScaleUITests/Pods-LeanGameScale-LeanGameScaleUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD8F832993327D1DD8046C3CBCBD97CD /* Debug */,
+				257497152829C177993B5EC99C1D227A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49825695F6C423C0CE41B3979A5C0374 /* Build configuration list for PBXNativeTarget "Pods-LeanGameScaleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				993810DBE324124957A9067F980190B2 /* Debug */,
+				9F6BE0534C910C8507A9887A0FE5B73A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		628F22DA99909886F90A15554E19531C /* Build configuration list for PBXNativeTarget "Pods-LeanGameScale" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EE912008ABC29B9077605E1AB1F7B0A /* Debug */,
+				A47EBD968D7E59AAF2B475522125F286 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C869AF63A76CFF19E814182B57A6BD1 /* Build configuration list for PBXNativeTarget "Kingfisher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				437BC8BE00365738124A171E31186183 /* Debug */,
+				A540060AEDCAD31DBBFD1214F7C8DCBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB3DCC7E36C9BEE3E490BCD66D30B697 /* Build configuration list for PBXNativeTarget "Pods-LeanGameScale-LeanGameScaleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				315FC06574F09524C2C9A6B6310AD022 /* Debug */,
+				B6D16CA2724587838218CDAF1C4C4DBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

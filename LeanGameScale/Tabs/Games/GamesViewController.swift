@@ -19,10 +19,13 @@ class GamesViewController: UIViewController, Storyboarded {
     
     var viewModel: GamesViewModelProtocol! {
         didSet {
-            viewModel.delegate = self
+            if viewModel != nil { viewModel.delegate = self }
         }
     }
+    
+    private var cellIdentifier: String = "gameCellIdentifier"
 
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,37 +37,54 @@ class GamesViewController: UIViewController, Storyboarded {
     }
     
     
-    // MARK: - Setup
+    // MARK: - Setup UI
     private func setupSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search for games"
         navigationItem.searchController = searchController
         definesPresentationContext = true
-        
-        navigationItem.searchController = searchController
     }
     
     private func setupTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "denemeCell")
-        tableView.rowHeight = 120
+        tableView.register(UINib(nibName: "GameTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: cellIdentifier)
+        tableView.rowHeight = 136
+        tableView.keyboardDismissMode = .interactive
+        tableView.tableFooterView = UIView(frame: .zero)
         tableView.dataSource = self
+        tableView.delegate = self
     }
 }
 
+
+// MARK: - UITableViewDataSource
 extension GamesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.games.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "denemeCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! GameTableViewCell
         
         let game = viewModel.games[indexPath.row]
-        
-        cell.textLabel?.text = game.name
+        cell.configure(with: GameTableCellViewModel(game: game))
         
         return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension GamesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == (viewModel?.games.count ?? 0) - 1  {
+            viewModel?.handlePagination()
+        }
     }
 }
 
@@ -84,13 +104,15 @@ extension GamesViewController: UISearchResultsUpdating {
 // MARK: - GamesViewModelDelegate
 extension GamesViewController: GamesViewModelDelegate {
     func handleGamesDataState(_ state: GamesViewModelState) {
-        switch state {
-        case .isLoadingData(let isLoading):
-            isLoading ? startAnimating() : stopAnimating()
-        case .dataReady:
-            tableView.reloadData()
-        case .requestFailed(let error):
-            debugPrint(error.localizedDescription)
+        DispatchQueue.main.async {
+            switch state {
+            case .isLoadingData(let isLoading):
+                isLoading ? self.startAnimating() : self.stopAnimating()
+            case .dataReady:
+                self.tableView.reloadData()
+            case .requestFailed(let error):
+                debugPrint(error.localizedDescription)
+            }
         }
     }
 }

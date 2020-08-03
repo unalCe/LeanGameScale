@@ -14,6 +14,7 @@ protocol GamesViewModelProtocol {
     var games: [GamesResult] { get }
     func fetchAllGames()
     func searchGames(with keyword: String)
+    func handlePagination()
 }
 
 protocol GamesViewModelDelegate: class {
