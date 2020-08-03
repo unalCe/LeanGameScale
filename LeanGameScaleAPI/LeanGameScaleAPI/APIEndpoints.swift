@@ -50,7 +50,7 @@ extension APIEndpoints {
         }
     }
     
-    private func queryParameters(_ page: Int = 1,
+    private func queryParameters(_ page: Int,
                                  _ keyword: String? = nil) -> [URLQueryItem] {
         var items = [URLQueryItem]()
         items.append(URLQueryItem(name: "page_size", value: "10"))  // This accepted as default

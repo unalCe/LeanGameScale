@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2CCA6C94114E076249A51E71 /* Pods_LeanGameScaleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5A0B1A7997CD5274836C15 /* Pods_LeanGameScaleTests.framework */; };
 		714D2067FE515A04A4B7E687 /* Pods_LeanGameScale_LeanGameScaleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA4849572C763C9E7862482 /* Pods_LeanGameScale_LeanGameScaleUITests.framework */; };
 		902416A424D74FCF00B4AE15 /* GameTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902416A324D74FCF00B4AE15 /* GameTableCellViewModel.swift */; };
+		902416A824D7FE8B00B4AE15 /* UITableView-ReloadAnimated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902416A724D7FE8B00B4AE15 /* UITableView-ReloadAnimated.swift */; };
 		90F093E124D4A4170043B1EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F093E024D4A4170043B1EA /* AppDelegate.swift */; };
 		90F093E524D4A4170043B1EA /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F093E424D4A4170043B1EA /* GamesViewController.swift */; };
 		90F093EB24D4A4170043B1EA /* LeanGameScale.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90F093E924D4A4170043B1EA /* LeanGameScale.xcdatamodeld */; };
@@ -76,7 +77,7 @@
 		7AA4849572C763C9E7862482 /* Pods_LeanGameScale_LeanGameScaleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeanGameScale_LeanGameScaleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F5C2E0766E39FF1514CAF0A /* Pods_LeanGameScale.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeanGameScale.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		902416A324D74FCF00B4AE15 /* GameTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableCellViewModel.swift; sourceTree = "<group>"; };
-		902416A524D7512300B4AE15 /* LeanGameScaleAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LeanGameScaleAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		902416A724D7FE8B00B4AE15 /* UITableView-ReloadAnimated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView-ReloadAnimated.swift"; sourceTree = "<group>"; };
 		90F093DD24D4A4170043B1EA /* LeanGameScale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeanGameScale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F093E024D4A4170043B1EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90F093E424D4A4170043B1EA /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +149,6 @@
 				51ABA2BF6AC95D3DD14D7AA4 /* Pods-LeanGameScaleTests.debug.xcconfig */,
 				6910022B2729843F2EF0D801 /* Pods-LeanGameScaleTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -276,7 +276,6 @@
 		90F2819424D690F50049AF0E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				902416A524D7512300B4AE15 /* LeanGameScaleAPI.framework */,
 				90F2819524D690F50049AF0E /* LeanGameScaleAPI.framework */,
 				7F5C2E0766E39FF1514CAF0A /* Pods_LeanGameScale.framework */,
 				7AA4849572C763C9E7862482 /* Pods_LeanGameScale_LeanGameScaleUITests.framework */,
@@ -290,6 +289,7 @@
 			children = (
 				90F281A924D71DD30049AF0E /* Collection-SafeIndex.swift */,
 				90F281AB24D725530049AF0E /* UIViewController-LoadingAnimation.swift */,
+				902416A724D7FE8B00B4AE15 /* UITableView-ReloadAnimated.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -552,6 +552,7 @@
 				90F2816924D5A2A20049AF0E /* GamesCoordinator.swift in Sources */,
 				90F2816024D59D920049AF0E /* Storyboarded.swift in Sources */,
 				90F2816724D5A1D90049AF0E /* MainTabBarController.swift in Sources */,
+				902416A824D7FE8B00B4AE15 /* UITableView-ReloadAnimated.swift in Sources */,
 				90F093E524D4A4170043B1EA /* GamesViewController.swift in Sources */,
 				902416A424D74FCF00B4AE15 /* GameTableCellViewModel.swift in Sources */,
 				90F281B024D7449E0049AF0E /* GameTableViewCell.swift in Sources */,

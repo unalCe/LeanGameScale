@@ -19,7 +19,7 @@ class GamesViewController: UIViewController, Storyboarded {
     
     var viewModel: GamesViewModelProtocol! {
         didSet {
-            viewModel.delegate = self
+            if viewModel != nil { viewModel.delegate = self }
         }
     }
     
@@ -49,8 +49,11 @@ class GamesViewController: UIViewController, Storyboarded {
     private func setupTableView() {
         tableView.register(UINib(nibName: "GameTableViewCell", bundle: nil),
                            forCellReuseIdentifier: cellIdentifier)
-        tableView.rowHeight = 120
+        tableView.rowHeight = 136
+        tableView.keyboardDismissMode = .interactive
+        tableView.tableFooterView = UIView(frame: .zero)
         tableView.dataSource = self
+        tableView.delegate = self
     }
 }
 
@@ -68,6 +71,20 @@ extension GamesViewController: UITableViewDataSource {
         cell.configure(with: GameTableCellViewModel(game: game))
         
         return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension GamesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == (viewModel?.games.count ?? 0) - 1  {
+            viewModel?.handlePagination()
+        }
     }
 }
 

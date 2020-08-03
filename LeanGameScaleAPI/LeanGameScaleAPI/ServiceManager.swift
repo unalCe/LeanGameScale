@@ -87,7 +87,6 @@ public final class ServiceManager {
 // MARK: - Fetch Services
 extension ServiceManager {
 
-    // FIXME: **** ** * * * *    Response handler generic Types!!
     // MARK: - All Games
     public func fetchAllGames(in page: Int, completion: @escaping ResponseHandler<BaseGamesResponse>) {
         requestData(fromEndpoint: .games(page), completion: completion)
