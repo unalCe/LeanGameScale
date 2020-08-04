@@ -29,6 +29,7 @@ final class GamesCoordinator: Coordinator {
     public func showDetail(with gameId: String) {
         let detailViewController = GameDetailViewController.instantiate(storyboard: .GameDetail)
         detailViewController.gameName = gameId
+        detailViewController.image = #imageLiteral(resourceName: "GamesTab")
         navigationController.pushViewController(detailViewController, animated: true)
     }
 }

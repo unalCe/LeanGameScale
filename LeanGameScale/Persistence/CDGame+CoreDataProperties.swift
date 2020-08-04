@@ -18,5 +18,7 @@ extension CDGame {
 
     @NSManaged public var name: String?
     @NSManaged public var isFavorite: Bool
+    @NSManaged public var metacritic: Float
+    @NSManaged public var imageData: Data?
 
 }

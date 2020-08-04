@@ -17,6 +17,8 @@ class GameDetailViewController: UIViewController, Storyboarded {
     var gameName: String?
     var isFavorited: Bool = false
     
+    var image: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +30,8 @@ class GameDetailViewController: UIViewController, Storyboarded {
         let coreDataGame = CDGame(context: PersistanceService.context)
         coreDataGame.name = gameName
         coreDataGame.isFavorite = !isFavorited
+        coreDataGame.metacritic = 33.3
+        coreDataGame.imageData = image?.jpegData(compressionQuality: 0.75)
         PersistanceService.saveContext()
     }
 }

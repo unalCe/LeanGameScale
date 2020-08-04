@@ -14,6 +14,7 @@ public enum APIError: String, Error {
     case invalidData = "The data is invalid"
     case invalidResponse = "The response is invalid"
     case decodingError = "Decoding failed"
+    case noConnection = "The Internet connection appears to be offline."
 }
 
 
@@ -48,6 +49,11 @@ public final class ServiceManager {
         currentDataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
 
             if let error = error {
+                // This is an error prone way to check internet connection.
+                if error.localizedDescription == APIError.noConnection.rawValue {
+                    completion(.failure(APIError.noConnection))
+                    return
+                }
                 completion(.failure(error))
                 return
             }

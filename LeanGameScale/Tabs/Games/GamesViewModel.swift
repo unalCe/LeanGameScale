@@ -25,7 +25,7 @@ final class GamesViewModel: GamesViewModelProtocol {
     
     /// Current search state of the viewModel
     private var isSearching: Bool = false
-    private var lastSearchedKeyword: String?
+    private(set) var lastSearchedKeyword: String?
     
     /// Current page that will be requested
     private var page: Int = 1

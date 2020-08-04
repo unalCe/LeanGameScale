@@ -12,6 +12,7 @@ import LeanGameScaleAPI
 protocol GamesViewModelProtocol {
     var delegate: GamesViewModelDelegate? { get set }
     var games: [GamesResult] { get }
+    var lastSearchedKeyword: String? { get }
     func isGameAlreadyOpened(_ game: GamesResult) -> Bool
     func saveOpenedGame(with gameID: Int)
     func fetchAlreadyOpenedGames()
