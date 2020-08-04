@@ -9,6 +9,7 @@
 import Foundation
 
 public struct GamesResult: Decodable {
+    public let id: Int?
     public let name: String?
     public let backgroundImage: URL?
     public let rating: Float?
@@ -16,7 +17,7 @@ public struct GamesResult: Decodable {
     public let genres: [GameGenre]?
     
     public enum CodingKeys: String, CodingKey {
-        case name, rating, metacritic, genres
+        case name, rating, metacritic, genres, id
         case backgroundImage = "background_image"
     }
 }
