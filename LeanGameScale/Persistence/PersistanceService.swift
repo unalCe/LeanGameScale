@@ -17,12 +17,24 @@ final class PersistanceService {
         persistentContainer.viewContext
     }
     
-    // MARK: - Actions
+    // MARK: - Opened Games Actions
     
-    static public func saveOpenedGame(game: CDGame) {
-        
+    static public func saveOpenedGame(gameId: Int) {
+        let openedGame = OpenedGames(context: context)
+        openedGame.gameId = Int32(gameId)
+        saveContext()
     }
     
+    static public func fetchOpenedGames() -> [Int] {
+        let fetchRequest: NSFetchRequest<OpenedGames> = OpenedGames.fetchRequest()
+        do {
+            let openedGames =  try context.fetch(fetchRequest)
+            return openedGames.map({ Int($0.gameId) })
+        } catch(let err) {
+            assertionFailure("failed to fetch opened games: \(err.localizedDescription)")
+            return []
+        }
+    }
     
     
     
@@ -38,18 +50,8 @@ final class PersistanceService {
         let container = NSPersistentContainer(name: "LeanGameScale")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                 
-                /*
-                 Typical reasons for an error here include:
-                 * The parent directory does not exist, cannot be created, or disallows writing.
-                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                 * The device is out of space.
-                 * The store could not be migrated to the current model version.
-                 Check the error message to determine what the actual problem was.
-                 */
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+                // This should never happen in a live app, so crash the app while in development.
+                assertionFailure("Unresolved error \(error), \(error.userInfo)")
             }
         })
         return container
@@ -63,10 +65,8 @@ final class PersistanceService {
             do {
                 try context.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                assertionFailure("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
     }

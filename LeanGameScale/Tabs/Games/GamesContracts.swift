@@ -12,9 +12,12 @@ import LeanGameScaleAPI
 protocol GamesViewModelProtocol {
     var delegate: GamesViewModelDelegate? { get set }
     var games: [GamesResult] { get }
+    func isGameAlreadyOpened(_ game: GamesResult) -> Bool
+    func saveOpenedGame(with gameID: Int)
+    func fetchAlreadyOpenedGames()
     func fetchAllGames()
     func searchGames(with keyword: String)
-    func handlePagination()
+    func fetchMoreForNewPage()
 }
 
 protocol GamesViewModelDelegate: class {

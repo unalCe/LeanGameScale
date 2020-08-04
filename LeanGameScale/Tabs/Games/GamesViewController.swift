@@ -36,6 +36,12 @@ class GamesViewController: UIViewController, Storyboarded {
         setupTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        viewModel.fetchAlreadyOpenedGames()
+    }
+    
     
     // MARK: - Setup UI
     private func setupSearchController() {
@@ -68,7 +74,9 @@ extension GamesViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! GameTableViewCell
         
         let game = viewModel.games[indexPath.row]
-        cell.configure(with: GameTableCellViewModel(game: game))
+        let isOpenedBefore = viewModel.isGameAlreadyOpened(game)
+        cell.configure(with: GameTableCellViewModel(game: game,
+                                                    isOpenedBefore: isOpenedBefore))
         
         return cell
     }
@@ -77,14 +85,17 @@ extension GamesViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension GamesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        let game = viewModel.games[indexPath.row]
+        guard let game = viewModel.games[safe: indexPath.row], let gameId = game.id else {
+            return
+        }
+        
         coordinator?.showDetail(with: game.name ?? "")
+        viewModel.saveOpenedGame(with: gameId)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == (viewModel?.games.count ?? 0) - 1  {
-            viewModel?.handlePagination()
+            viewModel?.fetchMoreForNewPage()
         }
     }
 }

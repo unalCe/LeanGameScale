@@ -40,6 +40,8 @@ final class GamesViewModel: GamesViewModelProtocol {
         isSearching ? searchedGames : allGames
     }
     
+    private var previouslyOpenedGamesIDs: [Int] = []
+    
     
     // MARK: - Service
     
@@ -88,7 +90,7 @@ final class GamesViewModel: GamesViewModelProtocol {
         }
     }
     
-    func handlePagination() {
+    func fetchMoreForNewPage() {
         if isSearching, let lastSearchKeyword = lastSearchedKeyword {
             searchGames(with: lastSearchKeyword)
         } else {
@@ -103,5 +105,25 @@ final class GamesViewModel: GamesViewModelProtocol {
         default:
             return false
         }
+    }
+    
+    
+    // MARK: - Opened Games Stack
+    
+    func fetchAlreadyOpenedGames() {
+        previouslyOpenedGamesIDs = PersistanceService.fetchOpenedGames()
+    }
+    
+    func saveOpenedGame(with gameID: Int) {
+        PersistanceService.saveOpenedGame(gameId: gameID)
+        previouslyOpenedGamesIDs.append(gameID)
+    }
+    
+    func isGameAlreadyOpened(_ game: GamesResult) -> Bool {
+        guard let gameID = game.id else {
+            return false
+        }
+        
+        return previouslyOpenedGamesIDs.contains(gameID)
     }
 }

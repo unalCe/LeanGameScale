@@ -13,9 +13,12 @@ struct GameTableCellViewModel {
     
     private var game: GamesResult
     
-    init(game: GamesResult) {
+    init(game: GamesResult, isOpenedBefore: Bool = false) {
         self.game = game
+        self.isOpenedBefore = isOpenedBefore
     }
+    
+    private(set) var isOpenedBefore: Bool
     
     var gameName: String? {
         game.name

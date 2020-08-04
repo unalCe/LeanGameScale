@@ -16,6 +16,8 @@
 		902416B024D89FA600B4AE15 /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902416AF24D89FA500B4AE15 /* PersistanceService.swift */; };
 		909ED0D824D98D4C0039A260 /* CDGame+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909ED0D624D98D4B0039A260 /* CDGame+CoreDataClass.swift */; };
 		909ED0D924D98D4C0039A260 /* CDGame+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909ED0D724D98D4C0039A260 /* CDGame+CoreDataProperties.swift */; };
+		909ED0DC24D996E40039A260 /* OpenedGames+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909ED0DB24D996E30039A260 /* OpenedGames+CoreDataProperties.swift */; };
+		909ED0DD24D996E40039A260 /* OpenedGames+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909ED0DA24D996E30039A260 /* OpenedGames+CoreDataClass.swift */; };
 		90F093E124D4A4170043B1EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F093E024D4A4170043B1EA /* AppDelegate.swift */; };
 		90F093E524D4A4170043B1EA /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F093E424D4A4170043B1EA /* GamesViewController.swift */; };
 		90F093EB24D4A4170043B1EA /* LeanGameScale.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90F093E924D4A4170043B1EA /* LeanGameScale.xcdatamodeld */; };
@@ -88,6 +90,8 @@
 		902416AF24D89FA500B4AE15 /* PersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
 		909ED0D624D98D4B0039A260 /* CDGame+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDGame+CoreDataClass.swift"; path = "/Users/unalcelik/Developer/LeanGameScale/LeanGameScale/Persistence/CDGame+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		909ED0D724D98D4C0039A260 /* CDGame+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDGame+CoreDataProperties.swift"; path = "/Users/unalcelik/Developer/LeanGameScale/LeanGameScale/Persistence/CDGame+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		909ED0DA24D996E30039A260 /* OpenedGames+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OpenedGames+CoreDataClass.swift"; path = "/Users/unalcelik/Developer/LeanGameScale/LeanGameScale/Persistence/OpenedGames+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		909ED0DB24D996E30039A260 /* OpenedGames+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OpenedGames+CoreDataProperties.swift"; path = "/Users/unalcelik/Developer/LeanGameScale/LeanGameScale/Persistence/OpenedGames+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		90F093DD24D4A4170043B1EA /* LeanGameScale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeanGameScale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F093E024D4A4170043B1EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90F093E424D4A4170043B1EA /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
@@ -255,6 +259,8 @@
 		90F0941724D4AF1F0043B1EA /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				909ED0DA24D996E30039A260 /* OpenedGames+CoreDataClass.swift */,
+				909ED0DB24D996E30039A260 /* OpenedGames+CoreDataProperties.swift */,
 				909ED0D624D98D4B0039A260 /* CDGame+CoreDataClass.swift */,
 				909ED0D724D98D4C0039A260 /* CDGame+CoreDataProperties.swift */,
 				90F093E924D4A4170043B1EA /* LeanGameScale.xcdatamodeld */,
@@ -579,6 +585,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90F2815E24D59D880049AF0E /* Coordinator.swift in Sources */,
+				909ED0DC24D996E40039A260 /* OpenedGames+CoreDataProperties.swift in Sources */,
 				90F281AA24D71DD30049AF0E /* Collection-SafeIndex.swift in Sources */,
 				909ED0D824D98D4C0039A260 /* CDGame+CoreDataClass.swift in Sources */,
 				90F093EB24D4A4170043B1EA /* LeanGameScale.xcdatamodeld in Sources */,
@@ -589,6 +596,7 @@
 				90F093E524D4A4170043B1EA /* GamesViewController.swift in Sources */,
 				902416A424D74FCF00B4AE15 /* GameTableCellViewModel.swift in Sources */,
 				909ED0D924D98D4C0039A260 /* CDGame+CoreDataProperties.swift in Sources */,
+				909ED0DD24D996E40039A260 /* OpenedGames+CoreDataClass.swift in Sources */,
 				90F281B024D7449E0049AF0E /* GameTableViewCell.swift in Sources */,
 				90F2816524D5A1A90049AF0E /* FavoritesViewController.swift in Sources */,
 				90F2816B24D5A30C0049AF0E /* FavoritesCoordinator.swift in Sources */,
