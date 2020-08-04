@@ -15,6 +15,7 @@ class GameDetailViewController: UIViewController, Storyboarded {
     @IBOutlet weak var isFavoritedLabel: UILabel!
     
     var gameName: String?
+    var isFavorited: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,9 @@ class GameDetailViewController: UIViewController, Storyboarded {
     }
     
     @IBAction func favoriteButtonTapped(_ sender: Any) {
-        
+        let coreDataGame = CDGame(context: PersistanceService.context)
+        coreDataGame.name = gameName
+        coreDataGame.isFavorite = !isFavorited
+        PersistanceService.saveContext()
     }
 }
