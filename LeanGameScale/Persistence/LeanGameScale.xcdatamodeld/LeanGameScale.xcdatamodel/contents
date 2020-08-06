@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CDGame" representedClassName="CDGame" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" usesScalarValueType="YES"/>
         <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="isFavorite" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="metacritic" attributeType="Float" minValueString="0" maxValueString="100" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="name" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <entity name="OpenedGames" representedClassName="OpenedGames" syncable="YES">
         <attribute name="gameId" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="gameId"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="CDGame" positionX="-63" positionY="-18" width="128" height="103"/>
-        <element name="OpenedGames" positionX="-54" positionY="9" width="128" height="58"/>
+        <element name="CDGame" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="OpenedGames" positionX="192.38671875" positionY="-17.43359375" width="128" height="58"/>
     </elements>
 </model>

@@ -57,6 +57,7 @@ class GamesViewController: UIViewController, Storyboarded {
                            forCellReuseIdentifier: cellIdentifier)
         tableView.rowHeight = 136
         tableView.keyboardDismissMode = .interactive
+        tableView.showsVerticalScrollIndicator = false
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.dataSource = self
         tableView.delegate = self
@@ -104,7 +105,7 @@ extension GamesViewController: UITableViewDelegate {
             return
         }
         
-        coordinator?.showDetail(with: game.name ?? "")
+        coordinator?.showDetail(with: gameId)
         viewModel.saveOpenedGame(with: gameId)
     }
     

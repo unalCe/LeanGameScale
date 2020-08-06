@@ -6,6 +6,7 @@
 //  Copyright © 2020 unalCe. All rights reserved.
 //
 
+import LeanGameScaleAPI
 import Foundation
 import CoreData
 
@@ -37,7 +38,6 @@ final class PersistanceService {
     }
     
     
-    
     // MARK: - Core Data stack
 
     static var persistentContainer: NSPersistentContainer = {
@@ -48,6 +48,7 @@ final class PersistanceService {
          error conditions that could cause the creation of the store to fail.
         */
         let container = NSPersistentContainer(name: "LeanGameScale")
+        container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // This should never happen in a live app, so crash the app while in development.
