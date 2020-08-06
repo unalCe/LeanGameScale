@@ -18,14 +18,14 @@ class FavoritesViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "favorites")
         tableView.dataSource = self
         tableView.rowHeight = 90
-                
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         let fetchReq: NSFetchRequest<CDGame> = CDGame.fetchRequest()
         
         do {
@@ -34,8 +34,6 @@ class FavoritesViewController: UIViewController, Storyboarded {
         } catch(let err) {
             debugPrint(err.localizedDescription)
         }
-        
-        
     }
 }
 
@@ -48,8 +46,7 @@ extension FavoritesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favorites", for: indexPath)
         cell.textLabel?.text = favGames[safe: indexPath.row]?.name
+        // debugPrint(favGames[safe: indexPath.row]?.imageData)
         return cell
     }
-    
-    
 }

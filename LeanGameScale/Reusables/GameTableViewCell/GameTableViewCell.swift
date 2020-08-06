@@ -38,10 +38,11 @@ class GameTableViewCell: UITableViewCell {
         metacriticPointLabel.text = viewModel.metacriticScore
         genreLabel.text = viewModel.genres
         
+        gameImageView.kf.indicatorType = .activity
         gameImageView.kf.setImage(with: viewModel.gameImageUrl,
                                       options: [
                                         .scaleFactor(UIScreen.main.scale),
-                                        .transition(.fade(1)),
+                                        .transition(.fade(0.5)),
                                         .cacheOriginalImage
         ])
     }

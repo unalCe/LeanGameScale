@@ -26,9 +26,11 @@ final class GamesCoordinator: Coordinator {
         navigationController.viewControllers = [viewController]
     }
     
-    public func showDetail(with gameId: String) {
+    public func showDetail(with gameId: Int) {
         let detailViewController = GameDetailViewController.instantiate(storyboard: .GameDetail)
-        detailViewController.gameName = gameId
+        detailViewController.navigationItem.largeTitleDisplayMode = .never
+        
+        detailViewController.viewModel = GameDetailViewModel(gameID: gameId)
         navigationController.pushViewController(detailViewController, animated: true)
     }
 }

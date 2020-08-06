@@ -47,7 +47,7 @@ class GamesViewController: UIViewController, Storyboarded {
     private func setupSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search for games"
+        searchController.searchBar.placeholder = "Search for games" //TODO: Localize
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
@@ -57,6 +57,7 @@ class GamesViewController: UIViewController, Storyboarded {
                            forCellReuseIdentifier: cellIdentifier)
         tableView.rowHeight = 136
         tableView.keyboardDismissMode = .interactive
+        tableView.showsVerticalScrollIndicator = false
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.dataSource = self
         tableView.delegate = self
@@ -66,6 +67,21 @@ class GamesViewController: UIViewController, Storyboarded {
 
 // MARK: - UITableViewDataSource
 extension GamesViewController: UITableViewDataSource {
+    // Handle empty data result
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if viewModel.games.count > 0 {
+            tableView.backgroundView = nil
+            return 1
+        } else {
+            if let searchKeyword = viewModel.lastSearchedKeyword {
+                tableView.setEmptyView(message: "No games found for \"\(searchKeyword)\"")
+            } else {
+                tableView.setEmptyView(message: "No games found.")
+            }
+            return 0
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.games.count
     }
@@ -89,13 +105,13 @@ extension GamesViewController: UITableViewDelegate {
             return
         }
         
-        coordinator?.showDetail(with: game.name ?? "")
+        coordinator?.showDetail(with: gameId)
         viewModel.saveOpenedGame(with: gameId)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == (viewModel?.games.count ?? 0) - 1  {
-            viewModel?.fetchMoreForNewPage()
+        if indexPath.row == (viewModel.games.count) - 1  {
+            viewModel.fetchMoreForNewPage()
         }
     }
 }
@@ -123,7 +139,9 @@ extension GamesViewController: GamesViewModelDelegate {
             case .dataReady:
                 self.tableView.reloadData()
             case .requestFailed(let error):
-                debugPrint(error.localizedDescription)
+                if let error = error as? APIError, error == .noConnection {
+                    debugPrint("Handle no network")
+                }
             }
         }
     }
