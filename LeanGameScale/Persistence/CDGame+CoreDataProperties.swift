@@ -2,7 +2,7 @@
 //  CDGame+CoreDataProperties.swift
 //  
 //
-//  Created by Unal Celik on 4.08.2020.
+//  Created by Unal Celik on 5.08.2020.
 //
 //
 
@@ -16,9 +16,10 @@ extension CDGame {
         return NSFetchRequest<CDGame>(entityName: "CDGame")
     }
 
-    @NSManaged public var name: String?
+    @NSManaged public var imageData: Data?
     @NSManaged public var isFavorite: Bool
     @NSManaged public var metacritic: Float
-    @NSManaged public var imageData: Data?
+    @NSManaged public var name: String?
+    @NSManaged public var id: Int32
 
 }
