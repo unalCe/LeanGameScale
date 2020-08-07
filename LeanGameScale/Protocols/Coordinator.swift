@@ -13,3 +13,14 @@ protocol Coordinator: AnyObject {
     // func start()
 }
 
+// This is a common use in both GamesCoordinator and FavoritesCoordinator
+extension Coordinator {
+    public func showDetail(with gameId: Int) {
+        let detailViewController = GameDetailViewController.instantiate(storyboard: .GameDetail)
+        detailViewController.navigationItem.largeTitleDisplayMode = .never
+        
+        detailViewController.viewModel = GameDetailViewModel(gameID: gameId)
+        navigationController.pushViewController(detailViewController, animated: true)
+    }
+}
+

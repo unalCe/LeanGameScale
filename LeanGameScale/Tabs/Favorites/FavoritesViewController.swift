@@ -23,6 +23,7 @@ class FavoritesViewController: UIViewController, Storyboarded {
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "favorites")
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.rowHeight = 90
     }
     
@@ -54,13 +55,6 @@ extension FavoritesViewController: UITableViewDataSource {
         // debugPrint(favGames[safe: indexPath.row]?.imageData)
         return cell
     }
-}
-
-extension FavoritesViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        // TODO: push detail from coordinator
-    }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -70,5 +64,18 @@ extension FavoritesViewController: UITableViewDelegate {
                 }
             }
         }
+    }
+}
+
+
+// MARK: - UITableViewDelegate
+
+extension FavoritesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let game = viewModel.game(at: indexPath.row) else {
+            return
+        }
+        coordinator?.showDetail(with: Int(game.id))
     }
 }

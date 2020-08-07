@@ -24,5 +24,4 @@ class FavoritesCoordinator: Coordinator {
 
         navigationController.viewControllers = [viewController]
     }
-    
 }
