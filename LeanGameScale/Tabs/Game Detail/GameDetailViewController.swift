@@ -45,10 +45,9 @@ class GameDetailViewController: UIViewController, Storyboarded {
     // MARK: - Setup UI
     
     private func setupRightBarButton(animated: Bool) {
-        // TODO: Check if favorited before, in ViewModel
-        // let buttonTitle = viewModel.gameIsFavorited ? : "Favorited" : "Favorite"
-        // let favoriteBarButtonItem = UIBarButtonItem(title: butonTitle, style: .plain, target: self, action: #selector(favoriteTapped))
-        //navigationItem.setRightBarButton(favoriteBarButtonItem, animated: animated)
+         let buttonTitle = viewModel.isGameFavorited ?  "Favorited" : "Favorite"
+         let favoriteBarButtonItem = UIBarButtonItem(title: buttonTitle, style: .plain, target: self, action: #selector(favoriteTapped))
+        navigationItem.setRightBarButton(favoriteBarButtonItem, animated: animated)
     }
     
     private func setupTableView() {
@@ -82,7 +81,7 @@ class GameDetailViewController: UIViewController, Storyboarded {
     }
     
     @objc func favoriteTapped() {
-        // TODO: Handle in viewModel
+        viewModel.handleFavoriteAction()
     }
 }
 

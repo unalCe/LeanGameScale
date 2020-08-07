@@ -10,57 +10,114 @@ import LeanGameScaleAPI
 import Foundation
 import CoreData
 
+/// This is a globally reachable persistenceService endpoint for  simpler use.
+let persistanceService = PersistanceService.shared
+
+/// Singleton class for handling Core Data related functionality
 final class PersistanceService {
+    
+    static public let shared = PersistanceService()
     
     private init() { }
     
-    static public var context: NSManagedObjectContext {
+    public var context: NSManagedObjectContext {
         persistentContainer.viewContext
     }
     
+    
+    private func fetchEntities<T: NSManagedObject>(entity: T.Type, predicateFilter: NSPredicate? = nil) -> [T]? {
+        var results: [T]?
+        
+        if let fetchRequest: NSFetchRequest<T> = T.fetchRequest() as? NSFetchRequest<T> {
+            fetchRequest.predicate = predicateFilter
+            do {
+                results = try context.fetch(fetchRequest)
+            } catch  {
+                assert(false, error.localizedDescription)
+                return nil
+            }
+        } else {
+            assert(false,"Error: cast to NSFetchRequest<T> failed")
+            return nil
+        }
+        
+        return results
+    }
+    
+    
     // MARK: - Opened Games Actions
     
-    static public func saveOpenedGame(gameId: Int) {
+    public func saveOpenedGame(gameId: Int) {
         let openedGame = OpenedGames(context: context)
         openedGame.gameId = Int32(gameId)
         saveContext()
     }
     
-    static public func fetchOpenedGames() -> [Int] {
-        let fetchRequest: NSFetchRequest<OpenedGames> = OpenedGames.fetchRequest()
-        do {
-            let openedGames =  try context.fetch(fetchRequest)
-            return openedGames.map({ Int($0.gameId) })
-        } catch(let err) {
-            assertionFailure("failed to fetch opened games: \(err.localizedDescription)")
+    public func fetchOpenedGamesIDs() -> [Int] {
+        if let openedGames = fetchEntities(entity: OpenedGames.self) {
+            return openedGames.map({ Int($0.gameId)} )
+        } else {
             return []
         }
     }
     
     
+    // MARK: - Favorite Games
+    
+    /// Returns true if game exists in favorited database, false otherwise. Returns nil if fetch fails.
+    /// - Parameter game: GameID to be searched in favorites
+    public func isGameFavorited(_ gameID: Int) -> Bool {
+        let id = Int32(gameID)
+        let predicate = NSPredicate(format: "id == %d", id)
+        if let favorited = fetchEntities(entity: FavoritedGames.self, predicateFilter: predicate) {
+            return !favorited.isEmpty
+        }
+        return false
+    }
+    
+    public func fetchFavoritedGames() -> [FavoritedGames] {
+        if let favorited = fetchEntities(entity: FavoritedGames.self) {
+            return favorited
+        }
+        return []
+    }
+    
+    public func saveFavoritedGame(_ game: Game, imageData: Data? = nil) {
+        guard let gameID = game.id else { return }
+        
+        let favoritedGame = FavoritedGames(context: context)
+        favoritedGame.id = Int32(gameID)
+        favoritedGame.imageData = imageData
+        favoritedGame.name = game.name
+        favoritedGame.genres = game.genresAsString()
+        favoritedGame.metacritic = game.metacritic ?? 0
+        saveContext()
+    }
+    
+    public func removeFavoritedGame(_ gameID: Int) {
+        
+    }
+    
+    
     // MARK: - Core Data stack
 
-    static var persistentContainer: NSPersistentContainer = {
-        /*
-         The persistent container for the application. This implementation
-         creates and returns a container, having loaded the store for the
-         application to it. This property is optional since there are legitimate
-         error conditions that could cause the creation of the store to fail.
-        */
+    private var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "LeanGameScale")
-        container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // This should never happen in a live app, so crash the app while in development.
                 assertionFailure("Unresolved error \(error), \(error.userInfo)")
             }
+            
+            container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         })
         return container
     }()
 
     // MARK: - Core Data Saving support
 
-    static func saveContext () {
+    /// Saves the container context -- Always use on the main thread
+    public func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {

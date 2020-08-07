@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="CDGame" representedClassName="CDGame" syncable="YES">
+    <entity name="FavoritedGames" representedClassName="FavoritedGames" syncable="YES">
+        <attribute name="genres" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" usesScalarValueType="YES"/>
         <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
-        <attribute name="isFavorite" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="metacritic" attributeType="Float" minValueString="0" maxValueString="100" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="name" attributeType="String"/>
         <uniquenessConstraints>
@@ -21,7 +21,7 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="CDGame" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="FavoritedGames" positionX="-63" positionY="-18" width="128" height="118"/>
         <element name="OpenedGames" positionX="192.38671875" positionY="-17.43359375" width="128" height="58"/>
     </elements>
 </model>

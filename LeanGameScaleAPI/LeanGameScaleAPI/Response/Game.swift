@@ -12,13 +12,21 @@ public struct Game: Decodable {
     public let id: Int?
     public let name: String?
     public let description: String?
+    public let metacritic: Float?
+    public let genres: [GameGenre]?
     public let website: URL?
     public let backgroundImage: URL?
     public let redditURL: URL?
     public let redditName: String?
     
     enum CodingKeys: String, CodingKey {
-        case name, description, website, id
+        case name, description, website, id, genres, metacritic
         case backgroundImage = "background_image", redditURL = "reddit_url", redditName = "reddit_name"
+    }
+}
+
+extension Game {
+    public func genresAsString() -> String? {
+        genres?.compactMap({ $0.name }).joined(separator: ", ")
     }
 }

@@ -111,11 +111,11 @@ final class GamesViewModel: GamesViewModelProtocol {
     // MARK: - Opened Games Stack
     
     func fetchAlreadyOpenedGames() {
-        previouslyOpenedGamesIDs = PersistanceService.fetchOpenedGames()
+        previouslyOpenedGamesIDs = persistanceService.fetchOpenedGamesIDs()
     }
     
     func saveOpenedGame(with gameID: Int) {
-        PersistanceService.saveOpenedGame(gameId: gameID)
+        persistanceService.saveOpenedGame(gameId: gameID)
         previouslyOpenedGamesIDs.append(gameID)
     }
     

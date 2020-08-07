@@ -14,7 +14,7 @@ class FavoritesViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var favGames: [CDGame] = []
+    var favGames: [FavoritedGames] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +26,8 @@ class FavoritesViewController: UIViewController, Storyboarded {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let fetchReq: NSFetchRequest<CDGame> = CDGame.fetchRequest()
-        
-        do {
-            favGames = try PersistanceService.context.fetch(fetchReq)
-            tableView.reloadData()
-        } catch(let err) {
-            debugPrint(err.localizedDescription)
-        }
+        // TODO: In View Model
+        favGames = persistanceService.fetchFavoritedGames()
     }
 }
 

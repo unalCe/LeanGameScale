@@ -33,6 +33,6 @@ struct GameTableCellViewModel {
     }
     
     var genres: String? {
-        game.genres?.compactMap({ $0.name }).joined(separator: ", ")
+        game.genresAsString()
     }
 }

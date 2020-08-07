@@ -21,3 +21,9 @@ public struct GamesResult: Decodable {
         case backgroundImage = "background_image"
     }
 }
+
+extension GamesResult {
+    public func genresAsString() -> String? {
+        genres?.compactMap({ $0.name }).joined(separator: ", ")
+    }
+}
