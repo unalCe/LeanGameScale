@@ -76,9 +76,11 @@ final class GameDetailViewModel: GameDetaiViewModelProtocol {
         }
         
         if isGameFavorited {
-            // TODO: Remove
+            persistanceService.removeFavoritedGame(gameID)
         } else {
-            persistanceService.saveFavoritedGame(game)    // Game object should exist always
+            persistanceService.saveFavoritedGame(game)
         }
+        
+        delegate?.updateFavoriteStatus(isGameFavorited)
     }
 }

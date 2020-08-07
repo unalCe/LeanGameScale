@@ -17,6 +17,7 @@ protocol GameDetaiViewModelProtocol {
 
 protocol GameDetailViewModelDelegate: class {
     func handleGameDetailState(_ state: GameDetailModelState)
+    func updateFavoriteStatus(_ isFavorite: Bool)
 }
 
 public enum GameDetailModelState {

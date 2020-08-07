@@ -19,6 +19,8 @@ class FavoritesCoordinator: Coordinator {
         let viewController = FavoritesViewController.instantiate(storyboard: .Favorites)
         viewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
         viewController.coordinator = self
+        
+        viewController.viewModel = FavoritesViewModel()
 
         navigationController.viewControllers = [viewController]
     }

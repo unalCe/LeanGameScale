@@ -39,7 +39,7 @@ class GamesViewController: UIViewController, Storyboarded {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        viewModel.fetchAlreadyOpenedGames()
+        updatePopBackCellsIsOpenedColor()
     }
     
     
@@ -61,6 +61,21 @@ class GamesViewController: UIViewController, Storyboarded {
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    
+    // MARK: - Helper
+    
+    /// Reloads rows that are currently selected -> updates the backgroundcolor in (cellForRowAt: indexPath)
+    private func updatePopBackCellsIsOpenedColor() {
+        viewModel.updateAlreadyOpenedGames()
+        
+        if let selectedCellsIndex = tableView.indexPathsForSelectedRows {
+            tableView.reloadRows(at: selectedCellsIndex, with: .automatic)
+            for cellIndex in selectedCellsIndex {
+                tableView.deselectRow(at: cellIndex, animated: true)
+            }
+        }
     }
 }
 

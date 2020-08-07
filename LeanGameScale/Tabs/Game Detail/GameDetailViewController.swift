@@ -100,6 +100,10 @@ extension GameDetailViewController: GameDetailViewModelDelegate {
                 debugPrint(error.localizedDescription)            }
         }
     }
+    
+    func updateFavoriteStatus(_ isFavorite: Bool) {
+        navigationItem.rightBarButtonItem?.title = isFavorite ? "Favorited" : "Favorite"    // TODO: Localize || Constant
+    }
 }
 
 

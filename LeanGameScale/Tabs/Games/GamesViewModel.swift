@@ -110,7 +110,7 @@ final class GamesViewModel: GamesViewModelProtocol {
     
     // MARK: - Opened Games Stack
     
-    func fetchAlreadyOpenedGames() {
+    func updateAlreadyOpenedGames() {
         previouslyOpenedGamesIDs = persistanceService.fetchOpenedGamesIDs()
     }
     

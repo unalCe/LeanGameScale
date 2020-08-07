@@ -11,6 +11,7 @@
 		714D2067FE515A04A4B7E687 /* Pods_LeanGameScale_LeanGameScaleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA4849572C763C9E7862482 /* Pods_LeanGameScale_LeanGameScaleUITests.framework */; };
 		9018949324DD388800082E25 /* FavoritedGames+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9018949224DD388800082E25 /* FavoritedGames+CoreDataClass.swift */; };
 		9018949424DD388800082E25 /* FavoritedGames+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9018949124DD388800082E25 /* FavoritedGames+CoreDataProperties.swift */; };
+		9018949624DD68BD00082E25 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9018949524DD68BD00082E25 /* FavoritesViewModel.swift */; };
 		902416A424D74FCF00B4AE15 /* GameTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902416A324D74FCF00B4AE15 /* GameTableCellViewModel.swift */; };
 		902416A824D7FE8B00B4AE15 /* UITableView-ReloadAnimated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902416A724D7FE8B00B4AE15 /* UITableView-ReloadAnimated.swift */; };
 		902416AC24D8013700B4AE15 /* GameDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 902416AB24D8013700B4AE15 /* GameDetail.storyboard */; };
@@ -89,6 +90,7 @@
 		7F5C2E0766E39FF1514CAF0A /* Pods_LeanGameScale.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeanGameScale.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9018949124DD388800082E25 /* FavoritedGames+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FavoritedGames+CoreDataProperties.swift"; path = "/Users/unalcelik/Developer/LeanGameScale/LeanGameScale/Persistence/FavoritedGames+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		9018949224DD388800082E25 /* FavoritedGames+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FavoritedGames+CoreDataClass.swift"; path = "/Users/unalcelik/Developer/LeanGameScale/LeanGameScale/Persistence/FavoritedGames+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		9018949524DD68BD00082E25 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		902416A324D74FCF00B4AE15 /* GameTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableCellViewModel.swift; sourceTree = "<group>"; };
 		902416A724D7FE8B00B4AE15 /* UITableView-ReloadAnimated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView-ReloadAnimated.swift"; sourceTree = "<group>"; };
 		902416AB24D8013700B4AE15 /* GameDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameDetail.storyboard; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				90F2815A24D53FB10049AF0E /* Favorites.storyboard */,
 				90F2816A24D5A30C0049AF0E /* FavoritesCoordinator.swift */,
 				90F2816424D5A1A90049AF0E /* FavoritesViewController.swift */,
+				9018949524DD68BD00082E25 /* FavoritesViewModel.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -617,6 +620,7 @@
 				90F2816B24D5A30C0049AF0E /* FavoritesCoordinator.swift in Sources */,
 				902416AE24D8930500B4AE15 /* GameDetailViewController.swift in Sources */,
 				902416B024D89FA600B4AE15 /* PersistanceService.swift in Sources */,
+				9018949624DD68BD00082E25 /* FavoritesViewModel.swift in Sources */,
 				90F281AC24D725540049AF0E /* UIViewController-LoadingAnimation.swift in Sources */,
 				90F281A724D70EF20049AF0E /* GamesContracts.swift in Sources */,
 				9018949324DD388800082E25 /* FavoritedGames+CoreDataClass.swift in Sources */,
