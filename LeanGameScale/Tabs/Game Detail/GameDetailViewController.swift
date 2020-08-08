@@ -103,7 +103,8 @@ extension GameDetailViewController: GameDetailViewModelDelegate {
                 self.updateUI()
                 self.webRedirectionsTableView.reloadData()
             case .requestFailed(let error):
-                debugPrint(error.localizedDescription)            }
+                debugPrint(error.localizedDescription)
+            }
         }
     }
     

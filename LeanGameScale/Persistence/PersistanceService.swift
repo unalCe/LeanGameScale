@@ -64,13 +64,6 @@ final class PersistanceService {
     
     // MARK: - Favorite Games
     
-    private func fetchFavoritedGames(with gameID: Int) -> [FavoritedGames]? {
-        let id = Int32(gameID)
-        let predicate = NSPredicate(format: "id == %d", id)
-        
-        return fetchEntities(entity: FavoritedGames.self, predicateFilter: predicate)
-    }
-    
     /// Returns true if game exists in favorited database, false otherwise. Returns nil if fetch fails.
     /// - Parameter game: GameID to be searched in favorites
     public func isGameFavorited(_ gameID: Int) -> Bool {
@@ -85,6 +78,13 @@ final class PersistanceService {
             return favorited
         }
         return []
+    }
+    
+    private func fetchFavoritedGames(with gameID: Int) -> [FavoritedGames]? {
+        let id = Int32(gameID)
+        let predicate = NSPredicate(format: "id == %d", id)
+        
+        return fetchEntities(entity: FavoritedGames.self, predicateFilter: predicate)
     }
     
     public func saveFavoritedGame(_ game: Game, imageData: Data? = nil) {

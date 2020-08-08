@@ -44,7 +44,9 @@ final class GameDetailViewModel: GameDetaiViewModelProtocol {
     // MARK: - Service
     
     private func fetchGameDetails(with gameID: Int) {
+        state = .isLoadingData(true)
         ServiceManager.shared.gameDetail(with: gameID) { (result) in
+            //self.state = .isLoadingData(false)
             switch result {
             case .success(let gameResponse):
                 self.game = gameResponse
@@ -57,15 +59,6 @@ final class GameDetailViewModel: GameDetaiViewModelProtocol {
     
     
     // MARK: - Helpers
-    
-    private func isAlreadyFetching() -> Bool {
-        switch state {
-        case .isLoadingData(let isLoading):
-            return isLoading
-        default:
-            return false
-        }
-    }
     
     /// Saves a favorited game on CoreData
     /// - Parameter imageData: game image data to be saved
