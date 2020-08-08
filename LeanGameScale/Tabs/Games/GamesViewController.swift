@@ -68,6 +68,9 @@ class GamesViewController: UIViewController, Storyboarded {
     private func updatePopBackCellsIsOpenedColor() {
         viewModel.updateAlreadyOpenedGames()
         
+        /*
+         After returning from a detail screen, the cell still remains selected. We detect that cell and reload it so we configure the cell again in cellForRowAt, this time isOpenedBefore will be set to true.
+         */
         if let selectedCellsIndex = tableView.indexPathsForSelectedRows {
             tableView.reloadRows(at: selectedCellsIndex, with: .automatic)
             for cellIndex in selectedCellsIndex {

@@ -43,7 +43,9 @@ class FavoritesViewController: UIViewController, Storyboarded {
         tableView.delegate = self
     }
     
+    
     // MARK: - Helper
+    
     private func updateTableData(shouldReload: Bool = true) {
         viewModel.fetchFavoritedGames()
         title = S.favorites(count: viewModel.gameCount)
@@ -57,15 +59,27 @@ class FavoritesViewController: UIViewController, Storyboarded {
 // MARK: - UITableViewDataSource
 
 extension FavoritesViewController: UITableViewDataSource {
+    // Handle empty data result
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if viewModel.gameCount > 0 || tableView.hasUncommittedUpdates {
+            tableView.backgroundView = nil
+            return 1
+        } else {
+            tableView.setEmptyView(message: S.noFavorites)
+            return 0
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.gameCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: S.cellIdentifier, for: indexPath)
-        let game = viewModel.game(at: indexPath.row)
-        cell.textLabel?.text = game?.name
-        // debugPrint(favGames[safe: indexPath.row]?.imageData)
+        let cell = tableView.dequeueReusableCell(withIdentifier: S.cellIdentifier, for: indexPath) as! GameTableViewCell
+        
+        let favoriteGame = viewModel.game(at: indexPath.row)
+        cell.configure(with: GameTableCellViewModel(favoriteGame: favoriteGame))
+        
         return cell
     }
     
@@ -73,8 +87,19 @@ extension FavoritesViewController: UITableViewDataSource {
         if editingStyle == .delete {
             viewModel.removeGame(at: indexPath.row) { (success) in
                 if success {
-                    tableView.deleteRows(at: [indexPath], with: .fade)
                     self.updateTableData(shouldReload: false)
+                    
+                    tableView.beginUpdates()
+
+                    // Either delete some rows within a section (leaving at least one) or the entire section.
+                    if self.viewModel.gameCount > 0 {
+                        tableView.deleteRows(at: [indexPath], with: .fade)
+                    } else {
+                        // Section is now completely empty, so delete the entire section.
+                        tableView.deleteSections(IndexSet(integer: indexPath.section), with: .fade)
+                    }
+
+                    tableView.endUpdates()
                 }
             }
         }

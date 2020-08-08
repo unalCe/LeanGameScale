@@ -81,7 +81,13 @@ class GameDetailViewController: UIViewController, Storyboarded {
     }
     
     @objc func favoriteTapped() {
-        viewModel.handleFavoriteAction()
+        if viewModel.isGameFavorited {
+            viewModel.removeFavoritedGame()
+        } else {
+            // This data doesn't have to be in high quality because it's only showed in the small cell image
+            let imageData = gameImageView.image?.jpegData(compressionQuality: 0.6)
+            viewModel.saveFavoritedGame(with: imageData)
+        }
     }
 }
 

@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 typealias S = StringConstants
+typealias C = ColorConstants
 
 struct StringConstants {
     static let cellIdentifier = "GameTableCell"
@@ -31,4 +33,8 @@ struct StringConstants {
     }
     
     static let noFavorites = "There is no favorite game."
+}
+
+struct ColorConstants {
+    static let openedCellColor = UIColor(named: "openedCellBackground")
 }

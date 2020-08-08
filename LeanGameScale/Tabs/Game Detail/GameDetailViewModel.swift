@@ -67,20 +67,20 @@ final class GameDetailViewModel: GameDetaiViewModelProtocol {
         }
     }
     
-    
-    /// Saves a favorited game on CoreData if not favorited already. Deletes the favorited game if already exists in CoreData
-    func handleFavoriteAction() {
+    /// Saves a favorited game on CoreData
+    /// - Parameter imageData: game image data to be saved
+    func saveFavoritedGame(with imageData: Data?) {
         guard let game = game else {
             assertionFailure("Game object cannot be nil")
             return
         }
-        
-        if isGameFavorited {
-            persistanceService.removeFavoritedGame(gameID)
-        } else {
-            persistanceService.saveFavoritedGame(game)
-        }
-        
+        persistanceService.saveFavoritedGame(game, imageData: imageData)
+        delegate?.updateFavoriteStatus(isGameFavorited)
+    }
+    
+    /// Deletes the favorited game if already exists in CoreData
+    func removeFavoritedGame() {
+        persistanceService.removeFavoritedGame(gameID)
         delegate?.updateFavoriteStatus(isGameFavorited)
     }
 }
