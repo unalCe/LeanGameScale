@@ -131,6 +131,7 @@ class GameDetailViewController: UIViewController, Storyboarded {
 
 
 // MARK: - GameDetailViewModelDelegate
+
 extension GameDetailViewController: GameDetailViewModelDelegate {
     func handleGameDetailState(_ state: GameDetailModelState) {
         DispatchQueue.main.async {
@@ -152,8 +153,9 @@ extension GameDetailViewController: GameDetailViewModelDelegate {
 }
 
 
-extension GameDetailViewController: UITableViewDataSource, UITableViewDelegate {
-    // MARK: - Table DataSource
+// MARK: - Table DataSource
+
+extension GameDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
@@ -168,19 +170,23 @@ extension GameDetailViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
-    
-    // MARK: - Table Delegate
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        // TODO: Handle ...
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
-    }
-    
-    // This is for the separator line on top
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        1
-    }
+}
+
+
+// MARK: - Table Delegate
+
+extension GameDetailViewController: UITableViewDelegate {
+       func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           tableView.deselectRow(at: indexPath, animated: true)
+           // TODO: Handle ...
+       }
+       
+       func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+           return 60
+       }
+       
+       // This is for the separator line on top
+       func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+           1
+       }
 }
