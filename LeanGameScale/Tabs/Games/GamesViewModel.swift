@@ -58,6 +58,10 @@ final class GamesViewModel: GamesViewModelProtocol {
                 self.state = .dataReady
                 self.page += 1
             case .failure(let err):
+                if let error = err as? APIError, error == .noConnection {
+                    self.state = .noNetworkConnection
+                    return
+                }
                 self.state = .requestFailed(err)
             }
         }

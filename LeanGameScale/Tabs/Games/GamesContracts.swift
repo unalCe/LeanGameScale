@@ -29,4 +29,5 @@ public enum GamesViewModelState {
     case isLoadingData(Bool)
     case dataReady
     case requestFailed(Error)
+    case noNetworkConnection
 }

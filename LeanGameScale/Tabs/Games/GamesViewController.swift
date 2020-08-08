@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import LeanGameScaleAPI
 
 class GamesViewController: UIViewController, Storyboarded {
     
@@ -155,10 +154,10 @@ extension GamesViewController: GamesViewModelDelegate {
             case .dataReady:
                 self.tableView.reloadData()
             case .requestFailed(let error):
-                if let error = error as? APIError, error == .noConnection {
-                    debugPrint("Handle no network")
-                    // TODO: Offline capability
-                }
+                debugPrint(error.localizedDescription)
+            case .noNetworkConnection:
+                debugPrint("No network connection..")
+                // TODO: Offline capabilities
             }
         }
     }
