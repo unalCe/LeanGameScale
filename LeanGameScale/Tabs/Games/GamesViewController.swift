@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import LeanGameScaleAPI
 
 class GamesViewController: UIViewController, Storyboarded {
     
@@ -23,8 +22,6 @@ class GamesViewController: UIViewController, Storyboarded {
         }
     }
     
-    private var cellIdentifier: String = "gameCellIdentifier"
-
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -36,10 +33,10 @@ class GamesViewController: UIViewController, Storyboarded {
         setupTableView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        viewModel.fetchAlreadyOpenedGames()
+        updatePopBackCellsIsOpenedColor()
     }
     
     
@@ -47,20 +44,38 @@ class GamesViewController: UIViewController, Storyboarded {
     private func setupSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search for games" //TODO: Localize
+        searchController.searchBar.placeholder = S.searchGames
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
     
     private func setupTableView() {
         tableView.register(UINib(nibName: "GameTableViewCell", bundle: nil),
-                           forCellReuseIdentifier: cellIdentifier)
+                           forCellReuseIdentifier: S.cellIdentifier)
         tableView.rowHeight = 136
         tableView.keyboardDismissMode = .interactive
         tableView.showsVerticalScrollIndicator = false
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    
+    // MARK: - Helper
+    
+    /// Reloads rows that are currently selected -> updates the backgroundcolor in (cellForRowAt: indexPath)
+    private func updatePopBackCellsIsOpenedColor() {
+        viewModel.updateAlreadyOpenedGames()
+        
+        /*
+         After returning from a detail screen, the cell still remains selected. We detect that cell and reload it so we configure the cell again in cellForRowAt, this time isOpenedBefore will be set to true.
+         */
+        if let selectedCellsIndex = tableView.indexPathsForSelectedRows {
+            tableView.reloadRows(at: selectedCellsIndex, with: .automatic)
+            for cellIndex in selectedCellsIndex {
+                tableView.deselectRow(at: cellIndex, animated: true)
+            }
+        }
     }
 }
 
@@ -74,9 +89,9 @@ extension GamesViewController: UITableViewDataSource {
             return 1
         } else {
             if let searchKeyword = viewModel.lastSearchedKeyword {
-                tableView.setEmptyView(message: "No games found for \"\(searchKeyword)\"")
+                tableView.setEmptyView(message: S.noGamesFound(for: searchKeyword))
             } else {
-                tableView.setEmptyView(message: "No games found.")
+                tableView.setEmptyView(message: S.noGamesFound)
             }
             return 0
         }
@@ -87,7 +102,7 @@ extension GamesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! GameTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: S.cellIdentifier, for: indexPath) as! GameTableViewCell
         
         let game = viewModel.games[indexPath.row]
         let isOpenedBefore = viewModel.isGameAlreadyOpened(game)
@@ -139,9 +154,10 @@ extension GamesViewController: GamesViewModelDelegate {
             case .dataReady:
                 self.tableView.reloadData()
             case .requestFailed(let error):
-                if let error = error as? APIError, error == .noConnection {
-                    debugPrint("Handle no network")
-                }
+                debugPrint(error.localizedDescription)
+            case .noNetworkConnection:
+                debugPrint("No network connection..")
+                // TODO: Offline capabilities
             }
         }
     }

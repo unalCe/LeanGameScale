@@ -58,6 +58,10 @@ final class GamesViewModel: GamesViewModelProtocol {
                 self.state = .dataReady
                 self.page += 1
             case .failure(let err):
+                if let error = err as? APIError, error == .noConnection {
+                    self.state = .noNetworkConnection
+                    return
+                }
                 self.state = .requestFailed(err)
             }
         }
@@ -110,12 +114,12 @@ final class GamesViewModel: GamesViewModelProtocol {
     
     // MARK: - Opened Games Stack
     
-    func fetchAlreadyOpenedGames() {
-        previouslyOpenedGamesIDs = PersistanceService.fetchOpenedGames()
+    func updateAlreadyOpenedGames() {
+        previouslyOpenedGamesIDs = persistanceService.fetchOpenedGamesIDs()
     }
     
     func saveOpenedGame(with gameID: Int) {
-        PersistanceService.saveOpenedGame(gameId: gameID)
+        persistanceService.saveOpenedGame(gameId: gameID)
         previouslyOpenedGamesIDs.append(gameID)
     }
     

@@ -15,7 +15,7 @@ protocol GamesViewModelProtocol {
     var lastSearchedKeyword: String? { get }
     func isGameAlreadyOpened(_ game: GamesResult) -> Bool
     func saveOpenedGame(with gameID: Int)
-    func fetchAlreadyOpenedGames()
+    func updateAlreadyOpenedGames()
     func fetchAllGames()
     func searchGames(with keyword: String)
     func fetchMoreForNewPage()
@@ -29,4 +29,5 @@ public enum GamesViewModelState {
     case isLoadingData(Bool)
     case dataReady
     case requestFailed(Error)
+    case noNetworkConnection
 }

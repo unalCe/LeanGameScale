@@ -19,7 +19,7 @@ class GameTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         let selectedView = UIView()
-        selectedView.backgroundColor = UIColor(named: "openedCellBackground")
+        selectedView.backgroundColor = C.openedCellColor
         selectedBackgroundView = selectedView
     }
     
@@ -33,14 +33,24 @@ class GameTableViewCell: UITableViewCell {
     }
     
     public func configure(with viewModel: GameTableCellViewModel) {
-        backgroundColor = viewModel.isOpenedBefore ? UIColor(named: "openedCellBackground") : UIColor.white
+        backgroundColor = viewModel.isOpenedBefore ? C.openedCellColor : UIColor.white
         nameLabel.text = viewModel.gameName
         metacriticPointLabel.text = viewModel.metacriticScore
         genreLabel.text = viewModel.genres
         
+        // This will only happen in favorites view controller
+        if let favImageData = viewModel.favoriteImage {
+            let favImage = UIImage(data: favImageData)
+            gameImageView.image = favImage
+            return
+        }
+        
         gameImageView.kf.indicatorType = .activity
+
+        let processor = DownsamplingImageProcessor(size: gameImageView.bounds.size)
         gameImageView.kf.setImage(with: viewModel.gameImageUrl,
                                       options: [
+                                        .processor(processor),
                                         .scaleFactor(UIScreen.main.scale),
                                         .transition(.fade(0.5)),
                                         .cacheOriginalImage

@@ -10,13 +10,28 @@ import UIKit
 
 public extension UIViewController {
     
+    internal var spinnerChildVC: SpinnerViewController? {
+        children.first(where: { $0 is SpinnerViewController }) as? SpinnerViewController
+    }
+    
     func startAnimating() {
-        debugPrint("Loading Started")
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        if spinnerChildVC != nil {
+            return
+        }
+        
+        let spinner = SpinnerViewController()
+        
+        addChild(spinner)
+        spinner.view.frame = view.frame
+        view.addSubview(spinner.view)
+        spinner.didMove(toParent: self)
     }
     
     func stopAnimating() {
-        debugPrint("Loading Stopped")
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        if spinnerChildVC != nil {
+            spinnerChildVC!.willMove(toParent: nil)
+            spinnerChildVC!.view.removeFromSuperview()
+            spinnerChildVC!.removeFromParent()
+        }
     }
 }

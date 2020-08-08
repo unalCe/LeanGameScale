@@ -21,6 +21,7 @@ class GameDetailViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var webRedirectionsTableView: UITableView!
     
+    private var titleGradient: CAGradientLayer!
     
     var viewModel: GameDetailViewModel! {
         didSet {
@@ -33,6 +34,8 @@ class GameDetailViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTitleGradientView()
+        setupDescriptionTextViewHeight(maximumNumberOfLines: 4)
         setupTableView()
     }
     
@@ -41,14 +44,25 @@ class GameDetailViewController: UIViewController, Storyboarded {
         setupRightBarButton(animated: animated)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        titleGradient.frame = titleGradientView.bounds
+    }
+    
     
     // MARK: - Setup UI
     
     private func setupRightBarButton(animated: Bool) {
-        // TODO: Check if favorited before, in ViewModel
-        // let buttonTitle = viewModel.gameIsFavorited ? : "Favorited" : "Favorite"
-        // let favoriteBarButtonItem = UIBarButtonItem(title: butonTitle, style: .plain, target: self, action: #selector(favoriteTapped))
-        //navigationItem.setRightBarButton(favoriteBarButtonItem, animated: animated)
+        let buttonTitle = viewModel.isGameFavorited ?  S.favorited : S.favorite
+        let favoriteBarButtonItem = UIBarButtonItem(title: buttonTitle, style: .plain, target: self, action: #selector(favoriteTapped))
+        navigationItem.setRightBarButton(favoriteBarButtonItem, animated: animated)
+    }
+    
+    private func setupTitleGradientView() {
+        titleGradient = CAGradientLayer()
+        titleGradient.colors = [UIColor.clear.cgColor, UIColor.black.withAlphaComponent(0.75).cgColor, UIColor.black.cgColor]
+        titleGradient.locations = [0.0, 0.5, 1.0]
+        titleGradientView.layer.insertSublayer(titleGradient, at: 0)
     }
     
     private func setupTableView() {
@@ -57,32 +71,61 @@ class GameDetailViewController: UIViewController, Storyboarded {
         webRedirectionsTableView.tableFooterView = UIView()
     }
     
+    private func setupDescriptionTextViewHeight(maximumNumberOfLines: Int) {
+        let lineHeights = CGFloat(maximumNumberOfLines) * (gameDescription.font?.lineHeight ?? 0)
+        let containerInsets = gameDescription.textContainerInset.top + gameDescription.textContainerInset.bottom
+        descriptionHeightConstraint.constant = (lineHeights + containerInsets)
+    }
+    
     private func updateUI() {
         let game = viewModel.game
         
         gameImageView.kf.setImage(with: game?.backgroundImage,
-                                      options: [
-                                        .scaleFactor(UIScreen.main.scale),
-                                        .transition(.fade(0.5)),
-                                        .cacheOriginalImage
+                                  options: [
+                                    .scaleFactor(UIScreen.main.scale),
+                                    .transition(.fade(0.5)),
+                                    .cacheOriginalImage
         ])
         
         gameNameLabel.text = game?.name
         gameDescription.text = game?.description?.htmlToString
+        gameDescription.addTrailing(moreText: S.readMore, moreTextFont: .systemFont(ofSize: 14, weight: .semibold), moreTextColor: .blue)
     }
     
     
     // MARK: - Helpers
     
-    private func updateTextViewHeight(for constant: CGFloat) {
-        descriptionHeightConstraint.constant = constant
+    @IBAction private func textViewTapped(_ sender: UITapGestureRecognizer) {
+        if sender.state == .ended {
+            let location = sender.location(in: gameDescription)
+            let tappedWord = gameDescription.wordAtPosition(point: location)
+            
+            if tappedWord == S.readMore {
+                collapseTextView()
+            }
+        }
+    }
+    
+    private func collapseTextView() {
+        gameDescription.attributedText = nil
+        gameDescription.text = viewModel.game?.description?.htmlToString
+        
+        let estimatedSize = gameDescription.sizeThatFits(CGSize(width: gameDescription.bounds.width,
+                                                                height: .greatestFiniteMagnitude))
+        descriptionHeightConstraint.constant = estimatedSize.height
         UIView.animate(withDuration: 0.2) {
             self.view.layoutIfNeeded()
         }
     }
     
     @objc func favoriteTapped() {
-        // TODO: Handle in viewModel
+        if viewModel.isGameFavorited {
+            viewModel.removeFavoritedGame()
+        } else {
+            // This data doesn't have to be in high quality because it's only showed in the small cell image
+            let imageData = gameImageView.image?.jpegData(compressionQuality: 0.6)
+            viewModel.saveFavoritedGame(with: imageData)
+        }
     }
 }
 
@@ -98,8 +141,13 @@ extension GameDetailViewController: GameDetailViewModelDelegate {
                 self.updateUI()
                 self.webRedirectionsTableView.reloadData()
             case .requestFailed(let error):
-                debugPrint(error.localizedDescription)            }
+                debugPrint(error.localizedDescription)
+            }
         }
+    }
+    
+    func updateFavoriteStatus(_ isFavorite: Bool) {
+        navigationItem.rightBarButtonItem?.title = isFavorite ? S.favorited : S.favorite
     }
 }
 
@@ -113,7 +161,7 @@ extension GameDetailViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "webTableCell", for: indexPath)
         
-        let leftText = indexPath.row == 0 ? "Visit Website" : "Visit Reddit"
+        let leftText = indexPath.row == 0 ? S.visitWeb : S.visitReddit
         let detailText = indexPath.row == 0 ? nil : viewModel.game?.redditName
         cell.textLabel?.text = leftText
         cell.detailTextLabel?.text = detailText

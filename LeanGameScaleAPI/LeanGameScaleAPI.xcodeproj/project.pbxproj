@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9018949E24DECBE400082E25 /* StringExtension-ToURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9018949D24DECBE400082E25 /* StringExtension-ToURL.swift */; };
 		90F2818024D5F0D80049AF0E /* LeanGameScaleAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F2817624D5F0D80049AF0E /* LeanGameScaleAPI.framework */; };
 		90F2818524D5F0D80049AF0E /* LeanGameScaleAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2818424D5F0D80049AF0E /* LeanGameScaleAPITests.swift */; };
 		90F2818724D5F0D80049AF0E /* LeanGameScaleAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 90F2817924D5F0D80049AF0E /* LeanGameScaleAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9018949D24DECBE400082E25 /* StringExtension-ToURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringExtension-ToURL.swift"; sourceTree = "<group>"; };
 		90F2817624D5F0D80049AF0E /* LeanGameScaleAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanGameScaleAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F2817924D5F0D80049AF0E /* LeanGameScaleAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanGameScaleAPI.h; sourceTree = "<group>"; };
 		90F2817A24D5F0D80049AF0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				90F2817A24D5F0D80049AF0E /* Info.plist */,
 				90F2819024D5F1410049AF0E /* APIEndpoints.swift */,
 				90F2819224D5F14B0049AF0E /* ServiceManager.swift */,
+				9018949D24DECBE400082E25 /* StringExtension-ToURL.swift */,
 			);
 			path = LeanGameScaleAPI;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9018949E24DECBE400082E25 /* StringExtension-ToURL.swift in Sources */,
 				90F2819F24D6CE190049AF0E /* GamesResult.swift in Sources */,
 				90F281A324D6D5050049AF0E /* Game.swift in Sources */,
 				90F2819124D5F1410049AF0E /* APIEndpoints.swift in Sources */,

@@ -11,28 +11,45 @@ import LeanGameScaleAPI
 
 struct GameTableCellViewModel {
     
-    private var game: GamesResult
+    private var game: GamesResult?
+    private var favoriteGame: FavoritedGames?
     
-    init(game: GamesResult, isOpenedBefore: Bool = false) {
+    /// This viewModel is used in both GamesViewController and FavoritesViewController
+    /// - Parameters:
+    ///   - game: Game object if set from GamesViewController
+    ///   - favoriteGame: Game object if set from FavoritesViewController
+    ///   - isOpenedBefore: Determines if this cell is opened before / only used in GamesViewController
+    init(game: GamesResult? = nil, favoriteGame: FavoritedGames? = nil, isOpenedBefore: Bool = false) {
         self.game = game
+        self.favoriteGame = favoriteGame
         self.isOpenedBefore = isOpenedBefore
     }
     
     private(set) var isOpenedBefore: Bool
     
     var gameName: String? {
-        game.name
+        game?.name ?? favoriteGame?.name
     }
     
     var gameImageUrl: URL? {
-        game.backgroundImage
+        game?.backgroundImage
+    }
+    
+    var favoriteImage: Data? {
+        favoriteGame?.imageData
     }
     
     var metacriticScore: String? {
-        game.metacritic == nil ? "N/A" : "\(game.metacritic!)"
+        if game?.metacritic != nil {
+            return "\(game!.metacritic!)"
+        } else if favoriteGame?.metacritic != nil {
+            return "\(favoriteGame!.metacritic)"
+        } else {
+            return "N/A"
+        }
     }
     
     var genres: String? {
-        game.genres?.compactMap({ $0.name }).joined(separator: ", ")
+        game?.genresAsString() ?? favoriteGame?.genres
     }
 }
