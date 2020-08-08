@@ -21,6 +21,7 @@ class GameDetailViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var webRedirectionsTableView: UITableView!
     
+    private var titleGradient: CAGradientLayer!
     
     var viewModel: GameDetailViewModel! {
         didSet {
@@ -33,12 +34,18 @@ class GameDetailViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTitleGradientView()
         setupTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupRightBarButton(animated: animated)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        titleGradient.frame = titleGradientView.bounds
     }
     
     
@@ -48,6 +55,13 @@ class GameDetailViewController: UIViewController, Storyboarded {
         let buttonTitle = viewModel.isGameFavorited ?  S.favorited : S.favorite
         let favoriteBarButtonItem = UIBarButtonItem(title: buttonTitle, style: .plain, target: self, action: #selector(favoriteTapped))
         navigationItem.setRightBarButton(favoriteBarButtonItem, animated: animated)
+    }
+    
+    private func setupTitleGradientView() {
+        titleGradient = CAGradientLayer()
+        titleGradient.colors = [UIColor.clear.cgColor, UIColor.black.withAlphaComponent(0.75).cgColor, UIColor.black.cgColor]
+        titleGradient.locations = [0.0, 0.5, 1.0]
+        titleGradientView.layer.insertSublayer(titleGradient, at: 0)
     }
     
     private func setupTableView() {
