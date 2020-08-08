@@ -23,8 +23,6 @@ class GamesViewController: UIViewController, Storyboarded {
         }
     }
     
-    private var cellIdentifier: String = "gameCellIdentifier"
-
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -47,14 +45,14 @@ class GamesViewController: UIViewController, Storyboarded {
     private func setupSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search for games" //TODO: Localize
+        searchController.searchBar.placeholder = S.searchGames
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
     
     private func setupTableView() {
         tableView.register(UINib(nibName: "GameTableViewCell", bundle: nil),
-                           forCellReuseIdentifier: cellIdentifier)
+                           forCellReuseIdentifier: S.cellIdentifier)
         tableView.rowHeight = 136
         tableView.keyboardDismissMode = .interactive
         tableView.showsVerticalScrollIndicator = false
@@ -89,9 +87,9 @@ extension GamesViewController: UITableViewDataSource {
             return 1
         } else {
             if let searchKeyword = viewModel.lastSearchedKeyword {
-                tableView.setEmptyView(message: "No games found for \"\(searchKeyword)\"")
+                tableView.setEmptyView(message: S.noGamesFound(for: searchKeyword))
             } else {
-                tableView.setEmptyView(message: "No games found.")
+                tableView.setEmptyView(message: S.noGamesFound)
             }
             return 0
         }
@@ -102,7 +100,7 @@ extension GamesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! GameTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: S.cellIdentifier, for: indexPath) as! GameTableViewCell
         
         let game = viewModel.games[indexPath.row]
         let isOpenedBefore = viewModel.isGameAlreadyOpened(game)
@@ -156,6 +154,7 @@ extension GamesViewController: GamesViewModelDelegate {
             case .requestFailed(let error):
                 if let error = error as? APIError, error == .noConnection {
                     debugPrint("Handle no network")
+                    // TODO: Offline capability
                 }
             }
         }

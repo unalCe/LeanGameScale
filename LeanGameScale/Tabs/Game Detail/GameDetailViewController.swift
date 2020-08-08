@@ -45,7 +45,7 @@ class GameDetailViewController: UIViewController, Storyboarded {
     // MARK: - Setup UI
     
     private func setupRightBarButton(animated: Bool) {
-         let buttonTitle = viewModel.isGameFavorited ?  "Favorited" : "Favorite"
+        let buttonTitle = viewModel.isGameFavorited ?  S.favorited : S.favorite
          let favoriteBarButtonItem = UIBarButtonItem(title: buttonTitle, style: .plain, target: self, action: #selector(favoriteTapped))
         navigationItem.setRightBarButton(favoriteBarButtonItem, animated: animated)
     }
@@ -102,7 +102,7 @@ extension GameDetailViewController: GameDetailViewModelDelegate {
     }
     
     func updateFavoriteStatus(_ isFavorite: Bool) {
-        navigationItem.rightBarButtonItem?.title = isFavorite ? "Favorited" : "Favorite"    // TODO: Localize || Constant
+        navigationItem.rightBarButtonItem?.title = isFavorite ? S.favorited : S.favorite
     }
 }
 
@@ -116,7 +116,7 @@ extension GameDetailViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "webTableCell", for: indexPath)
         
-        let leftText = indexPath.row == 0 ? "Visit Website" : "Visit Reddit"
+        let leftText = indexPath.row == 0 ? S.visitWeb : S.visitReddit
         let detailText = indexPath.row == 0 ? nil : viewModel.game?.redditName
         cell.textLabel?.text = leftText
         cell.detailTextLabel?.text = detailText

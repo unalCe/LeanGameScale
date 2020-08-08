@@ -21,10 +21,7 @@ class FavoritesViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "favorites")
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.rowHeight = 90
+        setupTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,10 +30,26 @@ class FavoritesViewController: UIViewController, Storyboarded {
     }
     
     
+    // MARK: - Setup
+    
+    private func setupTableView() {
+        tableView.register(UINib(nibName: "GameTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: S.cellIdentifier)
+        tableView.rowHeight = 136
+        tableView.keyboardDismissMode = .interactive
+        tableView.showsVerticalScrollIndicator = false
+        tableView.tableFooterView = UIView(frame: .zero)
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
     // MARK: - Helper
-    private func updateTableData() {
+    private func updateTableData(shouldReload: Bool = true) {
         viewModel.fetchFavoritedGames()
-        tableView.reloadData()
+        title = S.favorites(count: viewModel.gameCount)
+        if shouldReload {
+            tableView.reloadData()
+        }
     }
 }
 
@@ -49,7 +62,7 @@ extension FavoritesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "favorites", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: S.cellIdentifier, for: indexPath)
         let game = viewModel.game(at: indexPath.row)
         cell.textLabel?.text = game?.name
         // debugPrint(favGames[safe: indexPath.row]?.imageData)
@@ -61,6 +74,7 @@ extension FavoritesViewController: UITableViewDataSource {
             viewModel.removeGame(at: indexPath.row) { (success) in
                 if success {
                     tableView.deleteRows(at: [indexPath], with: .fade)
+                    self.updateTableData(shouldReload: false)
                 }
             }
         }
