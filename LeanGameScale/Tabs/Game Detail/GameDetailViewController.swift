@@ -35,6 +35,7 @@ class GameDetailViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
         
         setupTitleGradientView()
+        setupDescriptionTextViewHeight(maximumNumberOfLines: 4)
         setupTableView()
     }
     
@@ -68,6 +69,12 @@ class GameDetailViewController: UIViewController, Storyboarded {
         webRedirectionsTableView.delegate = self
         webRedirectionsTableView.dataSource = self
         webRedirectionsTableView.tableFooterView = UIView()
+    }
+    
+    private func setupDescriptionTextViewHeight(maximumNumberOfLines: Int) {
+        let lineHeights = CGFloat(maximumNumberOfLines) * (gameDescription.font?.lineHeight ?? 0)
+        let containerInsets = gameDescription.textContainerInset.top + gameDescription.textContainerInset.bottom
+        descriptionHeightConstraint.constant = (lineHeights + containerInsets)
     }
     
     private func updateUI() {

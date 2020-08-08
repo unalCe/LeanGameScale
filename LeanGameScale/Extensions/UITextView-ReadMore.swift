@@ -20,13 +20,13 @@ extension UITextView {
         
         if ((self.text?.count)! - lengthForVisibleString) <= 0 {
             let style = NSMutableParagraphStyle()
-            style.lineSpacing = 4.0 // change line spacing between paragraph like 36 or 48
+            style.lineSpacing = 4
             let answerAttributed = NSMutableAttributedString(string: self.text!, attributes: [NSAttributedString.Key.font: self.font!, NSAttributedString.Key.paragraphStyle: style])
             self.attributedText = answerAttributed
             return
         }
         
-        let leviTrimmedForReadMore = String(trimmedString ?? "") + String("... more")
+        let leviTrimmedForReadMore = String(trimmedString ?? "") + readMoreText
         self.text = leviTrimmedForReadMore
         let ddlengthForVisibleString: Int = self.vissibleTextLength
         if ((self.text?.count)! - ddlengthForVisibleString) <= 0 {
@@ -34,7 +34,7 @@ extension UITextView {
             let trimmedForReadMore: String = trimmedString! + trailingText
             
             let style = NSMutableParagraphStyle()
-            style.lineSpacing = 4.0 // change line spacing between paragraph like 36 or 48
+            style.lineSpacing = 4
             let answerAttributed = NSMutableAttributedString(string: trimmedForReadMore, attributes: [NSAttributedString.Key.font: self.font!, NSAttributedString.Key.paragraphStyle: style])
             
             let readMoreAttributed = NSMutableAttributedString(string: moreText, attributes: [NSAttributedString.Key.font: moreTextFont ?? self.font!, NSAttributedString.Key.foregroundColor: moreTextColor, NSAttributedString.Key.paragraphStyle: style])
@@ -47,7 +47,7 @@ extension UITextView {
             
             let trimmedForReadMore: String = (trimmedString! as NSString).substring(to: (trimmedString?.utf16.count ?? 0) - readMoreLength) + trailingText
             let style = NSMutableParagraphStyle()
-            style.lineSpacing = 4.0
+            style.lineSpacing = 4
             
             let answerAttributed = NSMutableAttributedString(string: trimmedForReadMore, attributes: [NSAttributedString.Key.font: self.font!, NSAttributedString.Key.paragraphStyle: style])
             
@@ -80,7 +80,7 @@ extension UITextView {
                 } else {
                     index = (self.text! as NSString).rangeOfCharacter(from: characterSet, options: [], range: NSRange(location: index + 1, length: self.text!.count - index - 1)).location
                 }
-            } while index != NSNotFound && index < self.text!.count && (self.text! as NSString).substring(to: index).boundingRect(with: sizeConstraint, options: .usesLineFragmentOrigin, attributes: attributes as? [NSAttributedString.Key : Any], context: nil).size.height <= labelHeight
+            } while index != NSNotFound && index < self.text!.count && (self.text! as NSString).substring(to: index).boundingRect(with: sizeConstraint, options: .usesLineFragmentOrigin, attributes: attributes as? [NSAttributedString.Key : Any], context: nil).size.height <= labelHeight - 32  // FIXME: Wrong calculation on prev/index
             return prev
         }
         return self.text!.count

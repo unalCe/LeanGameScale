@@ -46,8 +46,11 @@ class GameTableViewCell: UITableViewCell {
         }
         
         gameImageView.kf.indicatorType = .activity
+
+        let processor = DownsamplingImageProcessor(size: gameImageView.bounds.size)
         gameImageView.kf.setImage(with: viewModel.gameImageUrl,
                                       options: [
+                                        .processor(processor),
                                         .scaleFactor(UIScreen.main.scale),
                                         .transition(.fade(0.5)),
                                         .cacheOriginalImage
