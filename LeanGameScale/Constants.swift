@@ -33,6 +33,7 @@ struct StringConstants {
     }
     
     static let noFavorites = "There is no favorite game."
+    static let readMore = "ReadMore"
 }
 
 struct ColorConstants {

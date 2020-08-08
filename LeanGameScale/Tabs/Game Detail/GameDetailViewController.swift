@@ -46,7 +46,7 @@ class GameDetailViewController: UIViewController, Storyboarded {
     
     private func setupRightBarButton(animated: Bool) {
         let buttonTitle = viewModel.isGameFavorited ?  S.favorited : S.favorite
-         let favoriteBarButtonItem = UIBarButtonItem(title: buttonTitle, style: .plain, target: self, action: #selector(favoriteTapped))
+        let favoriteBarButtonItem = UIBarButtonItem(title: buttonTitle, style: .plain, target: self, action: #selector(favoriteTapped))
         navigationItem.setRightBarButton(favoriteBarButtonItem, animated: animated)
     }
     
@@ -60,21 +60,38 @@ class GameDetailViewController: UIViewController, Storyboarded {
         let game = viewModel.game
         
         gameImageView.kf.setImage(with: game?.backgroundImage,
-                                      options: [
-                                        .scaleFactor(UIScreen.main.scale),
-                                        .transition(.fade(0.5)),
-                                        .cacheOriginalImage
+                                  options: [
+                                    .scaleFactor(UIScreen.main.scale),
+                                    .transition(.fade(0.5)),
+                                    .cacheOriginalImage
         ])
         
         gameNameLabel.text = game?.name
         gameDescription.text = game?.description?.htmlToString
+        gameDescription.addTrailing(moreText: S.readMore, moreTextFont: .systemFont(ofSize: 14, weight: .semibold), moreTextColor: .blue)
     }
     
     
     // MARK: - Helpers
     
-    private func updateTextViewHeight(for constant: CGFloat) {
-        descriptionHeightConstraint.constant = constant
+    @IBAction private func textViewTapped(_ sender: UITapGestureRecognizer) {
+        if sender.state == .ended {
+            let location = sender.location(in: gameDescription)
+            let tappedWord = gameDescription.wordAtPosition(point: location)
+            
+            if tappedWord == S.readMore {
+                collapseTextView()
+            }
+        }
+    }
+    
+    private func collapseTextView() {
+        gameDescription.attributedText = nil
+        gameDescription.text = viewModel.game?.description?.htmlToString
+        
+        let estimatedSize = gameDescription.sizeThatFits(CGSize(width: gameDescription.bounds.width,
+                                                                height: .greatestFiniteMagnitude))
+        descriptionHeightConstraint.constant = estimatedSize.height
         UIView.animate(withDuration: 0.2) {
             self.view.layoutIfNeeded()
         }
