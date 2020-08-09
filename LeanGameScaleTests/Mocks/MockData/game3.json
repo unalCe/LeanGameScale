@@ -1,0 +1,343 @@
+{
+  "id": 2020,
+  "slug": "the-room",
+  "name": "The Room",
+  "name_original": "The Room",
+  "description": "<p>Fall into a world of bizarre contraptions and alchemical machinery with The Room, a BAFTA award-winning 3D puzzler from Fireproof Games. Follow a trail of cryptic letters and solve many unique devices in ever more extraordinary places, on a time-spanning journey where machinery meets myth.<br />\nThe Room PC is a fully-enhanced HD release of Apple&#39;s 2012 iPad Game Of The Year, including the &#39;EPILOGUE&#39; DLC that adds 20% more content and play time to the original release. This PC version of the game has been many months in the making and has involved recreating almost every asset in the game from the ground up.<br />\nFireproof Games are a small independent team working in Guildford in the UK. We self-published our first game The Room in September 2012 and were stunned with both the critical success and our new-found fan-base, not to mention multiple international awards. The Room has changed our lives and we hope you enjoy playing it as much as we enjoyed making it.</p>",
+  "metacritic": 73,
+  "metacritic_platforms": [],
+  "released": "2012-09-19",
+  "tba": false,
+  "updated": "2020-05-14T13:39:51",
+  "background_image": "https://media.rawg.io/media/screenshots/07b/07b235ea8c91bae34ea7c0a5049b8534.jpeg",
+  "background_image_additional": "https://media.rawg.io/media/screenshots/dfc/dfc9668dab162bccf0a9cd93327719c0.jpeg",
+  "website": "https://www.fireproofgames.com/games/the-room",
+  "rating": 4.24,
+  "rating_top": 4,
+  "ratings": [
+    {
+      "id": 4,
+      "title": "recommended",
+      "count": 100,
+      "percent": 54.95
+    },
+    {
+      "id": 5,
+      "title": "exceptional",
+      "count": 65,
+      "percent": 35.71
+    },
+    {
+      "id": 3,
+      "title": "meh",
+      "count": 15,
+      "percent": 8.24
+    },
+    {
+      "id": 1,
+      "title": "skip",
+      "count": 2,
+      "percent": 1.1
+    }
+  ],
+  "reactions": {
+    "2": 1,
+    "7": 1
+  },
+  "added": 899,
+  "added_by_status": {
+    "yet": 24,
+    "owned": 645,
+    "beaten": 202,
+    "toplay": 11,
+    "dropped": 14,
+    "playing": 3
+  },
+  "playtime": 3,
+  "screenshots_count": 13,
+  "movies_count": 0,
+  "creators_count": 4,
+  "achievements_count": 5,
+  "parent_achievements_count": 5,
+  "reddit_url": "",
+  "reddit_name": "",
+  "reddit_description": "",
+  "reddit_logo": "",
+  "reddit_count": 0,
+  "twitch_count": 103,
+  "youtube_count": 1000000,
+  "reviews_text_count": 4,
+  "ratings_count": 178,
+  "suggestions_count": 340,
+  "alternative_names": [],
+  "metacritic_url": "",
+  "parents_count": 0,
+  "additions_count": 0,
+  "game_series_count": 3,
+  "user_game": null,
+  "reviews_count": 182,
+  "saturated_color": "0f0f0f",
+  "dominant_color": "0f0f0f",
+  "parent_platforms": [
+    {
+      "platform": {
+        "id": 1,
+        "name": "PC",
+        "slug": "pc"
+      }
+    },
+    {
+      "platform": {
+        "id": 4,
+        "name": "iOS",
+        "slug": "ios"
+      }
+    },
+    {
+      "platform": {
+        "id": 8,
+        "name": "Android",
+        "slug": "android"
+      }
+    },
+    {
+      "platform": {
+        "id": 7,
+        "name": "Nintendo",
+        "slug": "nintendo"
+      }
+    }
+  ],
+  "platforms": [
+    {
+      "platform": {
+        "id": 4,
+        "name": "PC",
+        "slug": "pc",
+        "image": null,
+        "year_end": null,
+        "year_start": null,
+        "games_count": 244732,
+        "image_background": "https://media.rawg.io/media/games/7cf/7cfc9220b401b7a300e409e539c9afd5.jpg"
+      },
+      "released_at": "2012-09-19",
+      "requirements": {
+        "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> WindowsXP SP2 or higher<br></li><li><strong>Processor:</strong> 2.0 GHz Dual Core Processor<br></li><li><strong>Memory:</strong> 2 GB RAM<br></li><li><strong>Graphics:</strong> Video card with 512MB of VRAM<br></li><li><strong>DirectX:</strong> Version 9.0<br></li><li><strong>Storage:</strong> 1 GB available space</li></ul>"
+      }
+    },
+    {
+      "platform": {
+        "id": 3,
+        "name": "iOS",
+        "slug": "ios",
+        "image": null,
+        "year_end": null,
+        "year_start": null,
+        "games_count": 66640,
+        "image_background": "https://media.rawg.io/media/games/13a/13a528ac9cf48bbb6be5d35fe029336d.jpg"
+      },
+      "released_at": "2012-09-19",
+      "requirements": {
+        "minimum": "iPad 2 Wifi, iPad 2 3G, iPad Third Gen, iPad Third Gen 4G, iPad Fourth Gen, iPad Fourth Gen 4G, iPad Mini, iPad Mini 4G, iPad Air, iPad Air Cellular, iPad Mini Retina, iPad Mini Retina Cellular, iPad Air 2, iPad Air 2 Cellular, iPad Mini 3, iPad Mini 3 Cellular, iPad Mini 4, iPad Mini 4 Cellular, iPad Pro, iPad Pro Cellular, iPad Pro 9.7, iPad Pro 9.7 Cellular, iPad 6 1 1, iPad 6 1 2, iPad 7 1, iPad 7 2, iPad 7 3, iPad 7 4, iPad 7 5, iPad 7 6, iPad 8 1 2, iPad 8 3 4, iPad 8 5 6, iPad 8 7 8, iPad Mini 5, iPad Mini 5 Cellular, iPad Air 3, iPad Air 3 Cellular"
+      }
+    },
+    {
+      "platform": {
+        "id": 21,
+        "name": "Android",
+        "slug": "android",
+        "image": null,
+        "year_end": null,
+        "year_start": null,
+        "games_count": 30890,
+        "image_background": "https://media.rawg.io/media/games/238/2383a172b4d50a7b44e07980eb7141ea.jpg"
+      },
+      "released_at": "2012-09-19",
+      "requirements": {
+        "minimum": "2.3 and up"
+      }
+    },
+    {
+      "platform": {
+        "id": 7,
+        "name": "Nintendo Switch",
+        "slug": "nintendo-switch",
+        "image": null,
+        "year_end": null,
+        "year_start": null,
+        "games_count": 3300,
+        "image_background": "https://media.rawg.io/media/screenshots/c97/c97b943741f5fbc936fe054d9d58851d.jpg"
+      },
+      "released_at": "2012-09-19",
+      "requirements": null
+    }
+  ],
+  "stores": [
+    {
+      "id": 2093,
+      "url": "https://apps.apple.com/app/the-room/id552039496?uo=4",
+      "store": {
+        "id": 4,
+        "name": "App Store",
+        "slug": "apple-appstore",
+        "domain": "apps.apple.com",
+        "games_count": 65101,
+        "image_background": "https://media.rawg.io/media/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg"
+      }
+    },
+    {
+      "id": 246907,
+      "url": "https://www.nintendo.com/games/detail/the-room-switch",
+      "store": {
+        "id": 6,
+        "name": "Nintendo Store",
+        "slug": "nintendo",
+        "domain": "nintendo.com",
+        "games_count": 7741,
+        "image_background": "https://media.rawg.io/media/games/25c/25c4776ab5723d5d735d8bf617ca12d9.jpg"
+      }
+    },
+    {
+      "id": 40513,
+      "url": "https://play.google.com/store/apps/details?id=com.fireproofstudios.theroom&hl=en&gl=us",
+      "store": {
+        "id": 8,
+        "name": "Google Play",
+        "slug": "google-play",
+        "domain": "play.google.com",
+        "games_count": 16096,
+        "image_background": "https://media.rawg.io/media/games/fc3/fc30790a3b3c738d7a271b02c1e26dc2.jpg"
+      }
+    },
+    {
+      "id": 16072,
+      "url": "http://store.steampowered.com/app/288160/",
+      "store": {
+        "id": 1,
+        "name": "Steam",
+        "slug": "steam",
+        "domain": "store.steampowered.com",
+        "games_count": 41768,
+        "image_background": "https://media.rawg.io/media/games/d82/d82990b9c67ba0d2d09d4e6fa88885a7.jpg"
+      }
+    }
+  ],
+  "developers": [
+    {
+      "id": 988,
+      "name": "Fireproof Games",
+      "slug": "fireproof-games",
+      "games_count": 7,
+      "image_background": "https://media.rawg.io/media/games/ac1/ac157870541bc1c4b5a03d5ee528a747.jpg"
+    }
+  ],
+  "genres": [
+    {
+      "id": 51,
+      "name": "Indie",
+      "slug": "indie",
+      "games_count": 29833,
+      "image_background": "https://media.rawg.io/media/games/88c/88c5b4d7c80276c03ff62aebb1a99ad4.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Puzzle",
+      "slug": "puzzle",
+      "games_count": 49834,
+      "image_background": "https://media.rawg.io/media/games/51c/51c430f1795c79b78f863a9f22dc422d.jpg"
+    }
+  ],
+  "tags": [
+    {
+      "id": 13,
+      "name": "Atmospheric",
+      "slug": "atmospheric",
+      "language": "eng",
+      "games_count": 8674,
+      "image_background": "https://media.rawg.io/media/games/588/588c6bdff3d4baf66ec36b1c05b793bf.jpg"
+    },
+    {
+      "id": 8,
+      "name": "First-Person",
+      "slug": "first-person",
+      "language": "eng",
+      "games_count": 7855,
+      "image_background": "https://media.rawg.io/media/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg"
+    },
+    {
+      "id": 140,
+      "name": "Hidden Object",
+      "slug": "hidden-object",
+      "language": "eng",
+      "games_count": 645,
+      "image_background": "https://media.rawg.io/media/screenshots/711/7116096e3c173e47e787f42e02050937.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Horror",
+      "slug": "horror",
+      "language": "eng",
+      "games_count": 14453,
+      "image_background": "https://media.rawg.io/media/games/9dd/9ddabb34840ea9227556670606cf8ea3.jpg"
+    },
+    {
+      "id": 117,
+      "name": "Mystery",
+      "slug": "mystery",
+      "language": "eng",
+      "games_count": 5083,
+      "image_background": "https://media.rawg.io/media/games/948/948fe7f00b6cba8472f5ecd07a455077.jpg"
+    },
+    {
+      "id": 141,
+      "name": "Point & Click",
+      "slug": "point-click",
+      "language": "eng",
+      "games_count": 5002,
+      "image_background": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg"
+    },
+    {
+      "id": 111,
+      "name": "Short",
+      "slug": "short",
+      "language": "eng",
+      "games_count": 14171,
+      "image_background": "https://media.rawg.io/media/games/8ca/8ca40b562a755d6a0e30d48e6c74b178.jpg"
+    },
+    {
+      "id": 31,
+      "name": "Singleplayer",
+      "slug": "singleplayer",
+      "language": "eng",
+      "games_count": 79718,
+      "image_background": "https://media.rawg.io/media/games/120/1201a40e4364557b124392ee50317b99.jpg"
+    },
+    {
+      "id": 154,
+      "name": "Steampunk",
+      "slug": "steampunk",
+      "language": "eng",
+      "games_count": 590,
+      "image_background": "https://media.rawg.io/media/games/bc0/bc06a29ceac58652b684deefe7d56099.jpg"
+    }
+  ],
+  "publishers": [
+    {
+      "id": 6665,
+      "name": "Fireproof Games",
+      "slug": "fireproof-games",
+      "games_count": 6,
+      "image_background": "https://media.rawg.io/media/screenshots/4a3/4a311d4b56ea5f90de2ad08864582466.jpg"
+    },
+    {
+      "id": 402,
+      "name": "Team17 Digital",
+      "slug": "team17-digital-ltd",
+      "games_count": 112,
+      "image_background": "https://media.rawg.io/media/screenshots/331/33157c45aaa7caceaac95af348a06b96.jpg"
+    }
+  ],
+  "esrb_rating": null,
+  "clip": null,
+  "description_raw": "Fall into a world of bizarre contraptions and alchemical machinery with The Room, a BAFTA award-winning 3D puzzler from Fireproof Games. Follow a trail of cryptic letters and solve many unique devices in ever more extraordinary places, on a time-spanning journey where machinery meets myth.\nThe Room PC is a fully-enhanced HD release of Apple's 2012 iPad Game Of The Year, including the 'EPILOGUE' DLC that adds 20% more content and play time to the original release. This PC version of the game has been many months in the making and has involved recreating almost every asset in the game from the ground up.\nFireproof Games are a small independent team working in Guildford in the UK. We self-published our first game The Room in September 2012 and were stunned with both the critical success and our new-found fan-base, not to mention multiple international awards. The Room has changed our lives and we hope you enjoy playing it as much as we enjoyed making it."
+}

@@ -1,0 +1,544 @@
+{
+  "id": 3498,
+  "slug": "grand-theft-auto-v",
+  "name": "Grand Theft Auto V",
+  "name_original": "Grand Theft Auto V",
+  "description": "<p>Rockstar Games went bigger, since their previous installment of the series. You get the complicated and realistic world-building from Liberty City of GTA4 in the setting of lively and diverse Los Santos, from an old fan favorite GTA San Andreas. 561 different vehicles (including every transport you can operate) and the amount is rising with every update. <br />\nSimultaneous storytelling from three unique perspectives: <br />\nFollow Michael, ex-criminal living his life of leisure away from the past, Franklin, a kid that seeks the better future, and Trevor, the exact past Michael is trying to run away from. <br />\nGTA Online will provide a lot of additional challenge even for the experienced players, coming fresh from the story mode. Now you will have other players around that can help you just as likely as ruin your mission. Every GTA mechanic up to date can be experienced by players through the unique customizable character, and community content paired with the leveling system tends to keep everyone busy and engaged.</p>",
+  "metacritic": 97,
+  "metacritic_platforms": [
+    {
+      "metascore": 96,
+      "url": "https://www.metacritic.com/game/pc/grand-theft-auto-v",
+      "platform": {
+        "platform": 4,
+        "name": "PC",
+        "slug": "pc"
+      }
+    },
+    {
+      "metascore": 97,
+      "url": "https://www.metacritic.com/game/playstation-3/grand-theft-auto-v",
+      "platform": {
+        "platform": 16,
+        "name": "PlayStation 3",
+        "slug": "playstation3"
+      }
+    },
+    {
+      "metascore": 97,
+      "url": "https://www.metacritic.com/game/playstation-4/grand-theft-auto-v",
+      "platform": {
+        "platform": 18,
+        "name": "PlayStation 4",
+        "slug": "playstation4"
+      }
+    },
+    {
+      "metascore": 97,
+      "url": "https://www.metacritic.com/game/xbox-360/grand-theft-auto-v",
+      "platform": {
+        "platform": 14,
+        "name": "Xbox 360",
+        "slug": "xbox360"
+      }
+    },
+    {
+      "metascore": 97,
+      "url": "https://www.metacritic.com/game/xbox-one/grand-theft-auto-v",
+      "platform": {
+        "platform": 1,
+        "name": "Xbox One",
+        "slug": "xbox-one"
+      }
+    }
+  ],
+  "released": "2013-09-17",
+  "tba": false,
+  "updated": "2020-07-21T14:42:33",
+  "background_image": "https://media.rawg.io/media/games/84d/84da2ac3fdfc6507807a1808595afb12.jpg",
+  "background_image_additional": "https://media.rawg.io/media/screenshots/5f5/5f5a38a222252d996b18962806eed707.jpg",
+  "website": "http://www.rockstargames.com/V/",
+  "rating": 4.48,
+  "rating_top": 5,
+  "ratings": [
+    {
+      "id": 5,
+      "title": "exceptional",
+      "count": 2324,
+      "percent": 59.21
+    },
+    {
+      "id": 4,
+      "title": "recommended",
+      "count": 1303,
+      "percent": 33.2
+    },
+    {
+      "id": 3,
+      "title": "meh",
+      "count": 232,
+      "percent": 5.91
+    },
+    {
+      "id": 1,
+      "title": "skip",
+      "count": 66,
+      "percent": 1.68
+    }
+  ],
+  "reactions": {
+    "1": 15,
+    "2": 3,
+    "3": 21,
+    "4": 8,
+    "5": 7,
+    "6": 4,
+    "7": 12,
+    "8": 12,
+    "10": 2,
+    "11": 8,
+    "12": 8,
+    "14": 3,
+    "15": 2,
+    "16": 5,
+    "18": 4,
+    "20": 1,
+    "21": 2
+  },
+  "added": 12588,
+  "added_by_status": {
+    "yet": 292,
+    "owned": 7731,
+    "beaten": 3192,
+    "toplay": 363,
+    "dropped": 558,
+    "playing": 452
+  },
+  "playtime": 68,
+  "screenshots_count": 58,
+  "movies_count": 8,
+  "creators_count": 11,
+  "achievements_count": 369,
+  "parent_achievements_count": 75,
+  "reddit_url": "https://www.reddit.com/r/GrandTheftAutoV/",
+  "reddit_name": "/r/GrandTheftAutoV",
+  "reddit_description": "/r/GrandTheftAutoV - the subreddit for all GTA V related news, content, and discussions revolving around Rockstar's critically acclaimed single player release and the ongoing multiplayer expansion of Grand Theft Auto Online.",
+  "reddit_logo": "",
+  "reddit_count": 805,
+  "twitch_count": 101,
+  "youtube_count": 1000000,
+  "reviews_text_count": 38,
+  "ratings_count": 3887,
+  "suggestions_count": 425,
+  "alternative_names": [
+    "GTA 5",
+    "GTA V",
+    "GTAV"
+  ],
+  "metacritic_url": "https://www.metacritic.com/game/pc/grand-theft-auto-v",
+  "parents_count": 0,
+  "additions_count": 3,
+  "game_series_count": 9,
+  "user_game": null,
+  "reviews_count": 3925,
+  "saturated_color": "0f0f0f",
+  "dominant_color": "0f0f0f",
+  "parent_platforms": [
+    {
+      "platform": {
+        "id": 1,
+        "name": "PC",
+        "slug": "pc"
+      }
+    },
+    {
+      "platform": {
+        "id": 2,
+        "name": "PlayStation",
+        "slug": "playstation"
+      }
+    },
+    {
+      "platform": {
+        "id": 3,
+        "name": "Xbox",
+        "slug": "xbox"
+      }
+    }
+  ],
+  "platforms": [
+    {
+      "platform": {
+        "id": 186,
+        "name": "Xbox Series X",
+        "slug": "xbox-series-x",
+        "image": null,
+        "year_end": null,
+        "year_start": 2020,
+        "games_count": 66,
+        "image_background": "https://media.rawg.io/media/games/a59/a5993b9f84944570a31cb6ad08bfe502.jpg"
+      },
+      "released_at": "2013-09-17",
+      "requirements": null
+    },
+    {
+      "platform": {
+        "id": 4,
+        "name": "PC",
+        "slug": "pc",
+        "image": null,
+        "year_end": null,
+        "year_start": null,
+        "games_count": 243989,
+        "image_background": "https://media.rawg.io/media/games/511/5118aff5091cb3efec399c808f8c598f.jpg"
+      },
+      "released_at": "2013-09-17",
+      "requirements": {
+        "minimum": "Minimum:OS: Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1, Windows Vista 64 Bit Service Pack 2* (*NVIDIA video card recommended if running Vista OS)Processor: Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs) / AMD Phenom 9850 Quad-Core Processor (4 CPUs) @ 2.5GHzMemory: 4 GB RAMGraphics: NVIDIA 9800 GT 1GB / AMD HD 4870 1GB (DX 10, 10.1, 11)Storage: 72 GB available spaceSound Card: 100% DirectX 10 compatibleAdditional Notes: Over time downloadable content and programming changes will change the system requirements for this game.  Please refer to your hardware manufacturer and www.rockstargames.com/support for current compatibility information. Some system components such as mobile chipsets, integrated, and AGP graphics cards may be incompatible. Unlisted specifications may not be supported by publisher.     Other requirements:  Installation and online play requires log-in to Rockstar Games Social Club (13+) network; internet connection required for activation, online play, and periodic entitlement verification; software installations required including Rockstar Games Social Club platform, DirectX , Chromium, and Microsoft Visual C++ 2008 sp1 Redistributable Package, and authentication software that recognizes certain hardware attributes for entitlement, digital rights management, system, and other support purposes.     SINGLE USE SERIAL CODE REGISTRATION VIA INTERNET REQUIRED; REGISTRATION IS LIMITED TO ONE ROCKSTAR GAMES SOCIAL CLUB ACCOUNT (13+) PER SERIAL CODE; ONLY ONE PC LOG-IN ALLOWED PER SOCIAL CLUB ACCOUNT AT ANY TIME; SERIAL CODE(S) ARE NON-TRANSFERABLE ONCE USED; SOCIAL CLUB ACCOUNTS ARE NON-TRANSFERABLE.  Partner Requirements:  Please check the terms of service of this site before purchasing this software.",
+        "recommended": "Recommended:OS: Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1Processor: Intel Core i5 3470 @ 3.2GHz (4 CPUs) / AMD X8 FX-8350 @ 4GHz (8 CPUs)Memory: 8 GB RAMGraphics: NVIDIA GTX 660 2GB / AMD HD 7870 2GBStorage: 72 GB available spaceSound Card: 100% DirectX 10 compatibleAdditional Notes:"
+      }
+    },
+    {
+      "platform": {
+        "id": 187,
+        "name": "PlayStation 5",
+        "slug": "playstation5",
+        "image": null,
+        "year_end": null,
+        "year_start": 2020,
+        "games_count": 64,
+        "image_background": "https://media.rawg.io/media/games/4b3/4b3f6c745e2cea93b4a92f69638f2e9f.jpg"
+      },
+      "released_at": "2013-09-17",
+      "requirements": null
+    },
+    {
+      "platform": {
+        "id": 18,
+        "name": "PlayStation 4",
+        "slug": "playstation4",
+        "image": null,
+        "year_end": null,
+        "year_start": null,
+        "games_count": 4948,
+        "image_background": "https://media.rawg.io/media/games/81b/81b138691f027ed1f8720758daa0d895.jpg"
+      },
+      "released_at": "2013-09-17",
+      "requirements": null
+    },
+    {
+      "platform": {
+        "id": 16,
+        "name": "PlayStation 3",
+        "slug": "playstation3",
+        "image": null,
+        "year_end": null,
+        "year_start": null,
+        "games_count": 3604,
+        "image_background": "https://media.rawg.io/media/games/e2d/e2d3f396b16dded0f841c17c9799a882.jpg"
+      },
+      "released_at": "2013-09-17",
+      "requirements": null
+    },
+    {
+      "platform": {
+        "id": 14,
+        "name": "Xbox 360",
+        "slug": "xbox360",
+        "image": null,
+        "year_end": null,
+        "year_start": null,
+        "games_count": 2547,
+        "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg"
+      },
+      "released_at": "2013-09-17",
+      "requirements": null
+    },
+    {
+      "platform": {
+        "id": 1,
+        "name": "Xbox One",
+        "slug": "xbox-one",
+        "image": null,
+        "year_end": null,
+        "year_start": null,
+        "games_count": 3598,
+        "image_background": "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg"
+      },
+      "released_at": "2013-09-17",
+      "requirements": null
+    }
+  ],
+  "stores": [
+    {
+      "id": 438095,
+      "url": "https://www.epicgames.com/store/en-us/product/grand-theft-auto-v/home",
+      "store": {
+        "id": 11,
+        "name": "Epic Games",
+        "slug": "epic-games",
+        "domain": "epicgames.com",
+        "games_count": 274,
+        "image_background": "https://media.rawg.io/media/games/c06/c06d88c35785c8003147cb53c84af033.jpg"
+      }
+    },
+    {
+      "id": 290375,
+      "url": "https://store.playstation.com/en-us/product/UP1004-CUSA00419_00-GTAVDIGITALDOWNL",
+      "store": {
+        "id": 3,
+        "name": "PlayStation Store",
+        "slug": "playstation-store",
+        "domain": "store.playstation.com",
+        "games_count": 6584,
+        "image_background": "https://media.rawg.io/media/games/511/5118aff5091cb3efec399c808f8c598f.jpg"
+      }
+    },
+    {
+      "id": 290378,
+      "url": "https://www.microsoft.com/en-us/store/p/grand-theft-auto-v/bpj686w6s0nh?cid=msft_web_chart",
+      "store": {
+        "id": 2,
+        "name": "Xbox Store",
+        "slug": "xbox-store",
+        "domain": "microsoft.com",
+        "games_count": 3206,
+        "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+      }
+    },
+    {
+      "id": 290377,
+      "url": "https://marketplace.xbox.com/en-us/product/gta-v/66acd000-77fe-1000-9115-d802545408a7",
+      "store": {
+        "id": 7,
+        "name": "Xbox 360 Store",
+        "slug": "xbox360",
+        "domain": "marketplace.xbox.com",
+        "games_count": 1765,
+        "image_background": "https://media.rawg.io/media/games/8d6/8d69eb6c32ed6acfd75f82d532144993.jpg"
+      }
+    },
+    {
+      "id": 290376,
+      "url": "http://store.steampowered.com/app/271590/",
+      "store": {
+        "id": 1,
+        "name": "Steam",
+        "slug": "steam",
+        "domain": "store.steampowered.com",
+        "games_count": 41766,
+        "image_background": "https://media.rawg.io/media/games/6cd/6cd653e0aaef5ff8bbd295bf4bcb12eb.jpg"
+      }
+    }
+  ],
+  "developers": [
+    {
+      "id": 3524,
+      "name": "Rockstar North",
+      "slug": "rockstar-north",
+      "games_count": 29,
+      "image_background": "https://media.rawg.io/media/games/4a0/4a0a1316102366260e6f38fd2a9cfdce.jpg"
+    }
+  ],
+  "genres": [
+    {
+      "id": 4,
+      "name": "Action",
+      "slug": "action",
+      "games_count": 92565,
+      "image_background": "https://media.rawg.io/media/games/84d/84da2ac3fdfc6507807a1808595afb12.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Adventure",
+      "slug": "adventure",
+      "games_count": 64002,
+      "image_background": "https://media.rawg.io/media/games/589/589fc47c5ae34160d65c4682e21fed66.jpg"
+    }
+  ],
+  "tags": [
+    {
+      "id": 40836,
+      "name": "Full controller support",
+      "slug": "full-controller-support",
+      "language": "eng",
+      "games_count": 8590,
+      "image_background": "https://media.rawg.io/media/games/88c/88c5b4d7c80276c03ff62aebb1a99ad4.jpg"
+    },
+    {
+      "id": 40847,
+      "name": "Steam Achievements",
+      "slug": "steam-achievements",
+      "language": "eng",
+      "games_count": 18292,
+      "image_background": "https://media.rawg.io/media/games/7fa/7fa0b586293c5861ee32490e953a4996.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Atmospheric",
+      "slug": "atmospheric",
+      "language": "eng",
+      "games_count": 8648,
+      "image_background": "https://media.rawg.io/media/games/d82/d82990b9c67ba0d2d09d4e6fa88885a7.jpg"
+    },
+    {
+      "id": 123,
+      "name": "Comedy",
+      "slug": "comedy",
+      "language": "eng",
+      "games_count": 4513,
+      "image_background": "https://media.rawg.io/media/games/c7a/c7a71a0531a9518236d99d0d60abe447.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Co-op",
+      "slug": "co-op",
+      "language": "eng",
+      "games_count": 5291,
+      "image_background": "https://media.rawg.io/media/games/5bb/5bb55ccb8205aadbb6a144cf6d8963f1.jpg"
+    },
+    {
+      "id": 144,
+      "name": "Crime",
+      "slug": "crime",
+      "language": "eng",
+      "games_count": 1477,
+      "image_background": "https://media.rawg.io/media/games/511/5118aff5091cb3efec399c808f8c598f.jpg"
+    },
+    {
+      "id": 8,
+      "name": "First-Person",
+      "slug": "first-person",
+      "language": "eng",
+      "games_count": 7826,
+      "image_background": "https://media.rawg.io/media/games/bc0/bc06a29ceac58652b684deefe7d56099.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Funny",
+      "slug": "funny",
+      "language": "eng",
+      "games_count": 9252,
+      "image_background": "https://media.rawg.io/media/games/af7/af7a831001c5c32c46e950cc883b8cb7.jpg"
+    },
+    {
+      "id": 42,
+      "name": "Great Soundtrack",
+      "slug": "great-soundtrack",
+      "language": "eng",
+      "games_count": 2954,
+      "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+    },
+    {
+      "id": 62,
+      "name": "Moddable",
+      "slug": "moddable",
+      "language": "eng",
+      "games_count": 429,
+      "image_background": "https://media.rawg.io/media/games/ed5/ed5b7d01dd68fd8d598c91ad61f153af.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Multiplayer",
+      "slug": "multiplayer",
+      "language": "eng",
+      "games_count": 20662,
+      "image_background": "https://media.rawg.io/media/games/511/5118aff5091cb3efec399c808f8c598f.jpg"
+    },
+    {
+      "id": 36,
+      "name": "Open World",
+      "slug": "open-world",
+      "language": "eng",
+      "games_count": 2688,
+      "image_background": "https://media.rawg.io/media/games/511/5118aff5091cb3efec399c808f8c598f.jpg"
+    },
+    {
+      "id": 24,
+      "name": "RPG",
+      "slug": "rpg",
+      "language": "eng",
+      "games_count": 9602,
+      "image_background": "https://media.rawg.io/media/games/c6b/c6bfece1daf8d06bc0a60632ac78e5bf.jpg"
+    },
+    {
+      "id": 37,
+      "name": "Sandbox",
+      "slug": "sandbox",
+      "language": "eng",
+      "games_count": 2628,
+      "image_background": "https://media.rawg.io/media/games/b5a/b5a1ee231afc407b49cc5f9716980b2d.jpg"
+    },
+    {
+      "id": 31,
+      "name": "Singleplayer",
+      "slug": "singleplayer",
+      "language": "eng",
+      "games_count": 79383,
+      "image_background": "https://media.rawg.io/media/games/7cf/7cfc9220b401b7a300e409e539c9afd5.jpg"
+    },
+    {
+      "id": 149,
+      "name": "Third Person",
+      "slug": "third-person",
+      "language": "eng",
+      "games_count": 2443,
+      "image_background": "https://media.rawg.io/media/games/1bb/1bb86c35ffa3eb0d299b01a7c65bf908.jpg"
+    },
+    {
+      "id": 150,
+      "name": "Third-Person Shooter",
+      "slug": "third-person-shooter",
+      "language": "eng",
+      "games_count": 963,
+      "image_background": "https://media.rawg.io/media/games/1bd/1bd2657b81eb0c99338120ad444b24ff.jpg"
+    },
+    {
+      "id": 411,
+      "name": "cooperative",
+      "slug": "cooperative",
+      "language": "eng",
+      "games_count": 2227,
+      "image_background": "https://media.rawg.io/media/games/73e/73eecb8909e0c39fb246f457b5d6cbbe.jpg"
+    }
+  ],
+  "publishers": [
+    {
+      "id": 4879,
+      "name": "1C-SoftClub",
+      "slug": "1c-softclub",
+      "games_count": 44,
+      "image_background": "https://media.rawg.io/media/games/6cd/6cd653e0aaef5ff8bbd295bf4bcb12eb.jpg"
+    },
+    {
+      "id": 2155,
+      "name": "Rockstar Games",
+      "slug": "rockstar-games",
+      "games_count": 63,
+      "image_background": "https://media.rawg.io/media/games/623/623eff489e5fcfd3d684e902d3efad8b.jpg"
+    },
+    {
+      "id": 11279,
+      "name": "Take Two Interactive",
+      "slug": "take-two-interactive",
+      "games_count": 51,
+      "image_background": "https://media.rawg.io/media/games/84d/84da2ac3fdfc6507807a1808595afb12.jpg"
+    }
+  ],
+  "esrb_rating": {
+    "id": 4,
+    "name": "Mature",
+    "slug": "mature"
+  },
+  "clip": {
+    "clip": "https://media.rawg.io/media/stories-640/5b0/5b0cfff8c606c5e4db4f74f108c4413b.mp4",
+    "clips": {
+      "320": "https://media.rawg.io/media/stories-320/91d/91d6b5963064a5f686f635c302095b55.mp4",
+      "640": "https://media.rawg.io/media/stories-640/5b0/5b0cfff8c606c5e4db4f74f108c4413b.mp4",
+      "full": "https://media.rawg.io/media/stories/f64/f64ce0b857918b0c202f2a5d3217848e.mp4"
+    },
+    "video": "dZubIhK-Z6w",
+    "preview": "https://media.rawg.io/media/stories-previews/f65/f6593df6c8df32c7f4763f9cb112a514.jpg"
+  },
+  "description_raw": "Rockstar Games went bigger, since their previous installment of the series. You get the complicated and realistic world-building from Liberty City of GTA4 in the setting of lively and diverse Los Santos, from an old fan favorite GTA San Andreas. 561 different vehicles (including every transport you can operate) and the amount is rising with every update. \r\nSimultaneous storytelling from three unique perspectives: \r\nFollow Michael, ex-criminal living his life of leisure away from the past, Franklin, a kid that seeks the better future, and Trevor, the exact past Michael is trying to run away from. \r\nGTA Online will provide a lot of additional challenge even for the experienced players, coming fresh from the story mode. Now you will have other players around that can help you just as likely as ruin your mission. Every GTA mechanic up to date can be experienced by players through the unique customizable character, and community content paired with the leveling system tends to keep everyone busy and engaged."
+}

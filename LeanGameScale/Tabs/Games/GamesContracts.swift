@@ -11,6 +11,7 @@ import LeanGameScaleAPI
 
 protocol GamesViewModelProtocol {
     var delegate: GamesViewModelDelegate? { get set }
+    init(service: ServiceManagerProtocol)
     var games: [GamesResult] { get }
     var lastSearchedKeyword: String? { get }
     func isGameAlreadyOpened(_ game: GamesResult) -> Bool
@@ -21,13 +22,13 @@ protocol GamesViewModelProtocol {
     func fetchMoreForNewPage()
 }
 
-protocol GamesViewModelDelegate: class {
+public protocol GamesViewModelDelegate: class {
     func handleGamesDataState(_ state: GamesViewModelState)
 }
 
-public enum GamesViewModelState {
+public enum GamesViewModelState: Equatable {
     case isLoadingData(Bool)
     case dataReady
-    case requestFailed(Error)
+    case requestFailed(APIError)
     case noNetworkConnection
 }

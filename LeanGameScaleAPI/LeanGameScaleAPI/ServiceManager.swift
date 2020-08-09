@@ -15,10 +15,16 @@ public enum APIError: String, Error {
     case invalidResponse = "The response is invalid"
     case decodingError = "Decoding failed"
     case noConnection = "The Internet connection appears to be offline."
+    case serviceError
 }
 
+public protocol ServiceManagerProtocol {
+    func fetchAllGames(in page: Int, completion: @escaping (Result<BaseGamesResponse, APIError>) -> Void)
+    func gameDetail(with gameId: Int, completion: @escaping (Result<Game, APIError>) -> Void)
+    func searchGames(with keyword: String, in page: Int, completion: @escaping (Result<BaseGamesResponse, APIError>) -> Void)
+}
 
-public final class ServiceManager {
+public final class ServiceManager: ServiceManagerProtocol {
     
     static public let shared = ServiceManager()
     
@@ -28,7 +34,7 @@ public final class ServiceManager {
     // This ensures the singleton
     private init() { }
     
-    public typealias ResponseHandler<T: Decodable> = (Result<T, Error>) -> Void
+    public typealias ResponseHandler<T: Decodable> = (Result<T, APIError>) -> Void
     
     private func requestData<T: Decodable>(fromEndpoint endpoint: APIEndpoints,
                                       completion: @escaping ResponseHandler<T>) {
@@ -54,7 +60,7 @@ public final class ServiceManager {
                     completion(.failure(APIError.noConnection))
                     return
                 }
-                completion(.failure(error))
+                completion(.failure(APIError.serviceError))
                 return
             }
 
