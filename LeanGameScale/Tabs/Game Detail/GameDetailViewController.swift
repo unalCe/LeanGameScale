@@ -21,8 +21,6 @@ class GameDetailViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var webRedirectionsTableView: UITableView!
     
-    private var titleGradient: CAGradientLayer!
-    
     var viewModel: GameDetailViewModel! {
         didSet {
             if viewModel != nil { viewModel.delegate = self }
@@ -34,7 +32,6 @@ class GameDetailViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupTitleGradientView()
         setupDescriptionTextViewHeight(maximumNumberOfLines: 4)
         setupTableView()
     }
@@ -44,11 +41,6 @@ class GameDetailViewController: UIViewController, Storyboarded {
         setupRightBarButton(animated: animated)
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        titleGradient.frame = titleGradientView.bounds
-    }
-    
     
     // MARK: - Setup UI
     
@@ -56,13 +48,6 @@ class GameDetailViewController: UIViewController, Storyboarded {
         let buttonTitle = viewModel.isGameFavorited ?  S.favorited : S.favorite
         let favoriteBarButtonItem = UIBarButtonItem(title: buttonTitle, style: .plain, target: self, action: #selector(favoriteTapped))
         navigationItem.setRightBarButton(favoriteBarButtonItem, animated: animated)
-    }
-    
-    private func setupTitleGradientView() {
-        titleGradient = CAGradientLayer()
-        titleGradient.colors = [UIColor.clear.cgColor, UIColor.black.withAlphaComponent(0.75).cgColor, UIColor.black.cgColor]
-        titleGradient.locations = [0.0, 0.5, 1.0]
-        titleGradientView.layer.insertSublayer(titleGradient, at: 0)
     }
     
     private func setupTableView() {
@@ -80,6 +65,7 @@ class GameDetailViewController: UIViewController, Storyboarded {
     private func updateUI() {
         let game = viewModel.game
         
+        gameImageView.kf.indicatorType = .activity
         gameImageView.kf.setImage(with: game?.backgroundImage,
                                   options: [
                                     .scaleFactor(UIScreen.main.scale),
