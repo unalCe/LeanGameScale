@@ -28,11 +28,11 @@
                                                     <constraint firstAttribute="width" secondItem="Pwu-eU-68X" secondAttribute="height" multiplier="4:3" id="gTF-Rx-mca"/>
                                                 </constraints>
                                             </imageView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmN-p5-IKM">
-                                                <rect key="frame" x="0.0" y="186.5" width="414" height="124"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmN-p5-IKM" customClass="GameTitleGradientView" customModule="LeanGameScale" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="211.5" width="414" height="99"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meseal burası uzun bir oyun adı hatta daha da uzun" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="J7q-bA-DID">
-                                                        <rect key="frame" x="16" y="65" width="382" height="43"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Name" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="J7q-bA-DID">
+                                                        <rect key="frame" x="198.5" y="40" width="199.5" height="43"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -42,7 +42,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="J7q-bA-DID" secondAttribute="trailing" constant="16" id="HH1-o1-Zrn"/>
                                                     <constraint firstAttribute="bottom" secondItem="J7q-bA-DID" secondAttribute="bottom" constant="16" id="NVs-vp-lG5"/>
                                                     <constraint firstItem="J7q-bA-DID" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nmN-p5-IKM" secondAttribute="leading" constant="16" id="ZWB-2v-fsb"/>
-                                                    <constraint firstItem="J7q-bA-DID" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nmN-p5-IKM" secondAttribute="top" constant="20" id="ePt-9V-liM"/>
+                                                    <constraint firstItem="J7q-bA-DID" firstAttribute="top" secondItem="nmN-p5-IKM" secondAttribute="top" constant="40" id="ePt-9V-liM"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7hF-0a-urV">
@@ -115,7 +115,6 @@
                                             <constraint firstAttribute="trailing" secondItem="qFJ-ow-rAk" secondAttribute="trailing" id="KO3-qX-Nhz"/>
                                             <constraint firstItem="qFJ-ow-rAk" firstAttribute="top" secondItem="7hF-0a-urV" secondAttribute="bottom" id="LdA-hx-hWN"/>
                                             <constraint firstItem="7hF-0a-urV" firstAttribute="top" secondItem="Pwu-eU-68X" secondAttribute="bottom" id="Nef-om-Lcb"/>
-                                            <constraint firstItem="nmN-p5-IKM" firstAttribute="height" secondItem="Pwu-eU-68X" secondAttribute="height" multiplier="0.4" id="Tff-Nc-x8R"/>
                                             <constraint firstItem="nmN-p5-IKM" firstAttribute="leading" secondItem="Pwu-eU-68X" secondAttribute="leading" id="jSq-oy-EtB"/>
                                             <constraint firstItem="7hF-0a-urV" firstAttribute="top" secondItem="Pwu-eU-68X" secondAttribute="bottom" id="mLw-gX-ytQ"/>
                                             <constraint firstAttribute="trailing" secondItem="7hF-0a-urV" secondAttribute="trailing" id="noV-LX-EyK"/>
@@ -142,7 +141,7 @@
                         <constraints>
                             <constraint firstItem="83W-gP-Q7k" firstAttribute="top" secondItem="eTH-Ss-DSi" secondAttribute="top" id="224-lx-814"/>
                             <constraint firstItem="83W-gP-Q7k" firstAttribute="trailing" secondItem="eTH-Ss-DSi" secondAttribute="trailing" id="5O7-hA-1W5"/>
-                            <constraint firstItem="WO6-Ky-aW7" firstAttribute="width" secondItem="2Eq-X3-hVP" secondAttribute="width" id="612-ic-taL"/>
+                            <constraint firstItem="WO6-Ky-aW7" firstAttribute="width" secondItem="ayB-Gi-9Kp" secondAttribute="width" id="612-ic-taL"/>
                             <constraint firstItem="WO6-Ky-aW7" firstAttribute="height" secondItem="eTH-Ss-DSi" secondAttribute="height" priority="750" id="raM-ru-ZXW"/>
                             <constraint firstItem="eTH-Ss-DSi" firstAttribute="leading" secondItem="83W-gP-Q7k" secondAttribute="leading" id="vKy-iR-hGJ"/>
                             <constraint firstItem="eTH-Ss-DSi" firstAttribute="bottom" secondItem="2Eq-X3-hVP" secondAttribute="bottom" id="wDs-uy-kgY"/>

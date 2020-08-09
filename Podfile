@@ -14,8 +14,4 @@ pod 'Kingfisher'
     # Pods for testing
   end
 
-  target 'LeanGameScaleUITests' do
-    # Pods for testing
-  end
-
 end

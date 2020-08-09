@@ -24,12 +24,12 @@ final class GamesViewModel: GamesViewModelProtocol {
     }
     
     /// Current search state of the viewModel
-    private var isSearching: Bool = false
+    private(set) var isSearching: Bool = false
     private(set) var lastSearchedKeyword: String?
     
     /// Current page that will be requested
-    private var page: Int = 1
-    private var searchingPage: Int = 1
+    private(set) var page: Int = 1
+    private(set) var searchingPage: Int = 1
     
     private var allGames: [GamesResult] = []
     private var searchedGames: [GamesResult] = []
@@ -42,6 +42,12 @@ final class GamesViewModel: GamesViewModelProtocol {
     
     private var previouslyOpenedGamesIDs: [Int] = []
     
+    // MARK: - Initialization - DI
+    private var service: ServiceManagerProtocol!
+    
+    init(service: ServiceManagerProtocol = ServiceManager.shared) {
+        self.service = service
+    }
     
     // MARK: - Service
     
@@ -50,7 +56,7 @@ final class GamesViewModel: GamesViewModelProtocol {
         
         isSearching = false
         state = .isLoadingData(true)
-        ServiceManager.shared.fetchAllGames(in: page) { (result) in
+        service.fetchAllGames(in: page) { (result) in
             self.state = .isLoadingData(false)
             switch result {
             case .success(let response):
@@ -58,7 +64,7 @@ final class GamesViewModel: GamesViewModelProtocol {
                 self.state = .dataReady
                 self.page += 1
             case .failure(let err):
-                if let error = err as? APIError, error == .noConnection {
+                if err == .noConnection {
                     self.state = .noNetworkConnection
                     return
                 }
@@ -81,7 +87,7 @@ final class GamesViewModel: GamesViewModelProtocol {
         
         isSearching = true
         state = .isLoadingData(true)
-        ServiceManager.shared.searchGames(with: keyword, in: searchingPage) { (result) in
+        service.searchGames(with: keyword, in: searchingPage) { (result) in
             self.state = .isLoadingData(false)
             switch result {
             case .success(let response):

@@ -12,7 +12,7 @@ import LeanGameScaleAPI
 protocol GameDetaiViewModelProtocol {
     var delegate: GameDetailViewModelDelegate? { get set }
     var game: Game? { get set }
-    init(gameID: Int)
+    init(gameID: Int, service: ServiceManagerProtocol)
 }
 
 protocol GameDetailViewModelDelegate: class {
