@@ -28,6 +28,7 @@
 		9049C74324E056EA00D32E54 /* MockGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049C74224E056EA00D32E54 /* MockGameViewController.swift */; };
 		9049C74524E0581500D32E54 /* MockDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049C74424E0581500D32E54 /* MockDataLoader.swift */; };
 		9049C74924E058E400D32E54 /* gameResults.json in Resources */ = {isa = PBXBuildFile; fileRef = 9049C74824E058E400D32E54 /* gameResults.json */; };
+		9049C74B24E0880F00D32E54 /* GameDetailControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049C74A24E0880F00D32E54 /* GameDetailControllerTests.swift */; };
 		909ED0DC24D996E40039A260 /* OpenedGames+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909ED0DB24D996E30039A260 /* OpenedGames+CoreDataProperties.swift */; };
 		909ED0DD24D996E40039A260 /* OpenedGames+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909ED0DA24D996E30039A260 /* OpenedGames+CoreDataClass.swift */; };
 		909ED0E124DA10ED0039A260 /* UITableView-EmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909ED0E024DA10ED0039A260 /* UITableView-EmptyDataView.swift */; };
@@ -108,6 +109,7 @@
 		9049C74224E056EA00D32E54 /* MockGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGameViewController.swift; sourceTree = "<group>"; };
 		9049C74424E0581500D32E54 /* MockDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataLoader.swift; sourceTree = "<group>"; };
 		9049C74824E058E400D32E54 /* gameResults.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = gameResults.json; sourceTree = "<group>"; };
+		9049C74A24E0880F00D32E54 /* GameDetailControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailControllerTests.swift; sourceTree = "<group>"; };
 		909ED0DA24D996E30039A260 /* OpenedGames+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OpenedGames+CoreDataClass.swift"; path = "/Users/unalcelik/Developer/LeanGameScale/LeanGameScale/Persistence/OpenedGames+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		909ED0DB24D996E30039A260 /* OpenedGames+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OpenedGames+CoreDataProperties.swift"; path = "/Users/unalcelik/Developer/LeanGameScale/LeanGameScale/Persistence/OpenedGames+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		909ED0E024DA10ED0039A260 /* UITableView-EmptyDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView-EmptyDataView.swift"; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 			children = (
 				9049C73624E0016000D32E54 /* Mocks */,
 				9049C73E24E0029A00D32E54 /* GamesControllerTests.swift */,
+				9049C74A24E0880F00D32E54 /* GameDetailControllerTests.swift */,
 				90F093FC24D4A4190043B1EA /* Info.plist */,
 			);
 			path = LeanGameScaleTests;
@@ -596,6 +599,7 @@
 				9049C74524E0581500D32E54 /* MockDataLoader.swift in Sources */,
 				9049C74324E056EA00D32E54 /* MockGameViewController.swift in Sources */,
 				9049C73F24E0029A00D32E54 /* GamesControllerTests.swift in Sources */,
+				9049C74B24E0880F00D32E54 /* GameDetailControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
