@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import SafariServices
 
 class GameDetailViewController: UIViewController, Storyboarded {
     
@@ -162,17 +163,32 @@ extension GameDetailViewController: UITableViewDataSource {
 // MARK: - Table Delegate
 
 extension GameDetailViewController: UITableViewDelegate {
-       func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-           tableView.deselectRow(at: indexPath, animated: true)
-           // TODO: Handle ...
-       }
-       
-       func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-           return 60
-       }
-       
-       // This is for the separator line on top
-       func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-           1
-       }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let url = indexPath.row == 0 ? viewModel.game?.website : viewModel.game?.redditURL
+        if let url = url {
+            let vc = SFSafariViewController(url: url)
+            vc.delegate = self
+            
+            present(vc, animated: true)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    
+    // This is for the separator line on top
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        1
+    }
+}
+
+
+// MARK: - SFSafariViewControllerDelegate
+
+extension GameDetailViewController: SFSafariViewControllerDelegate {
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true, completion: nil)
+    }
 }
