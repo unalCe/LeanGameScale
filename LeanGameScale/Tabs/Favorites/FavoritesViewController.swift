@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 
 class FavoritesViewController: UIViewController, Storyboarded {
     @IBOutlet weak var tableView: UITableView!
