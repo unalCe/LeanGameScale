@@ -39,16 +39,15 @@ final class GameDetailViewModel: GameDetaiViewModelProtocol {
     init(gameID: Int, service: ServiceManagerProtocol = ServiceManager.shared) {
         self.gameID = gameID
         self.service = service
-        fetchGameDetails(with: gameID)
     }
     
     
     // MARK: - Service
     
-    private func fetchGameDetails(with gameID: Int) {
+    func fetchGameDetails() {
         state = .isLoadingData(true)
         service.gameDetail(with: gameID) { (result) in
-            //self.state = .isLoadingData(false)
+            self.state = .isLoadingData(false)
             switch result {
             case .success(let gameResponse):
                 self.game = gameResponse

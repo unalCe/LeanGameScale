@@ -24,7 +24,9 @@ class GameDetailViewController: UIViewController, Storyboarded {
     
     var viewModel: GameDetailViewModel! {
         didSet {
-            if viewModel != nil { viewModel.delegate = self }
+            if viewModel != nil {
+                viewModel.delegate = self
+            }
         }
     }
     
@@ -32,6 +34,7 @@ class GameDetailViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.fetchGameDetails()
         
         setupDescriptionTextViewHeight(maximumNumberOfLines: 4)
         setupTableView()
@@ -82,6 +85,12 @@ class GameDetailViewController: UIViewController, Storyboarded {
     
     // MARK: - Helpers
     
+    private func handleLoading(_ isLoading: Bool) {
+        gameNameLabel.isHidden = isLoading
+        gameDescription.text = nil
+        gameDescription.backgroundColor = isLoading ? C.loadingPlaceholderColor : .clear
+    }
+    
     @IBAction private func textViewTapped(_ sender: UITapGestureRecognizer) {
         if sender.state == .ended {
             let location = sender.location(in: gameDescription)
@@ -124,7 +133,8 @@ extension GameDetailViewController: GameDetailViewModelDelegate {
         DispatchQueue.main.async {
             switch state {
             case .isLoadingData(let isLoading):
-                isLoading ? self.startAnimating() : self.stopAnimating()
+                //isLoading ? self.startAnimating() : self.stopAnimating()
+                self.handleLoading(isLoading)
             case .dataReady:
                 self.updateUI()
                 self.webRedirectionsTableView.reloadData()

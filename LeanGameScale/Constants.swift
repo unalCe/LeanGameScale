@@ -38,4 +38,5 @@ struct StringConstants {
 
 struct ColorConstants {
     static let openedCellColor = UIColor(named: "openedCellBackground")
+    static let loadingPlaceholderColor = UIColor(named: "loadingPlaceholderColor")
 }

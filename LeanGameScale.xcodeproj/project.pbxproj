@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2CCA6C94114E076249A51E71 /* Pods_LeanGameScaleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5A0B1A7997CD5274836C15 /* Pods_LeanGameScaleTests.framework */; };
+		900563E524ED9F0F003E5032 /* UIView-Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900563E424ED9F0F003E5032 /* UIView-Radius.swift */; };
 		9018949324DD388800082E25 /* FavoritedGames+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9018949224DD388800082E25 /* FavoritedGames+CoreDataClass.swift */; };
 		9018949424DD388800082E25 /* FavoritedGames+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9018949124DD388800082E25 /* FavoritedGames+CoreDataProperties.swift */; };
 		9018949624DD68BD00082E25 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9018949524DD68BD00082E25 /* FavoritesViewModel.swift */; };
@@ -89,6 +90,7 @@
 		6910022B2729843F2EF0D801 /* Pods-LeanGameScaleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanGameScaleTests.release.xcconfig"; path = "Target Support Files/Pods-LeanGameScaleTests/Pods-LeanGameScaleTests.release.xcconfig"; sourceTree = "<group>"; };
 		7AA4849572C763C9E7862482 /* Pods_LeanGameScale_LeanGameScaleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeanGameScale_LeanGameScaleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F5C2E0766E39FF1514CAF0A /* Pods_LeanGameScale.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeanGameScale.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		900563E424ED9F0F003E5032 /* UIView-Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Radius.swift"; sourceTree = "<group>"; };
 		9018949124DD388800082E25 /* FavoritedGames+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FavoritedGames+CoreDataProperties.swift"; path = "/Users/unalcelik/Developer/LeanGameScale/LeanGameScale/Persistence/FavoritedGames+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		9018949224DD388800082E25 /* FavoritedGames+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FavoritedGames+CoreDataClass.swift"; path = "/Users/unalcelik/Developer/LeanGameScale/LeanGameScale/Persistence/FavoritedGames+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		9018949524DD68BD00082E25 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
@@ -254,12 +256,12 @@
 				90F2816624D5A1D90049AF0E /* MainTabBarController.swift */,
 				9018949724DE945F00082E25 /* Constants.swift */,
 				90F2816324D5A1340049AF0E /* Tabs */,
+				90F0941724D4AF1F0043B1EA /* Persistence */,
 				90F2815C24D59D6C0049AF0E /* Protocols */,
 				90F281A824D71DBB0049AF0E /* Extensions */,
 				902416A924D800EB00B4AE15 /* Reusables */,
 				90F0941524D4AEF40043B1EA /* Resources */,
 				90F0941624D4AEFC0043B1EA /* Supporting Files */,
-				90F0941724D4AF1F0043B1EA /* Persistence */,
 			);
 			path = LeanGameScale;
 			sourceTree = "<group>";
@@ -367,6 +369,7 @@
 				909ED0E024DA10ED0039A260 /* UITableView-EmptyDataView.swift */,
 				909ED0F824DC126E0039A260 /* String-HTMLtoString.swift */,
 				9018949F24DF318900082E25 /* UITextView-ReadMore.swift */,
+				900563E424ED9F0F003E5032 /* UIView-Radius.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				9018949624DD68BD00082E25 /* FavoritesViewModel.swift in Sources */,
 				90F281AC24D725540049AF0E /* UIViewController-LoadingAnimation.swift in Sources */,
 				90F281A724D70EF20049AF0E /* GamesContracts.swift in Sources */,
+				900563E524ED9F0F003E5032 /* UIView-Radius.swift in Sources */,
 				9018949324DD388800082E25 /* FavoritedGames+CoreDataClass.swift in Sources */,
 				90F281A524D70E2B0049AF0E /* GamesViewModel.swift in Sources */,
 				90F093E124D4A4170043B1EA /* AppDelegate.swift in Sources */,
